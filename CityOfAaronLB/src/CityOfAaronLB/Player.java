@@ -5,7 +5,6 @@
  */
 package CityOfAaronLB;
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.Objects;
 
 
@@ -13,12 +12,11 @@ import java.util.Objects;
  *
  * @author pytha
  */
-public class Player implements Serializable{
+public class player implements Serializable{
 
     private String name;
-    private ArrayList<Game> games = new ArrayList<Game>();
 
-    public Player() {
+    public player() {
     }
 
     public String getName() {
@@ -28,16 +26,6 @@ public class Player implements Serializable{
     public void setName(String name) {
         this.name = name;
     }
-
-    public ArrayList<Game> getGames() {
-        return games;
-    }
-
-    public void setGames(ArrayList<Game> games) {
-        this.games = games;
-    }
-
-
 
     @Override
     public int hashCode() {
@@ -57,7 +45,7 @@ public class Player implements Serializable{
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final Player other = (Player) obj;
+        final player other = (player) obj;
         if (!Objects.equals(this.name, other.name)) {
             return false;
         }
@@ -66,7 +54,7 @@ public class Player implements Serializable{
 
     @Override
     public String toString() {
-        return "Player{" + "name=" + name + '}';
+        return "player{" + "name=" + name + '}';
     }
     
 }
