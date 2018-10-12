@@ -16,6 +16,15 @@ public class CityOfAaronLB {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        Player playerOne = new Player();
+        
+        playerOne.setName("George Jetson");
+        
+        String playerOneName = playerOne.getName();
+        
+        System.out.println(playerOne.toString());
+        
+        
     }
     
 }
