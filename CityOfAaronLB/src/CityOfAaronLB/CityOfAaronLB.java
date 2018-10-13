@@ -36,6 +36,13 @@ public class CityOfAaronLB {
         Author.Michael.getLastname();
         System.out.println(Author.Michael.toString());
         
+        Game gameOne = new Game();
+        gameOne.setAcresOwned(1000);
+        gameOne.setCurrentPopulation(100);
+        gameOne.setWheatInStroage(100);
+        System.out.println(gameOne.toString());
+        
+        
         
     }
     

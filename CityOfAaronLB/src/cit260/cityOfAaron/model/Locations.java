@@ -15,7 +15,6 @@ public class Locations {
     private int column;
     private int row;
     private boolean visited;
-    private String scene;
 
     public Locations() {
     }
@@ -44,13 +43,7 @@ public class Locations {
         this.visited = visited;
     }
 
-    public String getScene() {
-        return scene;
-    }
 
-    public void setScene(String scene) {
-        this.scene = scene;
-    }
 
     @Override
     public int hashCode() {
@@ -58,7 +51,6 @@ public class Locations {
         hash = 13 * hash + this.column;
         hash = 13 * hash + this.row;
         hash = 13 * hash + (this.visited ? 1 : 0);
-        hash = 13 * hash + Objects.hashCode(this.scene);
         return hash;
     }
 
@@ -81,9 +73,6 @@ public class Locations {
             return false;
         }
         if (this.visited != other.visited) {
-            return false;
-        }
-        if (!Objects.equals(this.scene, other.scene)) {
             return false;
         }
         return true;
