@@ -5,8 +5,9 @@
  */
 package CityOfAaronLB;
 
-import cit260.cityOfAaron.model.Animals;
-import cit260.cityOfAaron.model.Player;
+import cit260.cityOfAaron.model.*;
+import cit260.cityOfAaron.model.Author;
+
 
 /**
  *
@@ -19,18 +20,23 @@ public class CityOfAaronLB {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        //Test new player
         Player playerOne = new Player();
-        
         playerOne.setName("George Jetson");
-        
         String playerOneName = playerOne.getName();
-        
         System.out.println(playerOne.toString());
         
         Animals.Mouse.getItemType();
         Animals.Mouse.getDescription();
         Animals.Mouse.getItemName();
         Animals.Mouse.getAdjustments();
+        System.out.println(Animals.Mouse.toString());
+        
+        Author.Michael.getFirstname();
+        Author.Michael.getLastname();
+        System.out.println(Author.Michael.toString());
+        
+        
     }
     
 }
