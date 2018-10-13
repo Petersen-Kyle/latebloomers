@@ -29,6 +29,7 @@ public class CityOfAaronLB {
         playerOne.setName("George Jetson");
         String playerOneName = playerOne.getName();
         System.out.println(playerOne.toString());
+        
         InventoryItem itemOne = new InventoryItem();
         itemOne.setItemType("Tool");
         itemOne.setItemName("Hammer");
