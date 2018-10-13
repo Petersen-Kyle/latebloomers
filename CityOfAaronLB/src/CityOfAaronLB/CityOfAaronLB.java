@@ -7,6 +7,8 @@ package CityOfAaronLB;
 
 import cit260.cityOfAaron.model.*;
 import cit260.cityOfAaron.model.Author;
+import java.util.HashSet;
+import java.util.Set;
 
 
 /**
@@ -42,6 +44,17 @@ public class CityOfAaronLB {
         gameOne.setWheatInStroage(100);
         System.out.println(gameOne.toString());
         
+        //creating Scene object
+        Scene wheatfield = new Scene();
+        wheatfield.setName("Wheat Field");
+        wheatfield.setDescription("You have entered a golden wheat field where worker are harvesting");
+        System.out.println(wheatfield.toString());
+        
+        //creating point Object
+        Point pointOne = new Point();
+        pointOne.setRow (1);
+        pointOne.setColumn(1);
+        System.out.println(pointOne.toString());
         
         
     }
