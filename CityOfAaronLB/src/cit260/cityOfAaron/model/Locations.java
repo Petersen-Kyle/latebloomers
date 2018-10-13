@@ -4,14 +4,14 @@
  * and open the template in the editor.
  */
 package cit260.cityOfAaron.model;
-
+import java.io.Serializable;
 import java.util.Objects;
 
 /**
  *
  * @author lafon
  */
-public class Locations {
+public class Locations implements Serializable {
     private int column;
     private int row;
     private boolean visited;
