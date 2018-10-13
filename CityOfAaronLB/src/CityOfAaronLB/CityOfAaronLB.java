@@ -5,6 +5,8 @@
  */
 package CityOfAaronLB;
 
+import cit260.cityOfAaron.model.Player;
+
 /**
  *
  * @author lafon

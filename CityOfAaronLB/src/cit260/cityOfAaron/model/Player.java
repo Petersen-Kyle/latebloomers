@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package CityOfAaronLB;
+package cit260.cityOfAaron.model;
 import java.io.Serializable;
 import java.util.Objects;
 
@@ -12,11 +12,11 @@ import java.util.Objects;
  *
  * @author pytha
  */
-public class player implements Serializable{
+public class Player implements Serializable{
 
     private String name;
 
-    public player() {
+    public Player() {
     }
 
     public String getName() {
@@ -45,7 +45,7 @@ public class player implements Serializable{
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final player other = (player) obj;
+        final Player other = (Player) obj;
         if (!Objects.equals(this.name, other.name)) {
             return false;
         }

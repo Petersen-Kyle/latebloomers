@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package CityOfAaronLB;
+package cit260.cityOfAaron.model;
 
 import java.io.Serializable;
 

@@ -3,20 +3,20 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package CityOfAaronLB;
+package cit260.cityOfAaron.model;
 import java.io.Serializable;
 
 /**
  *
  * @author pytha
  */
-public class game implements Serializable{
+public class Game implements Serializable{
 
     private int currentPopulation;
     private int acresOwned;
     private int wheatInStroage;
             
-    public game() {
+    public Game() {
     }
 
     public int getCurrentPopulation() {
@@ -63,7 +63,7 @@ public class game implements Serializable{
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final game other = (game) obj;
+        final Game other = (Game) obj;
         if (this.currentPopulation != other.currentPopulation) {
             return false;
         }
