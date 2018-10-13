@@ -49,6 +49,18 @@ public class CityOfAaronLB {
         itemOne.setAdjustments(+5);
         System.out.println(itemOne.toString());
         
+        Question introText = new Question();
+        introText.setQuestionText("What would you like to do?");
+        introText.setAnswer1("1 - Start a new game");
+        introText.setAnswer2("2 - Load a saved game");
+        introText.setAnswer3("3 - Help");
+        introText.setAnswer4("4 - Quit");
+        introText.setUserAnswer(1);
+        System.out.println(introText.toString());
+        
+        
+        
+        
     }
     
 }

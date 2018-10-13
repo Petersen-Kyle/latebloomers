@@ -4,14 +4,14 @@
  * and open the template in the editor.
  */
 package cit260.cityOfAaron.model;
-
+import java.io.Serializable;
 import java.util.Objects;
 
 /**
  *
  * @author lafon
  */
-public class Question {
+public class Question implements Serializable {
     private String questionText;
     private String answer1;
     private String answer2;
@@ -118,6 +118,34 @@ public class Question {
     @Override
     public String toString() {
         return "Question{" + "questionText=" + questionText + ", answer1=" + answer1 + ", answer2=" + answer2 + ", answer3=" + answer3 + ", answer4=" + answer4 + ", userAnswer=" + userAnswer + '}';
+    }
+
+    public void questionText(String what_would_you_like_to_do) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public void answer1(String location) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public void answer2(String load_a_saved_game) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public void answer3(String help) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public void answer4(String quit) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public void userAnswer(String string) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public void userAnswer(int i) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     

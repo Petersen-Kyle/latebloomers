@@ -4,11 +4,11 @@
  * and open the template in the editor.
  */
 package cit260.cityOfAaron.model;
-
+import java.io.Serializable;
 /**
  *
  * @author lafon
  */
-public class StoreHouse {
+public class StoreHouse implements Serializable {
     
 }
