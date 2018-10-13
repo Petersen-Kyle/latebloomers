@@ -5,6 +5,7 @@
  */
 package cit260.cityOfAaron.model;
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Objects;
 
 
@@ -15,10 +16,19 @@ import java.util.Objects;
 public class Player implements Serializable{
 
     private String name;
-
+    private ArrayList<Game> games = new ArrayList<Game>();
+    
     public Player() {
     }
 
+    public ArrayList<Game> getGames() {
+        return games;
+    }
+
+    public void setGames(ArrayList<Game> games) {
+        this.games = games;
+    }    
+    
     public String getName() {
         return name;
     }
