@@ -5,6 +5,7 @@
  */
 package CityOfAaronLB;
 
+import cit260.cityOfAaron.model.Animals;
 import cit260.cityOfAaron.model.Player;
 
 /**
@@ -26,7 +27,10 @@ public class CityOfAaronLB {
         
         System.out.println(playerOne.toString());
         
-        
+        Animals.Mouse.getItemType();
+        Animals.Mouse.getDescription();
+        Animals.Mouse.getItemName();
+        Animals.Mouse.getAdjustments();
     }
     
 }
