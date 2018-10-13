@@ -1,3 +1,5 @@
+
+        
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -7,6 +9,8 @@ package CityOfAaronLB;
 
 import cit260.cityOfAaron.model.*;
 import cit260.cityOfAaron.model.Author;
+import java.util.HashSet;
+import java.util.Set;
 
 
 /**
@@ -25,11 +29,13 @@ public class CityOfAaronLB {
         playerOne.setName("George Jetson");
         String playerOneName = playerOne.getName();
         System.out.println(playerOne.toString());
-        
-        Animals.Mouse.getItemType();
-        Animals.Mouse.getDescription();
-        Animals.Mouse.getItemName();
-        Animals.Mouse.getAdjustments();
+        InventoryItem itemOne = new InventoryItem();
+        itemOne.setItemType("Tool");
+        itemOne.setItemName("Hammer");
+        itemOne.setDescription("This is a solid tool used for building houses for your settlers");
+        itemOne.setAdjustments(+5);
+        System.out.println(itemOne.toString());
+
         System.out.println(Animals.Mouse.toString());
         
         Author.Michael.getFirstname();
@@ -41,6 +47,19 @@ public class CityOfAaronLB {
         gameOne.setCurrentPopulation(100);
         gameOne.setWheatInStroage(100);
         System.out.println(gameOne.toString());
+        
+
+        //creating Scene object
+        Scene wheatfield = new Scene();
+        wheatfield.setName("Wheat Field");
+        wheatfield.setDescription("You have entered a golden wheat field where workers are harvesting");
+        System.out.println(wheatfield.toString());
+        
+        //creating point Object
+        Point pointOne = new Point();
+        pointOne.setRow (1);
+        pointOne.setColumn(1);
+        System.out.println(pointOne.toString());
         
         Question introText = new Question();
         introText.setQuestionText("What would you like to do?");
@@ -56,8 +75,15 @@ public class CityOfAaronLB {
         gameLocation.setRow(0);
         gameLocation.setVisited(true);
         System.out.println(gameLocation.toString());
+     
+        System.out.println(Weapons.spear.toString());
         
-      
+        System.out.println(Tools.plow.toString());
+        
+        Map newMap = new Map();
+        newMap.setColumn(0);
+        newMap.setRow(0);
+        System.out.println(newMap.toString());
     }
     
 }
