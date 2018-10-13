@@ -73,6 +73,12 @@ public class CityOfAaronLB {
         playerOne.setName("George Jetson");
         String playerOneName = playerOne.getName();
         System.out.println(playerOne.toString());
+        InventoryItem itemOne = new InventoryItem();
+        itemOne.setItemType("Tool");
+        itemOne.setItemName("Hammer");
+        itemOne.setDescription("This is a solid tool used for building houses for your settlers");
+        itemOne.setAdjustments(+5);
+        System.out.println(itemOne.toString());
         
         Animals.Mouse.getItemType();
         Animals.Mouse.getDescription();
@@ -102,22 +108,6 @@ public class CityOfAaronLB {
         pointOne.setRow (1);
         pointOne.setColumn(1);
         System.out.println(pointOne.toString());
-=======
-        Question introText = new Question();
-        introText.questionText("What would you like to do?");
-        introText.answer1("1 - Start a new game");
-        introText.answer2("2 - Load a saved game");
-        introText.answer3("3 - Help");
-        introText.answer4("4 - Quit");
-        introText.userAnswer(1);
-        System.out.println(introText.toString());
-        InventoryItem itemOne = new InventoryItem();
-        itemOne.setItemType("Tool");
-        itemOne.setItemName("Hammer");
-        itemOne.setDescription("This is a solid tool used for building houses for your settlers");
-        itemOne.setAdjustments(+5);
-        System.out.println(itemOne.toString());
-        
         Question introText = new Question();
         introText.setQuestionText("What would you like to do?");
         introText.setAnswer1("1 - Start a new game");
