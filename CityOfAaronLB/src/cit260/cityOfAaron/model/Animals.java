@@ -26,6 +26,29 @@ public enum Animals{
             this.adjustments = adjustments;
             this.description = description;
         }
+
+    public String getItemType() {
+        return itemType;
+    }
+
+    public String getItemName() {
+        return itemName;
+    }
+
+    public int getAdjustments() {
+        return adjustments;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    @Override
+    public String toString() {
+        return "Animals{" + "itemType=" + itemType + ", itemName=" + itemName + ", adjustments=" + adjustments + ", description=" + description + '}';
+    }
+        
+        
     }
     
 
