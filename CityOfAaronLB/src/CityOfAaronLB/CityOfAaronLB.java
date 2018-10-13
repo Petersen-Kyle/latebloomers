@@ -57,7 +57,7 @@ public class CityOfAaronLB {
         gameLocation.setVisited(true);
         System.out.println(gameLocation.toString());
         
-        
+      
     }
     
 }

@@ -118,6 +118,18 @@ public class Scene implements Serializable  {
     public String toString() {
         return "Scene{" + "name=" + name + ", description=" + description + ", question=" + question + ", item=" + item + '}';
     }
+
+    public void setInventoryItem(String sling) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public void setItem(String sling) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public void setQuestion(String would_you_like_to_pick_up_the_sling) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
     
  
