@@ -17,7 +17,7 @@ public class Question {
     private String answer2;
     private String answer3;
     private String answer4;
-    private int correctAnswer;
+    private int userAnswer;
 
     public Question() {
     }
@@ -62,23 +62,23 @@ public class Question {
         this.answer4 = answer4;
     }
 
-    public int getCorrectAnswer() {
-        return correctAnswer;
+    public int getUserAnswer() {
+        return userAnswer;
     }
 
-    public void setCorrectAnswer(int correctAnswer) {
-        this.correctAnswer = correctAnswer;
+    public void setUserAnswer(int userAnswer) {
+        this.userAnswer = userAnswer;
     }
 
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 79 * hash + Objects.hashCode(this.questionText);
-        hash = 79 * hash + Objects.hashCode(this.answer1);
-        hash = 79 * hash + Objects.hashCode(this.answer2);
-        hash = 79 * hash + Objects.hashCode(this.answer3);
-        hash = 79 * hash + Objects.hashCode(this.answer4);
-        hash = 79 * hash + this.correctAnswer;
+        hash = 53 * hash + Objects.hashCode(this.questionText);
+        hash = 53 * hash + Objects.hashCode(this.answer1);
+        hash = 53 * hash + Objects.hashCode(this.answer2);
+        hash = 53 * hash + Objects.hashCode(this.answer3);
+        hash = 53 * hash + Objects.hashCode(this.answer4);
+        hash = 53 * hash + this.userAnswer;
         return hash;
     }
 
@@ -94,7 +94,7 @@ public class Question {
             return false;
         }
         final Question other = (Question) obj;
-        if (this.correctAnswer != other.correctAnswer) {
+        if (this.userAnswer != other.userAnswer) {
             return false;
         }
         if (!Objects.equals(this.questionText, other.questionText)) {
@@ -117,8 +117,10 @@ public class Question {
 
     @Override
     public String toString() {
-        return "Question{" + "questionText=" + questionText + ", answer1=" + answer1 + ", answer2=" + answer2 + ", answer3=" + answer3 + ", answer4=" + answer4 + ", correctAnswer=" + correctAnswer + '}';
+        return "Question{" + "questionText=" + questionText + ", answer1=" + answer1 + ", answer2=" + answer2 + ", answer3=" + answer3 + ", answer4=" + answer4 + ", userAnswer=" + userAnswer + '}';
     }
+
+    
     
     
 }
