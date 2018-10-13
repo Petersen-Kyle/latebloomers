@@ -5,15 +5,43 @@
  */
 package cit260.cityOfAaron.model;
 
-import java.io.Serializable;
-
-
-
 /**
  *
  * @author kpetersen
  */
-public class Author implements Serializable {
+public enum Author {
     
-//just adding a comment to test GitHub    
+    Michael("Michael","Smith","CIT260"),
+    MJ("MJ","LaFond","CIT260"),
+    Donovan("Donovan","Jones","CIT260"),
+    Kyle("Kyle","Petersen","CIT260");
+    
+    private String firstname;
+    private String lastname;
+    private String classname;
+
+    Author(String firstname, String lastname, String classname){
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.classname = classname;
+    }
+
+    public String getFirstname() {
+        return firstname;
+    }
+
+    public String getLastname() {
+        return lastname;
+    }
+
+    public String getClassname() {
+        return classname;
+    }
+
+    @Override
+    public String toString() {
+        return "Author{" + "firstname=" + firstname + ", lastname=" + lastname + ", classname=" + classname + '}';
+    }
+    
+    
 }
