@@ -42,6 +42,14 @@ public class CityOfAaronLB {
         gameOne.setWheatInStroage(100);
         System.out.println(gameOne.toString());
         
+        Question introText = new Question();
+        introText.questionText("What would you like to do?");
+        introText.answer1("1 - Start a new game");
+        introText.answer2("2 - Load a saved game");
+        introText.answer3("3 - Help");
+        introText.answer4("4 - Quit");
+        introText.userAnswer(1);
+        System.out.println(introText.toString());
         
         
     }
