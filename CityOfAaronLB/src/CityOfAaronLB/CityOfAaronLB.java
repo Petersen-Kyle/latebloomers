@@ -58,8 +58,12 @@ public class CityOfAaronLB {
         introText.setUserAnswer(1);
         System.out.println(introText.toString());
         
-        
-        
+        Locations gameLocation = new Locations();
+        gameLocation.setColumn(4);
+        gameLocation.setRow(0);
+        gameLocation.setVisited(true);
+        System.out.println(gameLocation.toString());
+     
         
     }
     
