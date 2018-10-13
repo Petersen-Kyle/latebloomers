@@ -6,6 +6,8 @@
 package cit260.cityOfAaron.model;
 import java.io.Serializable;
 
+
+
 /**
  *
  * @author kpetersen
