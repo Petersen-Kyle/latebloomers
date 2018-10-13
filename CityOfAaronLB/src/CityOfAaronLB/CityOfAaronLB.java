@@ -47,7 +47,7 @@ public class CityOfAaronLB {
         //creating Scene object
         Scene wheatfield = new Scene();
         wheatfield.setName("Wheat Field");
-        wheatfield.setDescription("You have entered a golden wheat field where worker are harvesting");
+        wheatfield.setDescription("You have entered a golden wheat field where workers are harvesting");
         System.out.println(wheatfield.toString());
         
         //creating point Object
