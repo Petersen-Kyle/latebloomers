@@ -29,17 +29,14 @@ public class CityOfAaronLB {
         playerOne.setName("George Jetson");
         String playerOneName = playerOne.getName();
         System.out.println(playerOne.toString());
+        
         InventoryItem itemOne = new InventoryItem();
         itemOne.setItemType("Tool");
         itemOne.setItemName("Hammer");
         itemOne.setDescription("This is a solid tool used for building houses for your settlers");
         itemOne.setAdjustments(+5);
         System.out.println(itemOne.toString());
-        
-        Animals.Mouse.getItemType();
-        Animals.Mouse.getDescription();
-        Animals.Mouse.getItemName();
-        Animals.Mouse.getAdjustments();
+
         System.out.println(Animals.Mouse.toString());
         
         Author.Michael.getFirstname();
@@ -64,6 +61,7 @@ public class CityOfAaronLB {
         pointOne.setRow (1);
         pointOne.setColumn(1);
         System.out.println(pointOne.toString());
+        
         Question introText = new Question();
         introText.setQuestionText("What would you like to do?");
         introText.setAnswer1("1 - Start a new game");
@@ -82,6 +80,11 @@ public class CityOfAaronLB {
         System.out.println(Weapons.spear.toString());
         
         System.out.println(Tools.plow.toString());
+        
+        Map newMap = new Map();
+        newMap.setColumn(0);
+        newMap.setRow(0);
+        System.out.println(newMap.toString());
     }
     
 }
