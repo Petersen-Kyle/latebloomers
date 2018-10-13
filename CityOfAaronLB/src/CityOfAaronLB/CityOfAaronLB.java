@@ -42,7 +42,12 @@ public class CityOfAaronLB {
         gameOne.setWheatInStroage(100);
         System.out.println(gameOne.toString());
         
-        
+        InventoryItem itemOne = new InventoryItem();
+        itemOne.setItemType("Tool");
+        itemOne.setItemName("Hammer");
+        itemOne.setDescription("This is a solid tool used for building houses for your settlers");
+        itemOne.setAdjustments(+5);
+        System.out.println(itemOne.toString());
         
     }
     
