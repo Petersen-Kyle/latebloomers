@@ -15,7 +15,9 @@ public class Locations implements Serializable {
     private int column;
     private int row;
     private boolean visited;
-
+    
+    
+    
     public Locations() {
     }
 
