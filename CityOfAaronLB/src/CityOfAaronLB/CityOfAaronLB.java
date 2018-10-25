@@ -27,7 +27,6 @@ public class CityOfAaronLB {
         //Test new player
         Player playerOne = new Player();
         playerOne.setName("George Jetson");
-        String playerOneName = playerOne.getName();
         System.out.println(playerOne.toString());
         
         InventoryItem itemOne = new InventoryItem();
