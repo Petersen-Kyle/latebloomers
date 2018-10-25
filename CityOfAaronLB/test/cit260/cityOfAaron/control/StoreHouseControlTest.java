@@ -14,9 +14,9 @@ import static org.junit.Assert.*;
  *
  * @author lafon
  */
-public class InverntoryItemControlTest {
+public class StoreHouseControlTest {
     
-    public InverntoryItemControlTest() {
+    public StoreHouseControlTest() {
     }
     
     @BeforeClass
@@ -48,7 +48,7 @@ public class InverntoryItemControlTest {
         int expResult = 240;
         
         //Call the method
-        int result = InverntoryItemControl.calcFeedThePeople(wheatInStorage, wheatHarvested, tithes, eatenByRats, peopleToFeed);
+        int result = StoreHouseControl.calcFeedThePeople(wheatInStorage, wheatHarvested, tithes, eatenByRats, peopleToFeed);
         
         //Test to see if the result returned equals the expected result
         assertEquals(expResult, result);
@@ -68,7 +68,7 @@ public class InverntoryItemControlTest {
         expResult = -1;
         
         //Call the method
-        result = InverntoryItemControl.calcFeedThePeople(wheatInStorage, wheatHarvested, tithes, eatenByRats, peopleToFeed);
+        result = StoreHouseControl.calcFeedThePeople(wheatInStorage, wheatHarvested, tithes, eatenByRats, peopleToFeed);
         
         //Test to see if the result returned equals the expected result
         assertEquals(expResult, result);
@@ -88,7 +88,7 @@ public class InverntoryItemControlTest {
         expResult = -2;
         
         //Call the method
-        result = InverntoryItemControl.calcFeedThePeople(wheatInStorage, wheatHarvested, tithes, eatenByRats, peopleToFeed);
+        result = StoreHouseControl.calcFeedThePeople(wheatInStorage, wheatHarvested, tithes, eatenByRats, peopleToFeed);
         
         //Test to see if the result returned equals the expected result
         assertEquals(expResult, result);
@@ -108,7 +108,7 @@ public class InverntoryItemControlTest {
         expResult = -3;
         
         //Call the method
-        result = InverntoryItemControl.calcFeedThePeople(wheatInStorage, wheatHarvested, tithes, eatenByRats, peopleToFeed);
+        result = StoreHouseControl.calcFeedThePeople(wheatInStorage, wheatHarvested, tithes, eatenByRats, peopleToFeed);
         
         //Test to see if the result returned equals the expected result
         assertEquals(expResult, result);
@@ -128,7 +128,7 @@ public class InverntoryItemControlTest {
         expResult = -4;
         
         //Call the method
-        result = InverntoryItemControl.calcFeedThePeople(wheatInStorage, wheatHarvested, tithes, eatenByRats, peopleToFeed);
+        result = StoreHouseControl.calcFeedThePeople(wheatInStorage, wheatHarvested, tithes, eatenByRats, peopleToFeed);
         
         //Test to see if the result returned equals the expected result
         assertEquals(expResult, result);
@@ -148,7 +148,7 @@ public class InverntoryItemControlTest {
         expResult = 690;
         
         //Call the method
-        result = InverntoryItemControl.calcFeedThePeople(wheatInStorage, wheatHarvested, tithes, eatenByRats, peopleToFeed);
+        result = StoreHouseControl.calcFeedThePeople(wheatInStorage, wheatHarvested, tithes, eatenByRats, peopleToFeed);
         
         //Test to see if the result returned equals the expected result
         assertEquals(expResult, result); 
