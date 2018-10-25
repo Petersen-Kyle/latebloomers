@@ -48,6 +48,66 @@ public class QuestionControlTest {
         
         //Test to see if the result returned equals the expected result
         assertEquals(expResult, result);
+        
+        //Test Case 2
+        System.out.println("\tTest Case 2");
+        
+        //Define the input variable
+        userAnswer = -2;
+        
+        //Define the expected output variable
+        expResult = -1;
+        
+        //Call the method
+        result = QuestionControl.userInput(userAnswer);
+        
+        //Test to see if the result returned equals the expected result
+        assertEquals(expResult, result);
+        
+        //Test Case 3
+        System.out.println("\tTest Case 3");
+        
+        //Define the input variable
+        userAnswer = 10;
+        
+        //Define the expected output variable
+        expResult = -2;
+        
+        //Call the method
+        result = QuestionControl.userInput(userAnswer);
+        
+        //Test to see if the result returned equals the expected result
+        assertEquals(expResult, result);
+        
+        //Test Case 4
+        System.out.println("\tTest Case 4");
+        
+        //Define the input variable
+        userAnswer = 1;
+        
+        //Define the expected output variable
+        expResult = 1;
+        
+        //Call the method
+        result = QuestionControl.userInput(userAnswer);
+        
+        //Test to see if the result returned equals the expected result
+        assertEquals(expResult, result);
+        
+        //Test Case 5
+        System.out.println("\tTest Case 5");
+        
+        //Define the input variable
+        userAnswer = 4;
+        
+        //Define the expected output variable
+        expResult = 4;
+        
+        //Call the method
+        result = QuestionControl.userInput(userAnswer);
+        
+        //Test to see if the result returned equals the expected result
+        assertEquals(expResult, result);
     }
     
 }
