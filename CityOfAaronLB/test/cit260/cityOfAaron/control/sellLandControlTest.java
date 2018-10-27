@@ -9,8 +9,6 @@ import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
-import cit260.cityOfAaron.control.sellLandControl;
-
 
 /**
  *
@@ -36,13 +34,49 @@ public class sellLandControlTest {
     public void testSellLand() {
         System.out.println("sellLand");
         int userLandSell = 20;
+        int landPrice = 27;
         int acresAvailable = 100;
         int acresPlanted = 80;
         int wheatInStorage = 150;
-        int expResult = landPrice*20+150;
-        int result = sellLandControl.sellLand(userLandSell, acresAvailable, acresPlanted, wheatInStorage);
+        int expResult = 690;
+        int result = sellLandControl.sellLand(userLandSell, landPrice, acresAvailable, acresPlanted, wheatInStorage);
         assertEquals(expResult, result);
 
+        userLandSell = 10;
+        landPrice = 27;
+        acresAvailable = 100;
+        acresPlanted = 80;
+        wheatInStorage = 150;
+        expResult = 420;
+        result = sellLandControl.sellLand(userLandSell, landPrice, acresAvailable, acresPlanted, wheatInStorage);
+        assertEquals(expResult, result);
+
+        userLandSell = -10;
+        landPrice = 27;
+        acresAvailable = 100;
+        acresPlanted = 80;
+        wheatInStorage = 150;
+        expResult = -1;
+        result = sellLandControl.sellLand(userLandSell, landPrice, acresAvailable, acresPlanted, wheatInStorage);
+        assertEquals(expResult, result);
+        
+        userLandSell = 30;
+        landPrice = 27;
+        acresAvailable = 100;
+        acresPlanted = 80;
+        wheatInStorage = 150;
+        expResult = -2;
+        result = sellLandControl.sellLand(userLandSell, landPrice, acresAvailable, acresPlanted, wheatInStorage);
+        assertEquals(expResult, result);
+        
+        userLandSell = 1;
+        landPrice = 27;
+        acresAvailable = 100;
+        acresPlanted = 80;
+        wheatInStorage = 150;
+        expResult = 177;
+        result = sellLandControl.sellLand(userLandSell, landPrice, acresAvailable, acresPlanted, wheatInStorage);
+        assertEquals(expResult, result);
     }
     
 }
