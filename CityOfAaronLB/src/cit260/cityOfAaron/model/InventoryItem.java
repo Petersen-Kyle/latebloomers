@@ -17,6 +17,9 @@ public class InventoryItem implements Serializable{
     private int adjustments;
     private String description;
 
+    public InventoryItem() {
+    }
+    
     public String getItemType() {
         return itemType;
     }
