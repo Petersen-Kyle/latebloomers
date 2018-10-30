@@ -3,30 +3,21 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package cit260.cityOfAaron.model;
+package cit260.cityOfAaronLB.model;
 import java.io.Serializable;
+
 
 
 /**
  *
- * @author lafon
+ * @author kpetersen
  */
-public class Locations implements Serializable {
-    private int column;
+public class Point implements Serializable {
+    
     private int row;
-    private boolean visited;
-    
-    
-    
-    public Locations() {
-    }
+    private int column;
 
-    public int getColumn() {
-        return column;
-    }
-
-    public void setColumn(int column) {
-        this.column = column;
+    public Point() {
     }
 
     public int getRow() {
@@ -37,22 +28,19 @@ public class Locations implements Serializable {
         this.row = row;
     }
 
-    public boolean isVisited() {
-        return visited;
+    public int getColumn() {
+        return column;
     }
 
-    public void setVisited(boolean visited) {
-        this.visited = visited;
+    public void setColumn(int column) {
+        this.column = column;
     }
-
-
 
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 13 * hash + this.column;
-        hash = 13 * hash + this.row;
-        hash = 13 * hash + (this.visited ? 1 : 0);
+        hash = 11 * hash + this.row;
+        hash = 11 * hash + this.column;
         return hash;
     }
 
@@ -67,25 +55,21 @@ public class Locations implements Serializable {
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final Locations other = (Locations) obj;
-        if (this.column != other.column) {
-            return false;
-        }
+        final Point other = (Point) obj;
         if (this.row != other.row) {
             return false;
         }
-        if (this.visited != other.visited) {
+        if (this.column != other.column) {
             return false;
         }
         return true;
     }
 
- 
-
     @Override
     public String toString() {
-        return "Locations{" + "column=" + column + ", row=" + row + ", visited=" + visited + '}';
+        return "Point{" + "row=" + row + ", column=" + column + '}';
     }
+    
     
     
 }

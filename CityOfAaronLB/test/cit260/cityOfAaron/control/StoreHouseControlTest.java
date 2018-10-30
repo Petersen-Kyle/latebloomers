@@ -5,6 +5,7 @@
  */
 package cit260.cityOfAaron.control;
 
+import cit260.cityOfAaronLB.control.StoreHouseControl;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;

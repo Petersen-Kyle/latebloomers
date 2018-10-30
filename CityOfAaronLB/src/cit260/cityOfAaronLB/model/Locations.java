@@ -3,29 +3,22 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package cit260.cityOfAaron.model;
+package cit260.cityOfAaronLB.model;
 import java.io.Serializable;
-
 
 
 /**
  *
- * @author kpetersen
+ * @author lafon
  */
-public class Point implements Serializable {
-    
-    private int row;
+public class Locations implements Serializable {
     private int column;
-
-    public Point() {
-    }
-
-    public int getRow() {
-        return row;
-    }
-
-    public void setRow(int row) {
-        this.row = row;
+    private int row;
+    private boolean visited;
+    
+    
+    
+    public Locations() {
     }
 
     public int getColumn() {
@@ -36,11 +29,30 @@ public class Point implements Serializable {
         this.column = column;
     }
 
+    public int getRow() {
+        return row;
+    }
+
+    public void setRow(int row) {
+        this.row = row;
+    }
+
+    public boolean isVisited() {
+        return visited;
+    }
+
+    public void setVisited(boolean visited) {
+        this.visited = visited;
+    }
+
+
+
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 11 * hash + this.row;
-        hash = 11 * hash + this.column;
+        hash = 13 * hash + this.column;
+        hash = 13 * hash + this.row;
+        hash = 13 * hash + (this.visited ? 1 : 0);
         return hash;
     }
 
@@ -55,21 +67,25 @@ public class Point implements Serializable {
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final Point other = (Point) obj;
+        final Locations other = (Locations) obj;
+        if (this.column != other.column) {
+            return false;
+        }
         if (this.row != other.row) {
             return false;
         }
-        if (this.column != other.column) {
+        if (this.visited != other.visited) {
             return false;
         }
         return true;
     }
 
+ 
+
     @Override
     public String toString() {
-        return "Point{" + "row=" + row + ", column=" + column + '}';
+        return "Locations{" + "column=" + column + ", row=" + row + ", visited=" + visited + '}';
     }
-    
     
     
 }
