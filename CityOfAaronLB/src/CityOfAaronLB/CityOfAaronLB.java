@@ -19,9 +19,10 @@ import cit260.cityOfAaronLB.model.Locations;
 import cit260.cityOfAaronLB.model.InventoryItem;
 import cit260.cityOfAaronLB.model.Tools;
 import cit260.cityOfAaronLB.model.Author;
+import cit260.cityOfAaronLB.view.StartProgramView;
 import java.util.HashSet;
 import java.util.Set;
-
+import java.io.IOException;
 
 /**
  *
@@ -94,6 +95,12 @@ public class CityOfAaronLB {
         newMap.setColumn(0);
         newMap.setRow(0);
         System.out.println(newMap.toString());
+        
+        StartProgramView newStart = new StartProgramView();
+        newStart.DisplayBanner();
+        newStart.DisplayStartProgramView();
+        
+        
     }
     
 }
