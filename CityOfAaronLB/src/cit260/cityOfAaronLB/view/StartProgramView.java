@@ -11,7 +11,7 @@ package cit260.cityOfAaronLB.view;
  */
 public class StartProgramView {
     public StartProgramView(){
-    
+
     }
     
 }
