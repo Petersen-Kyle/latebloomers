@@ -5,7 +5,7 @@
  */
 package cit260.cityOfAaronLB.view;
 import java.util.Scanner;
-
+import java.io.IOException;
 
 
 /**
@@ -95,6 +95,8 @@ public class StartProgramView {
     private boolean doAction(String[] inputs){       
         System.out.println("**** doAction() called ****");
         System.out.println("Welcome to the City of Aaron " + inputs[0]);
+        MainMenu newMainMenu = new MainMenu();
+//        newMainMenu.mainMenu();    
         return true;
     }  
 }
