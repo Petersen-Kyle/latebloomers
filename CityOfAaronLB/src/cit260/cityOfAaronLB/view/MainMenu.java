@@ -10,26 +10,24 @@ import java.io.IOException;
  *
  * @author pytha
  */
-public class HelpMenu {
-
-    public static void helpMenu() throws IOException {
+public class MainMenu {
+    
+public void mainMenu() throws IOException {
   
     char choice, ignore;  
     for(;;) {
     do {
-        System.out.println("Help Menu");
-        System.out.println("1. History of the City of Aaron?");
-        System.out.println("2. What is the goal of the game?");
-        System.out.println("3. How to make a move?");
-        System.out.println("4. Tips and Hints");
-        System.out.println("5. Starting Resources");
+        System.out.println("Main Menu");
+        System.out.println("1. Start a new game");
+        System.out.println("2. Load a saved game");
+        System.out.println("3. Help");
         System.out.println("Choose one (Q to Quit): ");
         choice = (char) System.in.read();
         
         do{
         ignore = (char) System.in.read();
         } while(ignore != '\n');
-    } while(choice < '1' | choice > '5' & choice !='q');
+    } while(choice < '1' | choice > '3' & choice !='q');
     
     if (choice == 'q') break;
             
@@ -45,18 +43,10 @@ public class HelpMenu {
         case '3':
             
             break;
-        case '4':
-            
-            break;
-        case '5':    
-           
-            break;
+
     }
     System.out.println();
     }
     }
 
 }  
-
-
-
