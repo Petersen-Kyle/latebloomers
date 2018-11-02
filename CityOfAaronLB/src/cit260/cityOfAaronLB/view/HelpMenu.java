@@ -12,8 +12,8 @@ import java.io.IOException;
  */
 public class HelpMenu {
 
-    public static void helpMenu() {
-    throws java.io.IOException{    
+    public static void helpMenu() throws IOException {
+  
     char choice, ignore;  
     for(;;) {
     do {
@@ -24,11 +24,10 @@ public class HelpMenu {
         System.out.println("4. Tips and Hints");
         System.out.println("5. Starting Resources");
         System.out.println("Choose one (Q to Quit): ");
-        
         choice = (char) System.in.read();
         
         do{
-            ignore = (char) System.in.read();
+        ignore = (char) System.in.read();
         } while(ignore != '\n');
     } while(choice < '1' | choice > '7' & choice !='q');
     
@@ -57,6 +56,7 @@ public class HelpMenu {
     }
     }
 
-}   
+}  
+
 
 
