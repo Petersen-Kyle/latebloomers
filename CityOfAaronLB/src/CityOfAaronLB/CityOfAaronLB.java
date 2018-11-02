@@ -96,6 +96,7 @@ public class CityOfAaronLB {
         newMap.setRow(0);
         System.out.println(newMap.toString());
         
+        
         StartProgramView newStart = new StartProgramView();
         newStart.DisplayStartProgramView();
         
