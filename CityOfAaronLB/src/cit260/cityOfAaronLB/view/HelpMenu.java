@@ -12,15 +12,15 @@ import java.io.IOException;
  */
 public class HelpMenu {
 
-    public static void helpMenu() throws IOException {
+    public void helpMenu() throws IOException {
   
     char choice, ignore;  
     for(;;) {
     do {
         System.out.println("Help Menu");
-        System.out.println("1. History of the City of Aaron?");
+        System.out.println("1. History of the City of Aaron");
         System.out.println("2. What is the goal of the game?");
-        System.out.println("3. How to make a move?");
+        System.out.println("3. How to make a move");
         System.out.println("4. Tips and Hints");
         System.out.println("5. Starting Resources");
         System.out.println("Choose one (Q to Quit): ");

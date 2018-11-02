@@ -18,7 +18,7 @@ public class StartProgramView {
     public StartProgramView(){
     }  
     
-    public void DisplayStartProgramView(){ 
+    public void DisplayStartProgramView() throws IOException{ 
         boolean endOfView = false;
     
         do {
@@ -92,11 +92,11 @@ public class StartProgramView {
         return inputs;
     }
        
-    private boolean doAction(String[] inputs){       
+    private boolean doAction(String[] inputs) throws IOException{       
         System.out.println("**** doAction() called ****");
         System.out.println("Welcome to the City of Aaron " + inputs[0]);
         MainMenu newMainMenu = new MainMenu();
-//        newMainMenu.mainMenu();    
+        newMainMenu.mainMenu();    
         return true;
     }  
 }

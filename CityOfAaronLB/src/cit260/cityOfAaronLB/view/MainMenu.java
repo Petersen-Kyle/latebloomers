@@ -35,13 +35,14 @@ public void mainMenu() throws IOException {
     
     switch(choice) {
         case '1':
-            
+            System.out.println("Welcome to a new game in the City of Aaron");
             break;
         case '2':
-            
+            System.out.println("Welcome back to the City of Aaron");
             break;
         case '3':
-            
+            HelpMenu newHelp = new HelpMenu();
+            newHelp.helpMenu();
             break;
 
     }
