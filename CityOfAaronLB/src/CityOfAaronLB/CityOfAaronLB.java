@@ -24,6 +24,7 @@ import java.util.HashSet;
 import java.util.Set;
 import java.io.IOException;
 
+
 /**
  *
  * @author lafon
@@ -33,7 +34,7 @@ public class CityOfAaronLB {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException{
         // TODO code application logic here
         //Test new player
         Player playerOne = new Player();
@@ -97,9 +98,8 @@ public class CityOfAaronLB {
         System.out.println(newMap.toString());
         
         
-        StartProgramView newStart = new StartProgramView();
-        newStart.DisplayStartProgramView();
-        
+       StartProgramView newStart = new StartProgramView();
+       newStart.DisplayStartProgramView();
         
     }
     

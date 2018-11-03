@@ -37,7 +37,7 @@ public class StartProgramView {
     
     
     
-    private String[] getInputs(){
+    public String[] getInputs(){
         System.out.println(
         "                   City Of Aaron                          \n" +
         "                                               /\\      /\\\n" +
