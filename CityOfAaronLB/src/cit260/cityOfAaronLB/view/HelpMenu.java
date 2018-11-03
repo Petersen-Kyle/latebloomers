@@ -23,16 +23,15 @@ public class HelpMenu {
         System.out.println("3. How to make a move");
         System.out.println("4. Tips and Hints");
         System.out.println("5. Starting Resources");
-        System.out.println("6. Main Menu");
-        System.out.println("Choose one (Q to Quit): ");
+        System.out.println("Choose one or (Q to Quit to Main Menu): ");
         choice = (char) System.in.read();
         
         do{
         ignore = (char) System.in.read();
         } while(ignore != '\n');
-    } while(choice < '1' | choice > '5' & choice !='q');
+    } while(choice < '1' | choice > '5' & choice != 'q' & choice != 'Q');
     
-    if (choice == 'q') break;
+    if (choice == 'q' | choice == 'Q') break;
             
     System.out.println("\n");
     

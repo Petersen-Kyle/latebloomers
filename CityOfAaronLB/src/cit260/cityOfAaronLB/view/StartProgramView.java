@@ -24,7 +24,7 @@ public class StartProgramView {
         do {
             
             String[] inputs = this.getInputs();                
-            if (inputs[0] == "Q"){
+            if (inputs[0] == "e"){
                 System.exit(0);
             }        
             endOfView = doAction(inputs);
@@ -78,7 +78,7 @@ public class StartProgramView {
             inFile = new Scanner(System.in);
             String name = inFile.nextLine().trim();
         
-            if(name.equalsIgnoreCase("Q")){
+            if(name.equalsIgnoreCase("e")){
                 System.out.println("Thanks for playing Late Bloomers City of Aaron");
                 System.exit(0);
             }

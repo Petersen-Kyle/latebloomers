@@ -21,21 +21,23 @@ public void mainMenu() throws IOException {
         System.out.println("1. Start a new game");
         System.out.println("2. Load a saved game");
         System.out.println("3. Help");
-        System.out.println("Choose one (Q to Quit): ");
+        System.out.println("Choose one or (E to Exit the game): ");
         choice = (char) System.in.read();
         
         do{
         ignore = (char) System.in.read();
         } while(ignore != '\n');
-    } while(choice < '1' | choice > '3' & choice !='q');
+    } while(choice < '1' | choice > '3' & choice !='e' & choice !='E');
     
-    if (choice == 'q') break;
+    if (choice == 'e' | choice == 'E') break;
             
     System.out.println("\n");
     
     switch(choice) {
         case '1':
             System.out.println("Welcome to a new game in the City of Aaron");
+            GameMenuView newGame = new GameMenuView();
+            newGame.gameMenuView();
             break;
         case '2':
             System.out.println("Welcome back to the City of Aaron");
