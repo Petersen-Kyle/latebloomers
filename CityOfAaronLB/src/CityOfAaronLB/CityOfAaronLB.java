@@ -100,6 +100,8 @@ public class CityOfAaronLB {
         
        StartProgramView newStart = new StartProgramView();
        newStart.DisplayStartProgramView();
+       
+       
         
     }
     
