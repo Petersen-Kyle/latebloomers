@@ -39,6 +39,8 @@ public void gameMenuView() throws IOException {
     switch(choice) {
         case '1':
             System.out.println("City of Aaron Map");
+            Map newMap = new Map();
+            newMap.displayMap();
             break;
         case '2':
             System.out.println("Where would you like to move to? ");

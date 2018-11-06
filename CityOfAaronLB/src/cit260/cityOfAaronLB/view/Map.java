@@ -11,23 +11,24 @@ package cit260.cityOfAaronLB.view;
  */
 public class Map {
     
-    public static void displayMap(){
+    public void displayMap(){
     System.out.println(
-                " __________ __________ __________ __________ __________|\n" +
-		"|          |          |          |          |          |\n" +
-		"|  Temple  |   Wheat  |  Wheat   |  River   |  Granary |\n" +
-		"|__________|__________|__________|__________|__________|\n" +
-		"|          |          |          |          |          |\n" +
-		"|  Wheat   |   Wheat  |  River   |  Wheat   |   Wheat  |\n" +
-		"|__________|__________|__________|__________|__________|\n" +
-		"|          |          |  Rulers  |          |          |\n" +
-		"|  Wheat   |  River   |  Court   |  Wheat   |Storehouse|\n" +
-		"|__________|__________|__________|__________|__________|\n" +
-		"|          |          |          |          |          |\n" +
-		"|  River   |  Wheat   |   Wheat  |  Wheat   |  Wheat   |\n" +
-		"|__________|__________|__________|__________|__________|\n" +
-		"|          |          |          |          |          |\n" +
-		"|Undevelop |Undevelop |Undevelop | Villiage |Undevelop |\n" +
-		"|__________|__________|__________|__________|__________|");
+                "   __________ __________ __________ __________ __________ \n" +
+		"  |          |          |          |          |          |\n" +
+		"5 |  Temple  |   Wheat  |  Wheat   |  River   |  Granary |\n" +
+		"  |__________|__________|__________|__________|__________|\n" +
+		"  |          |          |          |          |          |\n" +
+		"4 |  Wheat   |   Wheat  |  River   |  Wheat   |   Wheat  |\n" +
+		"  |__________|__________|__________|__________|__________|\n" +
+		"  |          |          |  Rulers  |          |          |\n" +
+		"3 |  Wheat   |  River   |  Court   |  Wheat   |Storehouse|\n" +
+		"  |__________|__________|__________|__________|__________|\n" +
+		"  |          |          |          |          |          |\n" +
+		"2 |  River   |  Wheat   |   Wheat  |  Wheat   |  Wheat   |\n" +
+		"  |__________|__________|__________|__________|__________|\n" +
+		"  |          |          |          |          |          |\n" +
+		"1 |Undevelop |Undevelop |Undevelop | Villiage |Undevelop |\n" +
+		"  |__________|__________|__________|__________|__________|\n" +
+                "      1           2          3          4          5       ");
 }
 }
