@@ -5,13 +5,12 @@
  */
 package cit260.cityOfAaronLB.view;
 
-import java.util.Scanner;
 
 /**
  *
  * @author lafon
  */
-public class Map {
+public class Map{
     
     public void displayMap(){
         System.out.println(
@@ -31,11 +30,6 @@ public class Map {
                     "|          |          |          |          |          |\n" +
                     "|Undevelop |Undevelop |Undevelop | Villiage |Undevelop |\n" +
                     "|___(21)___|__(22)____|___(23)___|___(24)___|___(25)___|\n");
-        
-        System.out.println("Select where you would like to go:");
-            Scanner inFile;
-            inFile = new Scanner(System.in);
-            String selection = inFile.nextLine().trim();
             
     }
         

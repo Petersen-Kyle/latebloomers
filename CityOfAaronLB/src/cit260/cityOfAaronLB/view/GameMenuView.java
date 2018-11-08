@@ -44,6 +44,8 @@ public void gameMenuView() throws IOException {
             break;
         case '2':
             System.out.println("Where would you like to move to? ");
+            MoveLocation newLocation = new MoveLocation();
+            newLocation.moveLocation();
             break;
         case '3':
             System.out.println("Open Land Management");
