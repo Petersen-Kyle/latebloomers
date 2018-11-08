@@ -17,8 +17,5 @@ public class MoveLocation {
         System.out.println("Select where you would like to go:");
         int choice;
         choice = (int) System.in.read();
-        if(choice == 1){
-            System.out.println("Welcome to the temple!");
-        }
     }
 }
