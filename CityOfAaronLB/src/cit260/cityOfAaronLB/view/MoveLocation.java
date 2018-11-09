@@ -34,9 +34,13 @@ public class MoveLocation {
         boolean valid = false;
         while (valid == false) {
             System.out.println("Enter where you would like to go:");
-            char name;
-            name = (char) System.in.read();
-            inputs[0] = name;
+            char choice;
+            choice = (char) System.in.read();
+            inputs[0] = choice;
+            if (choice == ' ') {
+                System.out.println("You must enter a non-blank value");
+                continue;
+            }
             valid = true;
         }
         return inputs;
