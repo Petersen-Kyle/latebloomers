@@ -5,6 +5,9 @@
  */
 package cit260.cityOfAaronLB.view;
 
+import java.io.IOException;
+import java.util.Scanner;
+
 /**
  *
  * @author lafon
@@ -12,7 +15,10 @@ package cit260.cityOfAaronLB.view;
 public class WheatField {
     
     
-    public void wheatField(){
-       System.out.println("Welcome to the wheat field!");  
+    public void wheatField() throws IOException{
+        System.out.println("Welcome to the Wheat Field");
+
     }
+    
+
 }

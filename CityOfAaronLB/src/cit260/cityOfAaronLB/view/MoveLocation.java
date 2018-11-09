@@ -6,6 +6,7 @@
 package cit260.cityOfAaronLB.view;
 
 import java.io.IOException;
+import java.util.Scanner;
 
 /**
  *
@@ -13,9 +14,44 @@ import java.io.IOException;
  */
 public class MoveLocation {
     
-    public void moveLocation()throws IOException{
-        System.out.println("Select where you would like to go:");
-        int choice;
-        choice = (int) System.in.read();
+    public void moveLocation() throws IOException{
+        boolean endOfView = false;
+
+        do {
+
+            char[] inputs = this.getInputs();
+            if (inputs[0] == 'e') {
+                System.exit(0);
+            }
+            endOfView = doAction(inputs);
+
+        } while (endOfView != true);
+
     }
+
+    public char[] getInputs() throws IOException{
+        char[] inputs = new char[1];
+        boolean valid = false;
+        while (valid == false) {
+            System.out.println("Enter where you would like to go:");
+            char name;
+            name = (char) System.in.read();
+            inputs[0] = name;
+            valid = true;
+        }
+        return inputs;
+    }
+
+    private boolean doAction(char[] inputs) throws IOException {
+        if (inputs[0] == '2') {
+            WheatField newField = new WheatField();
+            newField.wheatField();
+        } else if (inputs[0] == '1') {
+            Temple newTemple = new Temple();
+            newTemple.temple();
+        }
+        return true;
+
+    }
+    
 }

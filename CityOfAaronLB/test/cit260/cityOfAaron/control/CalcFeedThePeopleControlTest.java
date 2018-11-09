@@ -5,7 +5,7 @@
  */
 package cit260.cityOfAaron.control;
 
-import cit260.cityOfAaronLB.control.StoreHouseControl;
+import cit260.cityOfAaronLB.control.calcFeedThePeopleControl;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -15,9 +15,9 @@ import static org.junit.Assert.*;
  *
  * @author lafon
  */
-public class StoreHouseControlTest {
+public class CalcFeedThePeopleControlTest {
     
-    public StoreHouseControlTest() {
+    public CalcFeedThePeopleControlTest() {
     }
     
     @BeforeClass
@@ -49,7 +49,7 @@ public class StoreHouseControlTest {
         int expResult = 240;
         
         //Call the method
-        int result = StoreHouseControl.calcFeedThePeople(wheatInStorage, wheatHarvested, tithes, eatenByRats, peopleToFeed);
+        int result = calcFeedThePeopleControl.calcFeedThePeople(wheatInStorage, wheatHarvested, tithes, eatenByRats, peopleToFeed);
         
         //Test to see if the result returned equals the expected result
         assertEquals(expResult, result);
@@ -69,7 +69,7 @@ public class StoreHouseControlTest {
         expResult = -1;
         
         //Call the method
-        result = StoreHouseControl.calcFeedThePeople(wheatInStorage, wheatHarvested, tithes, eatenByRats, peopleToFeed);
+        result = calcFeedThePeopleControl.calcFeedThePeople(wheatInStorage, wheatHarvested, tithes, eatenByRats, peopleToFeed);
         
         //Test to see if the result returned equals the expected result
         assertEquals(expResult, result);
@@ -89,7 +89,7 @@ public class StoreHouseControlTest {
         expResult = -2;
         
         //Call the method
-        result = StoreHouseControl.calcFeedThePeople(wheatInStorage, wheatHarvested, tithes, eatenByRats, peopleToFeed);
+        result = calcFeedThePeopleControl.calcFeedThePeople(wheatInStorage, wheatHarvested, tithes, eatenByRats, peopleToFeed);
         
         //Test to see if the result returned equals the expected result
         assertEquals(expResult, result);
@@ -109,7 +109,7 @@ public class StoreHouseControlTest {
         expResult = -3;
         
         //Call the method
-        result = StoreHouseControl.calcFeedThePeople(wheatInStorage, wheatHarvested, tithes, eatenByRats, peopleToFeed);
+        result = calcFeedThePeopleControl.calcFeedThePeople(wheatInStorage, wheatHarvested, tithes, eatenByRats, peopleToFeed);
         
         //Test to see if the result returned equals the expected result
         assertEquals(expResult, result);
@@ -129,7 +129,7 @@ public class StoreHouseControlTest {
         expResult = -4;
         
         //Call the method
-        result = StoreHouseControl.calcFeedThePeople(wheatInStorage, wheatHarvested, tithes, eatenByRats, peopleToFeed);
+        result = calcFeedThePeopleControl.calcFeedThePeople(wheatInStorage, wheatHarvested, tithes, eatenByRats, peopleToFeed);
         
         //Test to see if the result returned equals the expected result
         assertEquals(expResult, result);
@@ -149,7 +149,7 @@ public class StoreHouseControlTest {
         expResult = 690;
         
         //Call the method
-        result = StoreHouseControl.calcFeedThePeople(wheatInStorage, wheatHarvested, tithes, eatenByRats, peopleToFeed);
+        result = calcFeedThePeopleControl.calcFeedThePeople(wheatInStorage, wheatHarvested, tithes, eatenByRats, peopleToFeed);
         
         //Test to see if the result returned equals the expected result
         assertEquals(expResult, result); 

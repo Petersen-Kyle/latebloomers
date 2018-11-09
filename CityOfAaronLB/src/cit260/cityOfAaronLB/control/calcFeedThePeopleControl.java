@@ -9,7 +9,7 @@ package cit260.cityOfAaronLB.control;
  *
  * @author lafon
  */
-public class StoreHouseControl {
+public class calcFeedThePeopleControl {
     public static int calcFeedThePeople(int wheatInStorage, int wheatHarvested, int tithes, int eatenByRats, int peopleToFeed){
         int wheatTotal = wheatInStorage + wheatHarvested - tithes - eatenByRats;
         
