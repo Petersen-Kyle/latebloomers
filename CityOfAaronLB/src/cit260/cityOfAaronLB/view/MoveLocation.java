@@ -12,40 +12,12 @@ import java.util.Scanner;
  *
  * @author lafon
  */
-public class MoveLocation {
+public class MoveLocation extends View {
     
-    public void moveLocation() throws IOException{
-        boolean endOfView = false;
-
-        do {
-
-            char[] inputs = this.getInputs();
-            if (inputs[0] == 'e') {
-                System.exit(0);
-            }
-            endOfView = doAction(inputs);
-
-        } while (endOfView != true);
-
-    }
-
-    public char[] getInputs() throws IOException{
-        char[] inputs = new char[1];
-        boolean valid = false;
-        while (valid == false) {
-            System.out.println("Enter where you would like to go:");
-            char choice;
-            choice = (char) System.in.read();
-            inputs[0] = choice;
-            if (choice == ' ') {
-                System.out.println("You must enter a non-blank value");
-                continue;
-            }
-            valid = true;
-        }
-        return inputs;
-    }
-
+    
+   String moveLocation = this.getInput("\nEnter where you would like to go: ");
+    inputs[0] = moveLocation;
+    
     private boolean doAction(char[] inputs) throws IOException {
         if (inputs[0] == '2') {
             WheatField newField = new WheatField();
