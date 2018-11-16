@@ -6,49 +6,55 @@
 package cit260.cityOfAaronLB.view;
 
 import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
  * @author lafon
  */
+
 public abstract class View implements ViewInterface {
-    public void view() throws IOException{
+    public View(){
+        
+    }
+    @Override
+    public void display() {
         boolean endOfView = false;
-
         do {
-
-            char[] inputs = this.getInput();
-            if (inputs[0] == 'q') {
+            String inputs = this.getInputs();
+            if (inputs.equals('e')) {
                 System.exit(0);
             }
-
+            endOfView = doAction(inputs);
         } while (endOfView != true);
 
     }
-    public char[] getInput() throws IOException{
-        char[] inputs = new char[1];
+    @Override
+    public String getInput(String promptMessage) {
+        String[] inputs = new String[1];
         boolean valid = false;
         while (valid == false) {
             char choice;
             choice = (char) System.in.read();
-            inputs[0] = choice;
-            if (choice == '\n' || choice == ' ') {
-                System.out.println("You must enter a non-blank value");
-                continue;
-            }
+            inputs[0].equals(choice);
+            if (choice == ' ') {
+                            }
             valid = true;
         }
-        return inputs;
+    return null;
     }
-    private boolean doAction(char[] inputs) throws IOException{
-        if (inputs[0] == '2') {
+    @Override
+        public boolean doAction(String inputs) throws IOException {
+        if (inputs.equals('2')) {
             WheatField newField = new WheatField();
             newField.wheatField();
-        } else if (inputs[0] == '1') {
+        } else if (inputs.equals('1')) {
             Temple newTemple = new Temple();
             newTemple.temple();
         }
         return true;
 
-        }
+    }
+
 }

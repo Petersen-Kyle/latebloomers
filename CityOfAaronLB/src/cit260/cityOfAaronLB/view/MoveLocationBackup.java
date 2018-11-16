@@ -12,6 +12,7 @@ import java.util.Scanner;
  *
  * @author lafon
  */
+/**
 public class MoveLocation {
     
     public void moveLocation() throws IOException{
@@ -59,3 +60,4 @@ public class MoveLocation {
     }
     
 }
+*/

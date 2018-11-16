@@ -14,23 +14,16 @@ import java.util.Scanner;
  */
 public class MoveLocation extends View {
     
-    public void moveLocation() throws IOException{
-        
-        
-        char[] view = this.getInputs("\nWhere would you like to go: ");
-        inputs[0] = view;
+    public void moveLocation() {
+        String moveLocation = this.getInput("\nWhere would you like to go: ");
+        input = moveLocation;
     }
     
-    private boolean doAction(char[] inputs) throws IOException {
-        if (inputs[0] == '2') {
-            WheatField newField = new WheatField();
-            newField.wheatField();
-        } else if (inputs[0] == '1') {
-            Temple newTemple = new Temple();
-            newTemple.temple();
-        }
-        return true;
+    
 
-        }
+
+    
+
+    
     
 }
