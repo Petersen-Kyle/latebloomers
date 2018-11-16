@@ -13,21 +13,21 @@ import java.util.logging.Logger;
  *
  * @author lafon
  */
-
+/**
 public abstract class View implements ViewInterface {
     public View(){
         
     }
     @Override
     public void display() {
-        boolean endOfView = false;
+        boolean endView = false;
         do {
             String inputs = this.getInputs();
             if (inputs.equals('e')) {
                 System.exit(0);
             }
-            endOfView = doAction(inputs);
-        } while (endOfView != true);
+            endView = doAction(inputs);
+        } while (endView != true);
 
     }
     @Override
@@ -58,3 +58,4 @@ public abstract class View implements ViewInterface {
     }
 
 }
+*/

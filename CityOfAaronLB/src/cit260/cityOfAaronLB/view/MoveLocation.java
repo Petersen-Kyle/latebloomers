@@ -12,6 +12,7 @@ import java.util.Scanner;
  *
  * @author lafon
  */
+/**
 public class MoveLocation extends View {
     
     public void moveLocation() {
@@ -27,3 +28,4 @@ public class MoveLocation extends View {
     
     
 }
+*/

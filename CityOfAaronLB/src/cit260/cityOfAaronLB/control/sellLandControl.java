@@ -11,7 +11,15 @@ import java.util.Random;
  * @author pytha
  */
 public class sellLandControl {
-    public static int sellLand(int userLandSell, int landPrice, int acresAvailable, int acresPlanted, int wheatInStorage){
+    public static int sellLand(String inputs, int landPrice, int acresAvailable, int acresPlanted, int wheatInStorage){
+        if (landPrice == ' ') {
+            landPrice = 27;
+            acresAvailable = 100;
+            acresPlanted = 80;
+            wheatInStorage = 500;
+        }
+        
+        int userLandSell = Integer.parseInt(inputs);
         if(userLandSell<=0){
             return -1;
         } 
@@ -21,7 +29,6 @@ public class sellLandControl {
 //        landPrice=(int)(Math.random()*10)+17;
         acresAvailable=acresAvailable-userLandSell;
         wheatInStorage=wheatInStorage+(userLandSell*landPrice);
-        
         return wheatInStorage;
     }
 }

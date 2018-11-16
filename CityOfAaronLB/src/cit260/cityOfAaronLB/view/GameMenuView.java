@@ -48,7 +48,8 @@ public void gameMenuView() throws IOException {
             newLocation.display();
             break;
         case '3':
-            System.out.println("Open Land Management");
+            SellLandView sellLand = new SellLandView();
+            sellLand.display();
             break;
         case '4':
             StorehouseMenu newStorehouseMenu = new StorehouseMenu();
