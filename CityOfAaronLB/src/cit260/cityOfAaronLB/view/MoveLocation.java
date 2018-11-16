@@ -19,11 +19,9 @@ public class MoveLocation extends View {
         
         char[] view = this.getInputs("\nWhere would you like to go: ");
         inputs[0] = view;
-        
-
-    
     }
-    private boolean doAction(char[] inputs) throws IOException{
+    
+    private boolean doAction(char[] inputs) throws IOException {
         if (inputs[0] == '2') {
             WheatField newField = new WheatField();
             newField.wheatField();
