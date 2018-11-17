@@ -15,7 +15,7 @@ import java.util.Scanner;
  */
 
 public class SellLandView {
-    public void display() throws IOException{
+    public void display(){
         boolean endOfView = false;
         do {
             String inputs = this.getInputs();
@@ -26,7 +26,7 @@ public class SellLandView {
             } while (endOfView != true);
     }
         
-    public String getInputs() throws IOException{
+    public String getInputs(){
         String[] inputs = new String[1];
         boolean valid = false;
         while (valid == false) {

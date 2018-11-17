@@ -15,7 +15,7 @@ import java.util.Scanner;
 
 public class MoveLocation {
     
-    public void display() throws IOException{
+    public void display(){
         boolean endOfView = false;
 
         do {
@@ -30,7 +30,7 @@ public class MoveLocation {
 
     }
 
-    public String getInputs() throws IOException{
+    public String getInputs(){
         String inputs = "";
         boolean valid = false;
         while (valid == false) {
@@ -47,7 +47,7 @@ public class MoveLocation {
         return inputs;
     }
 
-    private boolean doAction(String inputs) throws IOException {
+    private boolean doAction(String inputs) {
         if (inputs.equals("2")) {
             WheatField newField = new WheatField();
             newField.wheatField();
