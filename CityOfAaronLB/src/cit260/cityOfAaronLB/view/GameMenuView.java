@@ -13,7 +13,7 @@ import java.io.IOException;
  */
 public class GameMenuView {
 
-public void gameMenuView() throws IOException {
+public void GameMenuView() {
   
     char choice, ignore;  
     for(;;) {

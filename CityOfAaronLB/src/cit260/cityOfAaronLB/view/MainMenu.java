@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package cit260.cityOfAaronLB.view;
+
 import java.io.IOException;
 
 /**
@@ -11,47 +12,33 @@ import java.io.IOException;
  * @author pytha
  */
 public class MainMenu extends View {
-    
-public MainMenu() {
-    super("Main Menu"
-    );
-    
-    char choice, ignore;  
-    for(;;) {
-    do {
-        System.out.println("Main Menu");
-        System.out.println("1. Start a new game");
-        System.out.println("2. Load a saved game");
-        System.out.println("3. Help");
-        System.out.println("Choose one or (E to Exit the game): ");
-        choice = (char) System.in.read();
-        
-        do{
-        ignore = (char) System.in.read();
-        } while(ignore != '\n');
-    } while(choice < '1' | choice > '3' & choice !='e' & choice !='E');
-    
-    if (choice == 'e' | choice == 'E') break;
-            
-    System.out.println("\n");
-    
-    switch(choice) {
-        case '1':
-            System.out.println("Welcome to a new game in the City of Aaron");
-            GameMenuView newGame = new GameMenuView();
-            newGame.gameMenuView();
-            break;
-        case '2':
-            System.out.println("Welcome back to the City of Aaron");
-            break;
-        case '3':
-            HelpMenu newHelp = new HelpMenu();
-            newHelp.display();
-            break;
 
-    }
-    System.out.println();
-    }
+    public MainMenu() {
+        super("Main Menu\n"
+                + "1. Start a new game\n"
+                + "2. Load a saved game\n"
+                + "3. Help\n"
+                + "Choose one or (E to Exit the game): ");
     }
 
-}  
+    @Override
+    public boolean doAction(String inputs) {
+        switch (inputs) {
+            case "1":
+                System.out.println("Welcome to a new game in the City of Aaron");
+                GameMenuView newGame = new GameMenuView();
+                newGame.GameMenuView();
+                break;
+            case "2":
+                System.out.println("Welcome back to the City of Aaron");
+                break;
+            case "3":
+                HelpMenu newHelp = new HelpMenu();
+                newHelp.display();
+                break;
+
+        }
+        return false;
+    }
+
+}
