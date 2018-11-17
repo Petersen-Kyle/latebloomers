@@ -10,10 +10,12 @@ import java.io.IOException;
  *
  * @author pytha
  */
-public class MainMenu {
+public class MainMenu extends View {
     
-public void mainMenu() throws IOException {
-  
+public MainMenu() {
+    super("Main Menu"
+    );
+    
     char choice, ignore;  
     for(;;) {
     do {
@@ -44,7 +46,7 @@ public void mainMenu() throws IOException {
             break;
         case '3':
             HelpMenu newHelp = new HelpMenu();
-            newHelp.helpMenu();
+            newHelp.display();
             break;
 
     }

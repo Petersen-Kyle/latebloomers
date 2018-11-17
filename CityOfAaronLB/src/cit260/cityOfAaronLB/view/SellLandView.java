@@ -21,10 +21,11 @@ public class SellLandView {
             String inputs = this.getInputs();
             if (inputs.equals('q')) {
                 System.exit(0);
-            }
+            } 
                 endOfView = doAction(inputs);
             } while (endOfView != true);
     }
+        
     public String getInputs() throws IOException{
         String[] inputs = new String[1];
         boolean valid = false;
@@ -42,8 +43,8 @@ public class SellLandView {
         return null;
     }
     public boolean doAction(String inputs) {
-            sellLandControl newSell = new sellLandControl();
-            System.out.println();
+         //   sellLandControl newSell = new sellLandControl();
+            System.out.println("You sold + inputs + land.");
             return true;
     }
         

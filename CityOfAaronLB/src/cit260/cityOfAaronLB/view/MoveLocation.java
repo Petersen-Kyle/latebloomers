@@ -13,28 +13,50 @@ import java.util.Scanner;
  * @author lafon
  */
 
-public class MoveLocation extends View {
+public class MoveLocation {
     
-    public void moveLocation() {
-        String moveLocation = this.getInput("\nWhere would you like to go: ");
-        inputs[0] = moveLocation;
+    public void display() throws IOException{
+        boolean endOfView = false;
+
+        do {
+
+            String inputs = this.getInputs();
+            if (inputs.equals("e")) {
+                System.exit(0);
+            }
+            endOfView = doAction(inputs);
+
+        } while (endOfView != true);
+
     }
 
-    @Override
-    public String getInputs() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public String getInputs() throws IOException{
+        String inputs = "";
+        boolean valid = false;
+        while (valid == false) {
+            System.out.println("Enter where you would like to go:");
+            char choice;
+            choice = (char) System.in.read();
+            //inputs[0] = choice;
+            if (choice == ' ') {
+                System.out.println("You must enter a non-blank value");
+                continue;
+            }
+            valid = true;
+        }
+        return inputs;
     }
 
-    @Override
-    public boolean doAction(String[] inputs) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    private boolean doAction(String inputs) throws IOException {
+        if (inputs.equals("2")) {
+            WheatField newField = new WheatField();
+            newField.wheatField();
+        } else if (inputs.equals("1")) {
+            Temple newTemple = new Temple();
+            newTemple.temple();
+        }
+        return true;
+
     }
-    
-    
-
-
-    
-
-    
     
 }

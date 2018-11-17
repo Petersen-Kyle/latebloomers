@@ -6,6 +6,7 @@
 package cit260.cityOfAaronLB.view;
 
 import java.io.IOException;
+import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -15,55 +16,55 @@ import java.util.logging.Logger;
  */
 public abstract class View implements ViewInterface {
 
+    private String defaultMessage;
+
     public View() {
 
     }
 
+    public View(String msg) {
+        defaultMessage = msg;
+    }
+
     @Override
     public void display() {
-        boolean endView = false;
-        try {
-            do {
-                String inputs = this.getInputs();
-                if (inputs.equals('e')) {
-                    System.exit(0);
-                }
-                endView = doAction(inputs);
-            } while (endView != true);
-        } catch (IOException e) {
+        display(defaultMessage);
 
-        }
+    }
+
+    @Override
+    public void display(String message) {
+        boolean endView = false;
+        do {
+            String inputs = this.getInput(message);
+            if (inputs.toLowerCase().trim().equals("q")) {
+                return;
+            }
+            endView = doAction(inputs);
+        } while (endView != true);
+    }
+
+    @Override
+    public String getInput() {
+        return getInput(defaultMessage);
     }
 
     @Override
     public String getInput(String promptMessage) {
-        String[] inputs = new String[1];
+        String choice = "";
+        Scanner inChoice;
+        inChoice = new Scanner(System.in);
         boolean valid = false;
-        try {
-            while (valid == false) {
-                char choice;
-                choice = (char) System.in.read();
-                inputs[0].equals(choice);
-                if (choice == ' ') {
-                }
+        while (!valid) {
+            System.out.println(promptMessage);
+            choice = inChoice.nextLine().trim();
+            if (choice.equals("")) {
+                System.out.println("Entry can not be blank. ");
+            } else {
                 valid = true;
             }
-        } catch (IOException e) {
-
         }
-        return null;
+
+        return choice;
     }
-
-    public boolean doAction(String inputs) throws IOException {
-        if (inputs.equals('2')) {
-            WheatField newField = new WheatField();
-            newField.wheatField();
-        } else if (inputs.equals('1')) {
-            Temple newTemple = new Temple();
-            newTemple.temple();
-        }
-        return true;
-
-    }
-
 }

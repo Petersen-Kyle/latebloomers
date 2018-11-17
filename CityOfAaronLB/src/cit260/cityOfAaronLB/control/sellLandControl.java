@@ -12,7 +12,7 @@ import java.util.Random;
  */
 public class sellLandControl {
     public static int sellLand(String inputs, int landPrice, int acresAvailable, int acresPlanted, int wheatInStorage){
-        if (landPrice == ' ') {
+        if (landPrice == 0) {
             landPrice = 27;
             acresAvailable = 100;
             acresPlanted = 80;

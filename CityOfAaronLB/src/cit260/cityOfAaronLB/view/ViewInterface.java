@@ -11,7 +11,8 @@ package cit260.cityOfAaronLB.view;
  */
 public interface ViewInterface {
     public void display();
-    public String getInputs();
+    public void display(String message);
+    public String getInput();
     public String getInput(String promptMessage);
-    public boolean doAction(String[] inputs);
+    public boolean doAction(String inputs);
 }
