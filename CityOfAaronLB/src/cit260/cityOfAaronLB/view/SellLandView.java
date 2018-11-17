@@ -4,44 +4,19 @@
  * and open the template in the editor.
  */
 package cit260.cityOfAaronLB.view;
-import cit260.cityOfAaronLB.control.sellLandControl;
-import java.io.IOException;
-import java.util.Scanner;
-
 
 /**
  *
  * @author pytha
  */
 
-public class SellLandView {
-    public void display(){
-        boolean endOfView = false;
-        do {
-            String inputs = this.getInputs();
-            if (inputs.equals('q')) {
-                System.exit(0);
-            } 
-                endOfView = doAction(inputs);
-            } while (endOfView != true);
-    }
-        
-    public String getInputs(){
-        String[] inputs = new String[1];
-        boolean valid = false;
-        while (valid == false) {
-            System.out.println("Enter the amount of land to sell: ");
-            Scanner inChoice;
-            inChoice = new Scanner(System.in);
-            String choice = inChoice.nextLine().trim();
- //           inputs[0].equals(choice);
-            if (choice.equals(' ')) {
-                System.out.println("You must enter a non-blank value");
-            }
-            valid = true;
-        }
-        return null;
-    }
+public class SellLandView extends View {
+    
+    public SellLandView() {
+        super("Enter the amount of land to sell: ");
+    
+}
+
     public boolean doAction(String inputs) {
          //   sellLandControl newSell = new sellLandControl();
             System.out.println("You sold + inputs + land.");

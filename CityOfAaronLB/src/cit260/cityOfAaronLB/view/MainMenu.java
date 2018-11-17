@@ -27,7 +27,7 @@ public class MainMenu extends View {
             case "1":
                 System.out.println("Welcome to a new game in the City of Aaron");
                 GameMenuView newGame = new GameMenuView();
-                newGame.GameMenuView();
+                newGame.display();
                 break;
             case "2":
                 System.out.println("Welcome back to the City of Aaron");

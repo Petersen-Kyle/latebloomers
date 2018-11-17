@@ -13,41 +13,14 @@ import java.util.Scanner;
  * @author lafon
  */
 
-public class MoveLocation {
+public class MoveLocation extends View {
     
-    public void display(){
-        boolean endOfView = false;
-
-        do {
-
-            String inputs = this.getInputs();
-            if (inputs.equals("e")) {
-                System.exit(0);
-            }
-            endOfView = doAction(inputs);
-
-        } while (endOfView != true);
-
+    public MoveLocation() {
+        super("Enter where you would like to go:");
     }
 
-    public String getInputs(){
-        String inputs = "";
-        boolean valid = false;
-        while (valid == false) {
-            System.out.println("Enter where you would like to go:");
-            char choice;
-            choice = (char) System.in.read();
-            //inputs[0] = choice;
-            if (choice == ' ') {
-                System.out.println("You must enter a non-blank value");
-                continue;
-            }
-            valid = true;
-        }
-        return inputs;
-    }
 
-    private boolean doAction(String inputs) {
+    public boolean doAction(String inputs) {
         if (inputs.equals("2")) {
             WheatField newField = new WheatField();
             newField.wheatField();

@@ -15,7 +15,7 @@ import java.util.Scanner;
 public class WheatField {
     
     
-    public void wheatField() throws IOException{
+    public void wheatField() {
         System.out.println("Welcome to the Wheat Field");
 
     }

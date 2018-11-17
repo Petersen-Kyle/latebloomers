@@ -39,7 +39,7 @@ public abstract class View implements ViewInterface {
             String inputs = this.getInput(message);
             if (inputs.toLowerCase().trim().equals("q")) {
                 return;
-            }
+            } 
             endView = doAction(inputs);
         } while (endView != true);
     }
@@ -65,6 +65,6 @@ public abstract class View implements ViewInterface {
             }
         }
 
-        return choice;
+        return null;
     }
 }
