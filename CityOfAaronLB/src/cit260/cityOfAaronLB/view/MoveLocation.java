@@ -12,12 +12,22 @@ import java.util.Scanner;
  *
  * @author lafon
  */
-/**
+
 public class MoveLocation extends View {
     
     public void moveLocation() {
         String moveLocation = this.getInput("\nWhere would you like to go: ");
-        input = moveLocation;
+        inputs[0] = moveLocation;
+    }
+
+    @Override
+    public String getInputs() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public boolean doAction(String[] inputs) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
     
@@ -28,4 +38,3 @@ public class MoveLocation extends View {
     
     
 }
-*/

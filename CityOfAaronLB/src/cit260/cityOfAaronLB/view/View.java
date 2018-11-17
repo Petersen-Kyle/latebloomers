@@ -13,39 +13,48 @@ import java.util.logging.Logger;
  *
  * @author lafon
  */
-/**
 public abstract class View implements ViewInterface {
-    public View(){
-        
+
+    public View() {
+
     }
+
     @Override
     public void display() {
         boolean endView = false;
-        do {
-            String inputs = this.getInputs();
-            if (inputs.equals('e')) {
-                System.exit(0);
-            }
-            endView = doAction(inputs);
-        } while (endView != true);
+        try {
+            do {
+                String inputs = this.getInputs();
+                if (inputs.equals('e')) {
+                    System.exit(0);
+                }
+                endView = doAction(inputs);
+            } while (endView != true);
+        } catch (IOException e) {
 
+        }
     }
+
     @Override
     public String getInput(String promptMessage) {
         String[] inputs = new String[1];
         boolean valid = false;
-        while (valid == false) {
-            char choice;
-            choice = (char) System.in.read();
-            inputs[0].equals(choice);
-            if (choice == ' ') {
-                            }
-            valid = true;
+        try {
+            while (valid == false) {
+                char choice;
+                choice = (char) System.in.read();
+                inputs[0].equals(choice);
+                if (choice == ' ') {
+                }
+                valid = true;
+            }
+        } catch (IOException e) {
+
         }
-    return null;
+        return null;
     }
-    @Override
-        public boolean doAction(String inputs) throws IOException {
+
+    public boolean doAction(String inputs) throws IOException {
         if (inputs.equals('2')) {
             WheatField newField = new WheatField();
             newField.wheatField();
@@ -58,4 +67,3 @@ public abstract class View implements ViewInterface {
     }
 
 }
-*/
