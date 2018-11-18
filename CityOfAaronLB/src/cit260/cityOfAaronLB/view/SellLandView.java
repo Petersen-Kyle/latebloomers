@@ -16,7 +16,7 @@ public class SellLandView extends View {
         super("Enter the amount of land to sell: ");
     
 }
-
+    @Override
     public boolean doAction(String inputs) {
          //   sellLandControl newSell = new sellLandControl();
             System.out.println("You sold + inputs + land.");

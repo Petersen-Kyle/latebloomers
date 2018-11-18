@@ -5,7 +5,6 @@
  */
 package cit260.cityOfAaronLB.view;
 
-import java.util.Scanner;
 
 /**
  *
@@ -57,14 +56,17 @@ public class StartProgramView extends View {
             case "e":
                 System.out.println("Thanks for playing Late Bloomers City of Aaron");
                 System.exit(0);
+                break;
             case "":
                 System.out.println("You must enter a non-blank value");
+                break;
             default:
                 String name = "";
-                inputs = name;
+                name = inputs;
                 System.out.println("Welcome to the City of Aaron " + name);
                 MainMenu newMainMenu = new MainMenu();
                 newMainMenu.display();
+                break;
         }
         return true;
 

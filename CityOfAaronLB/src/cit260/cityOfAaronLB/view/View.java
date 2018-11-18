@@ -65,6 +65,6 @@ public abstract class View implements ViewInterface {
             }
         }
 
-        return null;
+        return choice;
     }
 }
