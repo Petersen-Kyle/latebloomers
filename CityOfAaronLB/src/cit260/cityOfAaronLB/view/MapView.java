@@ -5,13 +5,21 @@
  */
 package cit260.cityOfAaronLB.view;
 
+import cit260.cityOfAaronLB.model.Game;
+import cit260.cityOfAaronLB.model.Map;
+
 /**
  *
  * @author lafon
  */
-public class Map {
+public class MapView {
 
     public void displayMap() {
+        Map mapData = new Map();
+        Game game = new Game();
+        int row = mapData.getRow();
+        int column = mapData.getRow();
+        
         System.out.println(
                     " __________ __________ __________ __________ __________ \n" +
                     "|          |          |          |          |          |\n" +
