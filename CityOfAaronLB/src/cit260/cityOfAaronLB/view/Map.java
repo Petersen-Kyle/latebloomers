@@ -5,14 +5,13 @@
  */
 package cit260.cityOfAaronLB.view;
 
-
 /**
  *
  * @author lafon
  */
-public class Map{
-    
-    public void displayMap(){
+public class Map {
+
+    public void displayMap() {
         System.out.println(
                     " __________ __________ __________ __________ __________ \n" +
                     "|          |          |          |          |          |\n" +
@@ -30,8 +29,5 @@ public class Map{
                     "|          |          |          |          |          |\n" +
                     "|Undevelop |Undevelop |Undevelop | Villiage |Undevelop |\n" +
                     "|___(21)___|__(22)____|___(23)___|___(24)___|___(25)___|\n");
-            
     }
-        
- }
-
+}
