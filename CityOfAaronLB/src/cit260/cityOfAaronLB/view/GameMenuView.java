@@ -29,7 +29,7 @@ public class GameMenuView extends View{
         switch(inputs) {
         case "1":
             System.out.println("City of Aaron Map");
-            Map newMap = new Map();
+            MapView newMap = new MapView();
             newMap.displayMap();
             break;
         case "2":
