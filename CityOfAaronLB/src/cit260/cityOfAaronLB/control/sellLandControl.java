@@ -26,7 +26,7 @@ public class sellLandControl {
         else if(userLandSell > acresAvailable - acresPlanted){
             return -2;
         }
-//        landPrice=(int)(Math.random()*10)+17;
+        landPrice=(int)(Math.random()*10)+17;
         acresAvailable=acresAvailable-userLandSell;
         wheatInStorage=wheatInStorage+(userLandSell*landPrice);
         return wheatInStorage;

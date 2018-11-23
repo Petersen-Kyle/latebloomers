@@ -19,6 +19,10 @@ import cit260.cityOfAaronLB.view.StartProgramView;
  * @author lafon
  */
 public class CityOfAaronLB {
+    
+    public String acresOwned = "1000";
+    public String wheatInStorage = "1000";
+    public String population = "100";
 
     /**
      * @param args the command line arguments
