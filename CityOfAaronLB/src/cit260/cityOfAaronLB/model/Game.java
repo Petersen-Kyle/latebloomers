@@ -16,6 +16,15 @@ public class Game implements Serializable{
     private int acresOwned;
     private int wheatInStroage;
     private Player player;
+    private Game currentGame;
+
+    public Game getCurrentGame() {
+        return currentGame;
+    }
+
+    public void setCurrentGame(Game currentGame) {
+        this.currentGame = currentGame;
+    }
     
     public Game() {
     }

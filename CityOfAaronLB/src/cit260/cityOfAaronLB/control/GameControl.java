@@ -5,6 +5,8 @@
  */
 package cit260.cityOfAaronLB.control;
 
+import cit260.cityOfAaronLB.model.Player;
+
 
 
 /**
@@ -17,7 +19,7 @@ public class GameControl {
             System.out.println("***savePLayer() called ***");
             return new Player();  
     }
-    public static void creatNewGame(Player player) {
+    public static void createNewGame(Player player) {
             System.out.println("***createNewGame() called ***");
             return new newGame();
         
