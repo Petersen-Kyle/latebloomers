@@ -4,7 +4,9 @@
  * and open the template in the editor.
  */
 package cit260.cityOfAaronLB.view;
-
+import cit260.cityOfAaronLB.control.GameControl;
+import cit260.cityOfAaronLB.model.Player;
+        
 
 /**
  *
@@ -27,6 +29,7 @@ public class MainMenu extends View {
                 System.out.println("Welcome to a new game in the City of Aaron");
                 Player playersName = new Player();
                 Player player = GameControl.savePlayer(playersName);
+                GameControl.createNewGame(player);
                 GameMenuView newGame = new GameMenuView();
                 newGame.display();
                 break;

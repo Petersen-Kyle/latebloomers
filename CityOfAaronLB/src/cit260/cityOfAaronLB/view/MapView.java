@@ -8,6 +8,7 @@ package cit260.cityOfAaronLB.view;
 import CityOfAaronLB.CityOfAaronLB;
 import cit260.cityOfAaronLB.model.Game;
 import cit260.cityOfAaronLB.model.Map;
+import cit260.cityOfAaronLB.model.Location;
 
 /**
  *
@@ -15,33 +16,10 @@ import cit260.cityOfAaronLB.model.Map;
  */
 public class MapView {
 
-    public static Map createMap(Game game, Map map, int row, int column) {
-        if (row < 0 || column < 0) {
-            return null;
-        }
-        String description = map.setDescription("description");
-        int rows = map.setRow(5);
-        int columns = map.setColumn(5);
-        Game currentMap = game.setCurrentGame(game);
-
-    return map ;
-}
-    public static Location[][] createLocations(int rows, int columns) {
-        if (createLocations() == null) {
-            return null;
-        }
-    }
-
-    private static int assignItemsToLocations(Location[][] locations, InventoryItem[], itemsInGame) {
-        if (assignItemsToLocations() == null) {
-            return null;
-        }
-    }
-
     public void displayMap() {
       String leftIndicator;
       String rightIndicator;
-      Game game = CityOfAaronLB.getCurrentGame(); // retreive the game
+      Game game = CityOfAaronLB.getGame(); // retreive the game
       Map map = game.getMap(); // retreive the map from game
       Location[][] locations = map.getLocations(); // retreive the locations from map
         // Build the heading of the map

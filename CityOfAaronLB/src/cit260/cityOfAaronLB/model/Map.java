@@ -5,6 +5,7 @@
  */
 package cit260.cityOfAaronLB.model;
 import java.io.Serializable;
+import java.util.Arrays;
 import java.util.Objects;
 
 /**
@@ -12,30 +13,23 @@ import java.util.Objects;
  * @author lafon
  */
 public class Map implements Serializable {
-    Locations location = new Locations();
+    Location locations[][];
     private Point currentLocation;
-    private int row;
-    private int column;
-    private String description;
+    private int rows;
+    private int columns;
 
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public String getDescription() {
-        return description;
-    }
 
     public Map() {
     }
-    
-    public Locations getLocation() {
-        return location;
+
+    public Location[][] getLocations() {
+        return locations;
     }
 
-    public void setLocation(Locations location) {
-        this.location = location;
+    public void setLocations(Location[][] locations) {
+        this.locations = locations;
     }
+    
 
     public Point getCurrentLocation() {
         return currentLocation;
@@ -45,29 +39,29 @@ public class Map implements Serializable {
         this.currentLocation = currentLocation;
     }
 
-    public int getRow() {
-        return row;
+    public int getRows() {
+        return rows;
     }
 
-    public void setRow(int row) {
-        this.row = row;
+    public void setRows(int rows) {
+        this.rows = rows;
     }
 
-    public int getColumn() {
-        return column;
+    public int getColumns() {
+        return columns;
     }
 
-    public void setColumn(int column) {
-        this.column = column;
+    public void setColumns(int columns) {
+        this.columns = columns;
     }
 
     @Override
     public int hashCode() {
-        int hash = 5;
-        hash = 79 * hash + Objects.hashCode(this.location);
-        hash = 79 * hash + Objects.hashCode(this.currentLocation);
-        hash = 79 * hash + this.row;
-        hash = 79 * hash + this.column;
+        int hash = 7;
+        hash = 67 * hash + Arrays.deepHashCode(this.locations);
+        hash = 67 * hash + Objects.hashCode(this.currentLocation);
+        hash = 67 * hash + this.rows;
+        hash = 67 * hash + this.columns;
         return hash;
     }
 
@@ -83,13 +77,13 @@ public class Map implements Serializable {
             return false;
         }
         final Map other = (Map) obj;
-        if (this.row != other.row) {
+        if (this.rows != other.rows) {
             return false;
         }
-        if (this.column != other.column) {
+        if (this.columns != other.columns) {
             return false;
         }
-        if (!Objects.equals(this.location, other.location)) {
+        if (!Arrays.deepEquals(this.locations, other.locations)) {
             return false;
         }
         if (!Objects.equals(this.currentLocation, other.currentLocation)) {
@@ -100,8 +94,10 @@ public class Map implements Serializable {
 
     @Override
     public String toString() {
-        return "Map{" + "location=" + location + ", currentLocation=" + currentLocation + ", row=" + row + ", column=" + column + '}';
+        return "Map{" + "locations=" + locations + ", currentLocation=" + currentLocation + ", rows=" + rows + ", columns=" + columns + '}';
     }
+
+
     
     
     

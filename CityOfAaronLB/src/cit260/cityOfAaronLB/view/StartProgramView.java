@@ -5,6 +5,9 @@
  */
 package cit260.cityOfAaronLB.view;
 
+import CityOfAaronLB.CityOfAaronLB;
+import cit260.cityOfAaronLB.model.Player;
+
 
 /**
  *
@@ -61,9 +64,10 @@ public class StartProgramView extends View {
                 System.out.println("You must enter a non-blank value");
                 break;
             default:
-                String name = "";
-                name = inputs;
-                System.out.println("Welcome to the City of Aaron " + name);
+                Player player = new Player();
+                player.setName(inputs);
+                CityOfAaronLB.setPlayer(player);
+                System.out.println("Welcome to the City of Aaron " + inputs);
                 MainMenu newMainMenu = new MainMenu();
                 newMainMenu.display();
                 break;

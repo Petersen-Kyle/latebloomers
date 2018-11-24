@@ -8,6 +8,8 @@
 package CityOfAaronLB;
 
 
+import cit260.cityOfAaronLB.model.Game;
+import cit260.cityOfAaronLB.model.Player;
 import cit260.cityOfAaronLB.view.StartProgramView;
 //import java.util.HashSet;
 //import java.util.Set;
@@ -20,9 +22,24 @@ import cit260.cityOfAaronLB.view.StartProgramView;
  */
 public class CityOfAaronLB {
     
-    public String acresOwned = "1000";
-    public String wheatInStorage = "1000";
-    public String population = "100";
+    public static Player player;
+
+    public static Player getPlayer() {
+        return player;
+    }
+
+    public static void setPlayer(Player currentPlayer) {
+        player = currentPlayer;
+    }
+
+    public static Game getGame() {
+        return game;
+    }
+
+    public static void setGame(Game currentGame) {
+        game = currentGame;
+    }
+    public static Game game;
 
     /**
      * @param args the command line arguments
