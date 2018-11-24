@@ -19,7 +19,7 @@ public class Location implements Serializable {
     private String name;
     private String description;
     private Question question;
-    private InventoryItem item;
+    private Item item;
     private String sceneSymbol;
     
     
@@ -59,11 +59,11 @@ public class Location implements Serializable {
         this.question = question;
     }
 
-    public InventoryItem getItem() {
+    public Item getItem() {
         return item;
     }
 
-    public void setItem(InventoryItem item) {
+    public void setItem(Item item) {
         this.item = item;
     }
 

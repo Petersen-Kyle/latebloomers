@@ -11,13 +11,13 @@ import java.util.Objects;
  *
  * @author lafon
  */
-public class InventoryItem implements Serializable{
+public class Item implements Serializable{
     private String itemType;
     private String itemName;
     private int adjustments;
     private String description;
 
-    public InventoryItem() {
+    public Item() {
     }
     
     public String getItemType() {
@@ -73,7 +73,7 @@ public class InventoryItem implements Serializable{
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final InventoryItem other = (InventoryItem) obj;
+        final Item other = (Item) obj;
         if (this.adjustments != other.adjustments) {
             return false;
         }

@@ -14,7 +14,7 @@ import java.util.Objects;
  */
 public class Map implements Serializable {
     Location locations[][];
-    private Point currentLocation;
+    private Location currentLocation[][];
     private int rows;
     private int columns;
 
@@ -31,11 +31,11 @@ public class Map implements Serializable {
     }
     
 
-    public Point getCurrentLocation() {
+    public Location[][] getCurrentLocation() {
         return currentLocation;
     }
 
-    public void setCurrentLocation(Point currentLocation) {
+    public void setCurrentLocation(Location[][] currentLocation) {
         this.currentLocation = currentLocation;
     }
 

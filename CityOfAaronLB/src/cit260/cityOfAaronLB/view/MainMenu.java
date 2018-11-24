@@ -28,8 +28,8 @@ public class MainMenu extends View {
             case "1":
                 System.out.println("Welcome to a new game in the City of Aaron");
                 Player playersName = new Player();
-                Player player = GameControl.savePlayer(playersName);
-                GameControl.createNewGame(player);
+//                Player player = GameControl.savePlayer(playersName);
+                GameControl.createNewGame(playersName);
                 GameMenuView newGame = new GameMenuView();
                 newGame.display();
                 break;

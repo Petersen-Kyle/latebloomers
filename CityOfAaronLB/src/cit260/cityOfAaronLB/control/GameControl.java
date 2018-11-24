@@ -10,6 +10,7 @@ import cit260.cityOfAaronLB.model.Player;
 import cit260.cityOfAaronLB.model.Game;
 import cit260.cityOfAaronLB.model.Location;
 import cit260.cityOfAaronLB.model.Map;
+import cit260.cityOfAaronLB.model.Item;
 
 
 
@@ -164,5 +165,15 @@ public class GameControl {
          
      return locations;    
      }
-     
+    
+    public static Item createItem(String itemName, String itemType, String description, int adjustment){
+         if (itemName == null){
+             return null;
+         }
+         Item items = new Item();
+         return items;
+    }
 }
+     
+     
+

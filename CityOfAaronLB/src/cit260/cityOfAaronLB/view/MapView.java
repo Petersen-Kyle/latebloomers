@@ -36,25 +36,24 @@ public class MapView {
             // set default indicators as blanks
             leftIndicator = " ";
             rightIndicator = " ";
-            if(locations[row][column] == map.getCurrentLocation()){
+            if(locations[row][column] == map.getCurrentLocation(){
               // Set star indicators to show this is the current location.
               leftIndicator = "*"; 
               rightIndicator = "*"; 
             } 
-            else if(locations[row][column].isVisited()){
+            else if(locations[row][column].setVisited(true)){
                // Set < > indicators to show this location has been visited.
                leftIndicator = ">"; // can be stars or whatever these are indicators showing visited
                rightIndicator = "<"; // same as above
             }
            System.out.print("|"); // start map with a |
-            if(locations[row][column].getScene() == null)
-            {
-                 // No scene assigned here so use ?? for the symbol
-                 System.out.print(leftIndicator + "??" + rightIndicator);
-            }
-            else
+//            if(locations[row][column].getSceneSymbol() = null) {
+//                 // No scene assigned here so use ?? for the symbol
+//                 System.out.print(leftIndicator + "??" + rightIndicator);
+//            }
+//            else
               System.out.print(leftIndicator
-                 + locations[row][column].getScene().getMapSymbol()
+                 + locations[row][column].getSceneSymbol()
                  + rightIndicator);
           }
          System.out.println("|");

@@ -12,7 +12,7 @@ import java.util.Objects;
  */
 public class StoreHouse implements Serializable {
     private Author author;
-    private InventoryItem inventoryItem;
+    private Item inventoryItem;
 
     public StoreHouse() {
     }
@@ -25,11 +25,11 @@ public class StoreHouse implements Serializable {
         this.author = author;
     }
 
-    public InventoryItem getInventoryItem() {
+    public Item getInventoryItem() {
         return inventoryItem;
     }
 
-    public void setInventoryItem(InventoryItem inventoryItem) {
+    public void setInventoryItem(Item inventoryItem) {
         this.inventoryItem = inventoryItem;
     }
 
