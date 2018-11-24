@@ -97,40 +97,69 @@ public class GameControl {
          locations[2][2].setDescription("Deeply dug trenches lead to tall mounds of earth topped with wodden pickets.  Soldiers patrol the walls, taking turns at watch on the towers, watching for attacks from any direction.  The threat of Lamanite attack is always possible, and Captain Moroni has ordered that a constant watch be kept.  Swift riders are stationed near the entrance to bring word of attack to the outlieing areas.  Durning an attack all the poeple of the village, and surrounding area would come to the rulers court for protection from the invaders.");
          locations[2][2].setSceneSymbol("RC");
          locations[2][3].setName("Wheat Field");
-         locations[2][3].setDescription("Description");
+         locations[2][3].setDescription("A freshly husked field is laid before your eyes. \n"
+                                      + "You are excited to replant as the sun goes down on \n"
+                                      + "a days hard work.");
          locations[2][3].setSceneSymbol("WF");
          locations[2][4].setName("Storehouse");
-         locations[2][4].setDescription("Description");
+         locations[2][4].setDescription("You can tell that hard work has been done \n"
+                                      + "as the shelves are filled with items of all \n"
+                                      + "kinds.");
          locations[2][4].setSceneSymbol("SH");
          locations[3][0].setName("River");
-         locations[3][0].setDescription("Description");
+         locations[3][0].setDescription("You hear the frogs croak as the river makes \n"
+                                      + "its way through. Water cascading down over \n"
+                                      + "rocks and fallen branches.");
          locations[3][0].setSceneSymbol("RV");
          locations[3][1].setName("Wheat Field");
-         locations[3][1].setDescription("Description");
+         locations[3][1].setDescription("Children running thorugh the stalks playing hide \n"
+                                      + "and seek fill your view and the stalks gently \n"
+                                      + "sway from the tiny feet running past them.");
          locations[3][1].setSceneSymbol("WF");
          locations[3][2].setName("Wheat Field");
-         locations[3][2].setDescription("Description");
+         locations[3][2].setDescription("The smell of wheat fills your nostrils as you \n"
+                                      + "take in a deep breathe of the sweet aroma. The \n"
+                                      + "colors of brown and yellow dance before your eyes \n"
+                                      + "as the stalks sway in the wind.");
          locations[3][2].setSceneSymbol("WF");
          locations[3][3].setName("Wheat Field");
-         locations[3][3].setDescription("Description");
+         locations[3][3].setDescription("Nothing but wheat for miles around. You stare \n"
+                                      + "as the ensuing sunset casts shadows over the \n"
+                                      + "the field illuminating it different colors.");
          locations[3][3].setSceneSymbol("WF");
          locations[3][4].setName("Wheat Field");
-         locations[3][4].setDescription("Description");
+         locations[3][4].setDescription("The tall stalks brush across your face as you make \n"
+                                      + "your way through the golden fields. The sun shines \n"
+                                      + "even brighter as it glints off the stalks.");
          locations[3][4].setSceneSymbol("WF");
          locations[4][0].setName("Undeveloped");
-         locations[4][0].setDescription("Description");
+         locations[4][0].setDescription("You smell the sweet aroma of flowers as you gaze \n "
+                                      + "at the beauty around you. Weeds liter the ground \n"
+                                      + "with bits of color scaterred between them.");
          locations[4][0].setSceneSymbol("??");
          locations[4][1].setName("Undeveloped");
-         locations[4][1].setDescription("Description");
+         locations[4][1].setDescription("Trees loom high above you as you watch in awe \n"
+                                      + "at the birds fluttering about. you catch a glimpse \n"
+                                      + "of a deer making its way through the brush.");
          locations[4][1].setSceneSymbol("??");
          locations[4][2].setName("Undeveloped");
-         locations[4][2].setDescription("Description");
+         locations[4][2].setDescription("Tall greass liters that land with all kinds of \n"
+                                      + "flowers growing between the blades. It seems \n"
+                                      + "peaceful as the sun warms your face.");
          locations[4][2].setSceneSymbol("??");
          locations[4][3].setName("Villiage");
-         locations[4][3].setDescription("Description");
+         locations[4][3].setDescription("Humble homes line the streets and children are running \n"
+                                      + "through the streets as you enter the villiage. People \n"
+                                      + "greet you as you make your way down the dirt roads worn \n"
+                                      + "by many feet bustling about. You see people going about \n "
+                                      + "tending to fields and cattle preparing to feed thier\n"
+                                      + "families and those in need.");
          locations[4][3].setSceneSymbol("VG");
          locations[4][4].setName("Undeveloped");
-         locations[4][4].setDescription("Description");
+         locations[4][4].setDescription("You enter a large field of dirt and fresh mud \n"
+                                      + "created from the freshly fallen rain. You watch \n"
+                                      + "your step as you move around envisioning the \n"
+                                      + "potential the land has to become something great.");
          locations[4][4].setSceneSymbol("??");
          
      return locations;    
