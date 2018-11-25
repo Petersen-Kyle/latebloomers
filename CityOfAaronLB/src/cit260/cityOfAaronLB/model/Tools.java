@@ -13,7 +13,7 @@ public enum Tools {
     
     plow("Tool", "Plow", 10, "The plow plows 10 fields"),
     hammer("Tool", "Hammer", 5, "The hammer gains 5 people"),
-    sickle("Tool", "Sickle", 1, "THe sickle adds 1 harvested acre");
+    sickle("Tool", "Sickle", 1, "The sickle adds 1 harvested acre");
     
     private String itemType;
     private String itemName;

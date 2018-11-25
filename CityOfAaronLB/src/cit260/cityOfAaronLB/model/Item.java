@@ -16,8 +16,26 @@ public class Item implements Serializable{
     private String itemName;
     private int adjustments;
     private String description;
-
+    private Tools tools;
+    private Weapons weapons;
+    
     public Item() {
+    }
+    
+    public Weapons getWeapons() {
+        return weapons;
+    }
+
+    public void setWeapons(Weapons weapons) {
+        this.weapons = weapons;
+    }
+
+    public Tools getTools() {
+        return tools;
+    }
+
+    public void setTools(Tools tools) {
+        this.tools = tools;
     }
     
     public String getItemType() {
@@ -92,6 +110,12 @@ public class Item implements Serializable{
     @Override
     public String toString() {
         return "InventoryItem{" + "itemType=" + itemType + ", itemName=" + itemName + ", adjustments=" + adjustments + ", description=" + description + '}';
+    }
+
+    static class itemName {
+
+        public itemName() {
+        }
     }
     
     
