@@ -217,12 +217,8 @@ public class GameControl {
              return null;
          }
         Location[][] locations = new Location[rows][columns];
-        Location location = new Location();
         Item items = new Item();
-         for (int row = 0; row < rows; row++)
-             for (int column = 0; column < columns; column++){
-                 locations[row][column] = location;
-             }
+        
          locations[0][0].item.setTools(Tools.hammer);
          locations[0][1].item.setTools(Tools.plow);
          locations[0][2].item.setTools(Tools.sickle);
