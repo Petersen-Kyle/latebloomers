@@ -212,11 +212,10 @@ public class GameControl {
      return locations;    
      }
     
-    public static Item createItem(int rows, int columns, String itemName, Tools tools, Weapons weapons){
+    public static Item createItem(Location[][] locations, int rows, int columns, String itemName, Tools tools, Weapons weapons){
          if (itemName == null){
              return null;
          }
-        Location[][] locations = new Location[rows][columns];
         Item items = new Item();
         
          locations[0][0].item.setTools(Tools.hammer);
