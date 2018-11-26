@@ -52,6 +52,7 @@ public class GameControl {
      }
      public static Location[][] createLocations(int rows, int columns) {
          Location[][] locations = new Location[rows][columns];
+         Item items = new Item();
          for (int row = 0; row < rows; row++)
              for (int column = 0; column < columns; column++){
                  Location location = new Location();
@@ -67,6 +68,8 @@ public class GameControl {
                                       + "humbled by its shear magisty and the sacrifice made by the \n"
                                       + "people to make it so beautiful.");
          locations[0][0].setSceneSymbol("TE");
+         locations[0][0].item.setTools(Tools.plow);
+         locations[0][0].item.setWeapons(Weapons.sling);
          locations[0][1].setName("Wheat Field");
          locations[0][1].setDescription("The Wheat Field is flowing in the breeze, ready to harvest");
          locations[0][1].setSceneSymbol("WF");         
@@ -209,7 +212,7 @@ public class GameControl {
      return locations;    
      }
     
-    public static Item createItem(int rows, int columns, String itemType, String itemName, String description, int adjustment, Tools tools, Weapons weapons){
+    public static Item createItem(int rows, int columns, String itemName, Tools tools, Weapons weapons){
          if (itemName == null){
              return null;
          }
@@ -218,7 +221,6 @@ public class GameControl {
         Item items = new Item();
          for (int row = 0; row < rows; row++)
              for (int column = 0; column < columns; column++){
-                 items.setTools(tools);
                  locations[row][column] = location;
              }
          locations[0][0].item.setTools(Tools.hammer);
