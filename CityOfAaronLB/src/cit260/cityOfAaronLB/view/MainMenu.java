@@ -19,7 +19,7 @@ public class MainMenu extends View {
                 + "1. Start a new game\n"
                 + "2. Load a saved game\n"
                 + "3. Help\n"
-                + "Choose one or (E to Exit the game): ");
+                + "Choose one or (Q to Quit the game): ");
     }
 
     @Override
