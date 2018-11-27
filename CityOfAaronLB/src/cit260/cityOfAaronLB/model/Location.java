@@ -94,13 +94,13 @@ public class Location implements Serializable {
     @Override
     public int hashCode() {
         int hash = 5;
-        hash = 11 * hash + this.column;
-        hash = 11 * hash + this.row;
-        hash = 11 * hash + (this.visited ? 1 : 0);
-        hash = 11 * hash + Objects.hashCode(this.name);
-        hash = 11 * hash + Objects.hashCode(this.description);
-        hash = 11 * hash + Objects.hashCode(this.question);
-        hash = 11 * hash + Objects.hashCode(this.item);
+        hash = 83 * hash + this.column;
+        hash = 83 * hash + this.row;
+        hash = 83 * hash + (this.visited ? 1 : 0);
+        hash = 83 * hash + Objects.hashCode(this.name);
+        hash = 83 * hash + Objects.hashCode(this.description);
+        hash = 83 * hash + Objects.hashCode(this.question);
+        hash = 83 * hash + Objects.hashCode(this.sceneSymbol);
         return hash;
     }
 
@@ -131,10 +131,10 @@ public class Location implements Serializable {
         if (!Objects.equals(this.description, other.description)) {
             return false;
         }
-        if (!Objects.equals(this.question, other.question)) {
+        if (!Objects.equals(this.sceneSymbol, other.sceneSymbol)) {
             return false;
         }
-        if (!Objects.equals(this.item, other.item)) {
+        if (!Objects.equals(this.question, other.question)) {
             return false;
         }
         return true;
@@ -142,8 +142,10 @@ public class Location implements Serializable {
 
     @Override
     public String toString() {
-        return "Location{" + "column=" + column + ", row=" + row + ", visited=" + visited + ", name=" + name + ", description=" + description + ", question=" + question + ", item=" + item + '}';
+        return "Location{" + "column=" + column + ", row=" + row + ", visited=" + visited + ", name=" + name + ", description=" + description + ", question=" + question + ", sceneSymbol=" + sceneSymbol + '}';
     }
+
+
 
 
 

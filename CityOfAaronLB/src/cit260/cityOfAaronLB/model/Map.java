@@ -14,12 +14,30 @@ import java.util.Objects;
  */
 public class Map implements Serializable {
     Location locations[][];
-    Location currentLocation[][];
+    Location currentLocation;
     private int rows;
     private int columns;
-
+    private int currentRow;
+    private int currentColumn;
+    
 
     public Map() {
+    }
+
+    public int getCurrentRow() {
+        return currentRow;
+    }
+
+    public void setCurrentRow(int currentRow) {
+        this.currentRow = currentRow;
+    }
+
+    public int getCurrentColumn() {
+        return currentColumn;
+    }
+
+    public void setCurrentColumn(int currentColumn) {
+        this.currentColumn = currentColumn;
     }
 
     public Location[][] getLocations() {
@@ -31,11 +49,11 @@ public class Map implements Serializable {
     }
     
 
-    public Location[][] getCurrentLocation() {
+    public Location getCurrentLocation() {
         return currentLocation;
     }
 
-    public void setCurrentLocation(Location[][] currentLocation) {
+    public void setCurrentLocation(Location currentLocation) {
         this.currentLocation = currentLocation;
     }
 

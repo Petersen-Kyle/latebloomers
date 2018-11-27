@@ -22,7 +22,7 @@ public class MapView {
       Game game = CityOfAaronLB.getGame(); // retreive the game
       Map map = game.getMap(); // retreive the map from game
       Location[][] locations = map.getLocations(); // retreive the locations from map
-      Location[][] currentLocation = map.getCurrentLocation();
+      Location currentLocation = map.getCurrentLocation();
         // Build the heading of the map
         System.out.print("  |");
         for( int column = 0; column < locations[0].length; column++){
@@ -37,16 +37,16 @@ public class MapView {
             // set default indicators as blanks
             leftIndicator = " ";
             rightIndicator = " ";
-//            if(locations[row][column] == currentLocation[row][column]){
-//              // Set star indicators to show this is the current location.
-//              leftIndicator = "*"; 
-//              rightIndicator = "*"; 
-//            } 
-//            else if(locations[row][column].isVisited()){
-//               // Set < > indicators to show this location has been visited.
-//               leftIndicator = ">"; // can be stars or whatever these are indicators showing visited
-//               rightIndicator = "<"; // same as above
-//            }
+            if(locations[row][column] == currentLocation){
+              // Set star indicators to show this is the current location.
+              leftIndicator = "*"; 
+              rightIndicator = "*"; 
+            } 
+            else if(locations[row][column].isVisited()){
+               // Set < > indicators to show this location has been visited.
+               leftIndicator = ">"; // can be stars or whatever these are indicators showing visited
+               rightIndicator = "<"; // same as above
+            }
            System.out.print("|"); // start map with a |
 //            if(locations[row][column].getSceneSymbol() = null) {
 //                 // No scene assigned here so use ?? for the symbol

@@ -15,6 +15,7 @@ public enum Animals{
         Ox("Animal", "Ox", 5, "The ox adds 5 acres of plowed land"),
         Chicken("Animal", "Chicken", 2, "The chicken feeds 2 people");
         
+        
         private String itemType;
         private String itemName;
         private int adjustments;

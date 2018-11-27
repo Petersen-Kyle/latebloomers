@@ -19,7 +19,7 @@ public class MoveLocation extends View {
         super("Enter where you would like to go:");
     }
 
-
+    
     public boolean doAction(String inputs) {
         if (inputs.equals("2")) {
             WheatField newField = new WheatField();
