@@ -8,6 +8,7 @@
 package CityOfAaronLB;
 
 
+import cit260.cityOfAaronLB.control.SortControl;
 import cit260.cityOfAaronLB.model.Game;
 import cit260.cityOfAaronLB.model.Player;
 import cit260.cityOfAaronLB.view.StartProgramView;
