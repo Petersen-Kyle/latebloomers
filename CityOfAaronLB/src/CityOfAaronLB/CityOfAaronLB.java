@@ -8,7 +8,7 @@
 package CityOfAaronLB;
 
 
-import cit260.cityOfAaronLB.control.SortControl;
+import cit260.cityOfAaronLB.control.AnimalSortControl;
 import cit260.cityOfAaronLB.model.Game;
 import cit260.cityOfAaronLB.model.Player;
 import cit260.cityOfAaronLB.view.StartProgramView;
@@ -107,8 +107,7 @@ public class CityOfAaronLB {
 //        newMap.setColumn(0);
 //        newMap.setRow(0);
 //        System.out.println(newMap.toString());
-        
-        
+       
        StartProgramView newStart = new StartProgramView();
        newStart.display();
        
