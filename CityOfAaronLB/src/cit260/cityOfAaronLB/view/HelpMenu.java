@@ -4,6 +4,10 @@
  * and open the template in the editor.
  */
 package cit260.cityOfAaronLB.view;
+import cit260.cityOfAaronLB.control.GameControl;
+import cit260.cityOfAaronLB.model.Weapons;
+import cit260.cityOfAaronLB.model.Weapons;
+import java.util.EnumSet;
 
 /**
  *
@@ -18,6 +22,7 @@ public class HelpMenu extends View {
                 + "3. How to make a move\n"
                 + "4. Tips and Hints\n"
                 + "5. Starting Resources\n"
+                + "6. Sort Locations\n"
                 + "Choose one or (Q to Quit to Main Menu): ");
     }
 
@@ -63,6 +68,9 @@ public class HelpMenu extends View {
                         + "Population = 100 \n"
                         + "Acres of Land = 1000 \n"
                         + "Wheat in Storage = 2700 \n");
+                break;
+            case "6":
+
                 break;
         }
         System.out.println();

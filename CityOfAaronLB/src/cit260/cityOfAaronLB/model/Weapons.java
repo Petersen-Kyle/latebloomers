@@ -13,7 +13,10 @@ public enum Weapons {
     
     bowAndArrow("Weapon", "Bow and Arrow", 5, "A Bow and Arrow gains 5 food to your store"),
     sling("Weaopn", "Sling", -5, "The sling gives the chance for rats to eat food"),
-    spear("Weapon", "Spear", 10, "The spear adds 10 food to your store");
+    spear("Weapon", "Spear", 10, "The spear adds 10 food to your store"),
+    bolo("Weapon", "Bolo", 5, "The bolo is used to snare small animals on the run"),
+    knife("Weapon", "Knife", 5, "A knife can be used to better prepare meat so there is no waste"),
+    javelin("Weapon", "Javelin", 9, "A javelin can be thrown to bring down small game");
     
     private String itemType;
     private String itemName;
