@@ -10,6 +10,8 @@ import cit260.cityOfAaronLB.model.Weapons;
 import cit260.cityOfAaronLB.model.Weapons;
 import java.util.EnumSet;
 
+import cit260.cityOfAaronLB.control.ToolSortControl;
+
 /**
  *
  * @author pytha
@@ -23,7 +25,8 @@ public class HelpMenu extends View {
                 + "3. How to make a move\n"
                 + "4. Tips and Hints\n"
                 + "5. Starting Resources\n"
-                + "6. Sort Locations\n"
+                + "6. Tools Bonus Adjustments\n"
+                + "7. Display Weapons Sorted Alphabetically\n"
                 + "Choose one or (Q to Quit to Main Menu): ");
     }
 
@@ -70,9 +73,13 @@ public class HelpMenu extends View {
                         + "Acres of Land = 1000 \n"
                         + "Wheat in Storage = 2700 \n");
                 break;
-            case "6":
-                SortMTS sort = new SortMTS();
-//                        
+            case "6":                       
+                ToolSortControl sort = new ToolSortControl();
+                sort.sortTools();
+                break;
+            case "7":
+                SortMTS sortMTS = new SortMTS();
+                
                 break;
         }
         System.out.println();
