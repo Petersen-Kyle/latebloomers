@@ -11,9 +11,11 @@ package cit260.cityOfAaronLB.model;
 public enum Animals{
     
         Mouse("Animal", "Mouse", -1, "The mouse subtracts one from the wheat supply"),
-        Cow("Animal", "Cow", 5, "The cow feeds 5 people"),
+        Cow("Animal", "Cow", 6, "The cow feeds 6 people"),
         Ox("Animal", "Ox", 5, "The ox adds 5 acres of plowed land"),
-        Chicken("Animal", "Chicken", 2, "The chicken feeds 2 people");
+        Chicken("Animal", "Chicken", 2, "The chicken feeds 2 people"),
+        Rabbit("Animal", "Rabbit", -2, "The rabbit subtracts two from the wheat supply" ),
+        Bat("Animal", "Bat", 3, "The bat scares away birds and adds 3 wheat to your supply");
         
         
         private String itemType;

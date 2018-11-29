@@ -5,6 +5,8 @@
  */
 package cit260.cityOfAaronLB.view;
 
+import cit260.cityOfAaronLB.control.AnimalSortControl;
+
 
 /**
  *
@@ -19,7 +21,8 @@ public class GameMenuView extends View{
                 + "3. Manage Crops and Land\n"
                 + "4. Storehouse\n"
                 + "5. Reports Menu\n"
-                + "6. Save Game\n"
+                + "6. Animal Adjustments\n"
+                + "7. Save Game\n"
                 + "Choose one or (Q to Quit to Main Menu): ");
     }
 
@@ -46,8 +49,12 @@ public class GameMenuView extends View{
             break;
         case "5":
             System.out.println("Open the reports menu");
-            break;            
+            break;  
         case "6":
+            AnimalSortControl sort = new AnimalSortControl();
+            sort.sortAnimal();
+            break;
+        case "7":
             System.out.println("Save your game");
             break;
          

@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package cit260.cityOfAaronLB.view;
+import cit260.cityOfAaronLB.control.SortMTS;
 import cit260.cityOfAaronLB.control.GameControl;
 import cit260.cityOfAaronLB.model.Weapons;
 import cit260.cityOfAaronLB.model.Weapons;
@@ -70,8 +71,7 @@ public class HelpMenu extends View {
                         + "Wheat in Storage = 2700 \n");
                 break;
             case "6":
-//                Arrays.asList(Weapons.values())
-//                        .forEach(weapon -> System.out.println(weapon));
+                SortMTS sort = new SortMTS();
 //                        
                 break;
         }
