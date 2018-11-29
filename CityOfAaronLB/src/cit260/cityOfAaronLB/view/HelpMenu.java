@@ -70,7 +70,9 @@ public class HelpMenu extends View {
                         + "Wheat in Storage = 2700 \n");
                 break;
             case "6":
-
+//                Arrays.asList(Weapons.values())
+//                        .forEach(weapon -> System.out.println(weapon));
+//                        
                 break;
         }
         System.out.println();
