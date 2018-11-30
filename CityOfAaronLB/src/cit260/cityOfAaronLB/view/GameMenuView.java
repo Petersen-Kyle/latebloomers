@@ -7,7 +7,12 @@ package cit260.cityOfAaronLB.view;
 
 import cit260.cityOfAaronLB.control.SortControl;
 import cit260.cityOfAaronLB.control.MapControl;
+import cit260.cityOfAaronLB.control.calcFeedThePeopleControl;
+import static cit260.cityOfAaronLB.control.calcFeedThePeopleControl.calcFeedThePeople;
+import cit260.cityOfAaronLB.exceptions.GameControlException;
 import cit260.cityOfAaronLB.model.Map;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 
 /**
@@ -24,12 +29,13 @@ public class GameMenuView extends View{
                 + "4. Storehouse\n"
                 + "5. Reports Menu\n"
                 + "6. Animal Adjustments\n"
-                + "7. Save Game\n"
+                + "7. Feed the People \n"
+                + "8. Save Game\n"
                 + "Choose one or (Q to Quit to Main Menu): ");
     }
 
     @Override
-    public boolean doAction(String inputs) {
+    public boolean doAction(String inputs){
 
         switch(inputs) {
         case "1":
@@ -58,6 +64,16 @@ public class GameMenuView extends View{
             sort.sortAnimal();
             break;
         case "7":
+        {
+            try {
+                int wheatLeftover = calcFeedThePeopleControl.calcFeedThePeople(-1,5,5,5,5);
+                System.out.println("Wheat Leftover = " + wheatLeftover);
+            } catch (GameControlException ex) {
+                System.out.println(ex.getMessage());
+            }
+        }
+            break;
+        case "8":
             System.out.println("Save your game");
             break;
          
