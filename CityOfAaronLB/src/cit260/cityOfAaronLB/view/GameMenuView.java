@@ -5,7 +5,7 @@
  */
 package cit260.cityOfAaronLB.view;
 
-import cit260.cityOfAaronLB.control.AnimalSortControl;
+import cit260.cityOfAaronLB.control.SortControl;
 import cit260.cityOfAaronLB.control.MapControl;
 import cit260.cityOfAaronLB.model.Map;
 
@@ -36,10 +36,11 @@ public class GameMenuView extends View{
             System.out.println("City of Aaron Map");
             MapView newMap = new MapView();
             newMap.displayMap();
+            
             break;
         case "2":
             MoveLocation move = new MoveLocation();
-            move.display();
+            move.moveLocation();
             break;
         case "3":
             SellLandView sellLand = new SellLandView();
@@ -53,7 +54,7 @@ public class GameMenuView extends View{
             System.out.println("Open the reports menu");
             break;  
         case "6":
-            AnimalSortControl sort = new AnimalSortControl();
+            SortControl sort = new SortControl();
             sort.sortAnimal();
             break;
         case "7":

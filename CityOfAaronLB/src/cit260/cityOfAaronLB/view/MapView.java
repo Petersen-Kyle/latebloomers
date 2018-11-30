@@ -58,6 +58,8 @@ public class MapView {
                  + rightIndicator);
           }
          System.out.println("|");
+
         }
+  
      }
 }

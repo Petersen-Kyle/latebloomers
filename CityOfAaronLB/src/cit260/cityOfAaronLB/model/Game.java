@@ -12,6 +12,7 @@ import java.io.Serializable;
  */
 public class Game implements Serializable{
 
+    private Game currentGame;
     private int currentPopulation;
     private int acresOwned;
     private int wheatInStroage;
@@ -20,6 +21,14 @@ public class Game implements Serializable{
     
     
     public Game() {
+    }
+
+    public Game getCurrentGame() {
+        return currentGame;
+    }
+
+    public void setCurrentGame(Game currentGame) {
+        this.currentGame = currentGame;
     }
 
     public Map getMap() {

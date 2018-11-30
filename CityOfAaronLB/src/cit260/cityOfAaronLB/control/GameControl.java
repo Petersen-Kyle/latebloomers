@@ -285,29 +285,6 @@ public class GameControl {
         item.setAdjustments(adjustment);
         return item;
     }
-//    public static Item[] createItemList(){
-//        
-//        Item[] items = new Item[10];
-//        Animals.Chicken.getItemName();
-//        Weapons.bowAndArrow.toString();
-//        item[0]=createItem("Weapons", "Bow and Arrows", "Made of Wood", 5);
-//        items[0].setItemType("Weapons");
-//        items[0].setItemName("bowAndArrow");
-//        items[0].setDescription("Made of wood and strung with sinew.  The bow is the perfect tool for hunting.  Finding this bow will allow you to produce more food this year.");
-//        items[0].setAdjustments(5);
-//        
-//        items[1].setItemType("Weapons");
-//        items[1].setItemName("Sling");
-//        items[1].setDescription("A small patch of cloth with string attached to both sides.  Every child in the village has spent hours building proficiency with this weapon.");
-//        items[1].setAdjustments(2);
-//        
-//        items[2].setItemType("Weapons");
-//        items[2].setItemName("Spear");
-//        items[2].setDescription("The spear is a long handed weapon.  It is used to take down boar with their wicked tusks.");
-//        items[2].setAdjustments(10);
-//
-//        return null;
-//    }
 
     public static void movePlayerToStartingLocation(Map map) {
         // If starting location is not supposed to be 0,0 then use the correct values here.

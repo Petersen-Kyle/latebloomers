@@ -13,7 +13,7 @@ import java.util.Arrays;
  *
  * @author lafon
  */
-public class AnimalSortControl {
+public class SortControl {
     public static int[] doSelectionSort(int[] arr){
          
         for (int i = 0; i < arr.length - 1; i++)
