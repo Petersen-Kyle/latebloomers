@@ -31,7 +31,7 @@ public class AnimalSortControl {
     }
     
     public void sortAnimal(){
-         int[] animal = new int[6];
+        int[] animal = new int[6];
 
         animal[0] = Animals.Bat.getAdjustments();
         animal[1] = Animals.Chicken.getAdjustments();

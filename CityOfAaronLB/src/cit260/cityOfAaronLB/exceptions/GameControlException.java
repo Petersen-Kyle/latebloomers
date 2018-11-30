@@ -9,6 +9,25 @@ package cit260.cityOfAaronLB.exceptions;
  *
  * @author pytha
  */
-public class GameControlException {
+public class GameControlException extends Exception{
+
+    public GameControlException() {
+    }
+
+    public GameControlException(String Message) {
+        super(Message);
+    }
+
+    public GameControlException(String message, Throwable cause) {
+        super(message, cause);
+    }
+
+    public GameControlException(Throwable cause) {
+        super(cause);
+    }
+
+    public GameControlException(String message, Throwable cause, boolean enableSuppression, boolean writeableStackTrace) {
+        super(message, cause, enableSuppression, writeableStackTrace);
+    }
     
 }

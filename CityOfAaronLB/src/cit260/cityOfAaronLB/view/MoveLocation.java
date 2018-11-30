@@ -5,31 +5,26 @@
  */
 package cit260.cityOfAaronLB.view;
 
-import java.io.IOException;
-import java.util.Scanner;
+import CityOfAaronLB.CityOfAaronLB;
+import cit260.cityOfAaronLB.control.MapControl;
+import static cit260.cityOfAaronLB.control.MapControl.movePlayer;
+import cit260.cityOfAaronLB.model.Game;
+import cit260.cityOfAaronLB.model.Location;
+import cit260.cityOfAaronLB.model.Map;
 
 /**
  *
  * @author lafon
  */
-
 public class MoveLocation extends View {
-    
+
     public MoveLocation() {
         super("Enter where you would like to go:");
     }
 
-    
-    public boolean doAction(String inputs) {
-        if (inputs.equals("2")) {
-            WheatField newField = new WheatField();
-            newField.wheatField();
-        } else if (inputs.equals("1")) {
-            Temple newTemple = new Temple();
-            newTemple.temple();
-        }
-        return true;
-
+    @Override
+    public boolean doAction(String mapOption) {
+        return false;
     }
-    
+
 }

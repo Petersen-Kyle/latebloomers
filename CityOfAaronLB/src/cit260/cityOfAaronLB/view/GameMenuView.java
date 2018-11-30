@@ -6,6 +6,8 @@
 package cit260.cityOfAaronLB.view;
 
 import cit260.cityOfAaronLB.control.AnimalSortControl;
+import cit260.cityOfAaronLB.control.MapControl;
+import cit260.cityOfAaronLB.model.Map;
 
 
 /**
@@ -36,8 +38,8 @@ public class GameMenuView extends View{
             newMap.displayMap();
             break;
         case "2":
-            MoveLocation newLocation = new MoveLocation();
-            newLocation.display();
+            MoveLocation move = new MoveLocation();
+            move.display();
             break;
         case "3":
             SellLandView sellLand = new SellLandView();

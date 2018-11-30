@@ -9,20 +9,20 @@ package cit260.cityOfAaronLB.exceptions;
  *
  * @author pytha
  */
-public abstract class Exception implements ExceptionsInterface {
-    
-    public Exception(){
-        
-    }
-    
-    public void display(){
-        
-    }
-    
-    public String getInput(){
-        
-    return null;
-    }
-
-    
+public abstract class Exception {
+       public Exception(){
+           
+       }
+       public Exception(String Message){
+           
+       }
+       public Exception(String message, Throwable cause){
+           
+       }
+       public Exception(Throwable cause){
+           
+       }
+       public Exception(String message, Throwable cause, boolean enableSuppression, boolean writeableStackTrace){
+           
+       }    
 }

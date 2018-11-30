@@ -20,7 +20,7 @@ public class Location implements Serializable {
     private String description;
     private Question question;
     private Item item;
-    private String sceneSymbol;
+    private String sceneSymbol; 
     
     
     public Location() {
