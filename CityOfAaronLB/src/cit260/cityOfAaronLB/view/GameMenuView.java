@@ -66,7 +66,7 @@ public class GameMenuView extends View{
         case "7":
         {
             try {
-                int wheatLeftover = calcFeedThePeopleControl.calcFeedThePeople(-1,5,5,5,5);
+                int wheatLeftover = calcFeedThePeopleControl.calcFeedThePeople(5,5,5,5,-1);
                 System.out.println("Wheat Leftover = " + wheatLeftover);
             } catch (GameControlException ex) {
                 System.out.println(ex.getMessage());

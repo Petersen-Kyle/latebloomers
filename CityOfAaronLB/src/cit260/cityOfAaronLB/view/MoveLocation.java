@@ -41,10 +41,10 @@ public class MoveLocation extends View{
             return;
         }
         
-        Game game = Game.getCurrentGame();
-        Map map = Game.getMap();
+//        Game game = Game.getCurrentGame();
+//        Map map = Game.getMap();
         try {
-            GameControl.movePlayer(map, inRow, inCol);
+//            GameControl.movePlayer(map, inRow, inCol);
 //            displayMap();
         } catch (ArrayIndexOutOfBoundsException e) {
             System.out.println("Invalid range.");
