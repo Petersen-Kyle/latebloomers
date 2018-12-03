@@ -12,23 +12,28 @@ import java.io.Serializable;
  */
 public class Game implements Serializable{
 
-    private Game currentGame;
+
     private int currentPopulation;
     private int acresOwned;
-    private int wheatInStroage;
+    private int wheatInStorage;
     private Player player;
     private Map map;
+    private int acresPlanted;
     
     
     public Game() {
+        currentPopulation = 100;
+        acresOwned = 1000;
+        wheatInStorage = 2000;
+        
     }
 
-    public Game getCurrentGame() {
-        return currentGame;
+    public int getAcresPlanted() {
+        return acresPlanted;
     }
 
-    public void setCurrentGame(Game currentGame) {
-        this.currentGame = currentGame;
+    public void setAcresPlanted(int acresPlanted) {
+        this.acresPlanted = acresPlanted;
     }
 
     public Map getMap() {
@@ -66,11 +71,11 @@ public class Game implements Serializable{
     }
 
     public int getWheatInStroage() {
-        return wheatInStroage;
+        return wheatInStorage;
     }
 
     public void setWheatInStroage(int wheatInStroage) {
-        this.wheatInStroage = wheatInStroage;
+        this.wheatInStorage = wheatInStroage;
     }
 
     @Override
@@ -78,7 +83,7 @@ public class Game implements Serializable{
         int hash = 7;
         hash = 31 * hash + this.currentPopulation;
         hash = 31 * hash + this.acresOwned;
-        hash = 31 * hash + this.wheatInStroage;
+        hash = 31 * hash + this.wheatInStorage;
         return hash;
     }
 
@@ -100,7 +105,7 @@ public class Game implements Serializable{
         if (this.acresOwned != other.acresOwned) {
             return false;
         }
-        if (this.wheatInStroage != other.wheatInStroage) {
+        if (this.wheatInStorage != other.wheatInStorage) {
             return false;
         }
         return true;
@@ -108,7 +113,7 @@ public class Game implements Serializable{
 
     @Override
     public String toString() {
-        return "game{" + "currentPopulation=" + currentPopulation + ", acresOwned=" + acresOwned + ", wheatInStroage=" + wheatInStroage + '}';
+        return "game{" + "currentPopulation=" + currentPopulation + ", acresOwned=" + acresOwned + ", wheatInStroage=" + wheatInStorage + '}';
     }
     
     

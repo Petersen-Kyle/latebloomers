@@ -5,12 +5,8 @@
  */
 package cit260.cityOfAaronLB.view;
 
-import CityOfAaronLB.CityOfAaronLB;
 import cit260.cityOfAaronLB.control.GameControl;
-import cit260.cityOfAaronLB.control.MapControl;
-import static cit260.cityOfAaronLB.control.MapControl.movePlayer;
 import cit260.cityOfAaronLB.model.Game;
-import cit260.cityOfAaronLB.model.Location;
 import cit260.cityOfAaronLB.model.Map;
 
 /**
@@ -20,17 +16,19 @@ import cit260.cityOfAaronLB.model.Map;
 public class MoveLocation extends View{
 
     
-    public void moveLocation() {
-        String row = getInput("Enter Row(Q to quit): ");
-        if (row.toUpperCase().trim().equals("q")){
-            System.out.println("You didnt want to move...");
-            return;
-        }
+    public MoveLocation() {
+        super("Enter Row(Q to quit): ");
+    }
+    
+    @Override
+    public boolean doAction(String inputs){  
+        String row = inputs;
         String col = getInput("Enter Column(Q to quit): ");
-        if (col.toUpperCase().trim().equals("q")){
+        if (col.toUpperCase().trim().equals("Q")){
             System.out.println("You didnt want to move...");
-            return;
+            return true;
         }
+      
         int inRow = -1;
         int inCol = -1;
         try {
@@ -38,22 +36,19 @@ public class MoveLocation extends View{
             inCol = Integer.parseInt(col); }
         catch (NumberFormatException e) {
             System.out.println("Invalid entry, must be an number...");
-            return;
+            return false;
         }
         
-        Game game = Game.getCurrentGame();
-        Map map = Game.getMap();
+        Game game = CityOfAaronLB.CityOfAaronLB.getGame();
+        Map map = game.getMap();
         try {
             GameControl.movePlayer(map, inRow, inCol);
-//            displayMap();
+
         } catch (ArrayIndexOutOfBoundsException e) {
             System.out.println("Invalid range.");
         }
-    }
-    @Override
-    public boolean doAction(String inputs){
-
-        return false;
+        return true;
     }
 
 }
+

@@ -40,13 +40,13 @@ public class GameMenuView extends View{
         switch(inputs) {
         case "1":
             System.out.println("City of Aaron Map");
-            MapView newMap = new MapView();
-            newMap.displayMap();
+            displayMap();
             
             break;
         case "2":
             MoveLocation move = new MoveLocation();
-            move.moveLocation();
+            move.display();
+            displayMap();
             break;
         case "3":
             SellLandView sellLand = new SellLandView();
@@ -81,6 +81,11 @@ public class GameMenuView extends View{
     }
     System.out.println();
         return false;
+    }
+    
+    public void displayMap(){
+            MapView newMap = new MapView();
+            newMap.displayMap();
     }
     
 }
