@@ -15,16 +15,7 @@ import java.util.Scanner;
 public class calcFeedThePeopleControl {
 
     public static int calcFeedThePeople(int wheatInStorage, int wheatHarvested, int tithes,
-            int eatenByRats, int peopleToFeed) throws GameControlException {
-//        System.out.println("How many people would you like to feed?");
-//        Scanner inFile;
-//        inFile = new Scanner(System.in);
-//        peopleToFeed = inFile.nextInt();
-
-//        wheatInStorage = 500;
-//        wheatHarvested = 200;
-//        tithes = 10;
-//        eatenByRats = 50;
+        int eatenByRats, int peopleToFeed) throws GameControlException {
 
         int wheatTotal = wheatInStorage + wheatHarvested - tithes - eatenByRats;
 
@@ -39,7 +30,6 @@ public class calcFeedThePeopleControl {
         }
 
         int wheatLeftover = wheatTotal - peopleToFeed * 20;
-//        System.out.println("Wheat Leftover in the StoreHouse: " + wheatLeftover);
-           return wheatLeftover; 
+        return wheatLeftover; 
     }
 }
