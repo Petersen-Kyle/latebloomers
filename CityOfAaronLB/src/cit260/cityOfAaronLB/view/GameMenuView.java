@@ -5,22 +5,17 @@
  */
 package cit260.cityOfAaronLB.view;
 
+import cit260.cityOfAaronLB.control.MoveLocation;
 import cit260.cityOfAaronLB.control.SortControl;
-import cit260.cityOfAaronLB.control.MapControl;
 import cit260.cityOfAaronLB.control.calcFeedThePeopleControl;
-import static cit260.cityOfAaronLB.control.calcFeedThePeopleControl.calcFeedThePeople;
 import cit260.cityOfAaronLB.exceptions.GameControlException;
-import cit260.cityOfAaronLB.model.Map;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
 
 /**
  *
  * @author pytha
  */
-public class GameMenuView extends View{
-    
+public class GameMenuView extends View {
+
     public GameMenuView() {
         super("Game Menu\n"
                 + "1. View the Map\n"
@@ -35,57 +30,56 @@ public class GameMenuView extends View{
     }
 
     @Override
-    public boolean doAction(String inputs){
+    public boolean doAction(String inputs) {
 
-        switch(inputs) {
-        case "1":
-            System.out.println("City of Aaron Map");
-            displayMap();
-            
-            break;
-        case "2":
-            MoveLocation move = new MoveLocation();
-            move.display();
-            displayMap();
-            break;
-        case "3":
-            SellLandView sellLand = new SellLandView();
-            sellLand.display();
-            break;
-        case "4":
-            StorehouseMenu newStorehouseMenu = new StorehouseMenu();
-            newStorehouseMenu.display();
-            break;
-        case "5":
-            System.out.println("Open the reports menu");
-            break;  
-        case "6":
-            SortControl sort = new SortControl();
-            sort.sortAnimal();
-            break;
-        case "7":
-        {
-            try {
-                int wheatLeftover = calcFeedThePeopleControl.calcFeedThePeople(5,5,5,5,-1);
-                System.out.println("Wheat Leftover = " + wheatLeftover);
-            } catch (GameControlException ex) {
-                System.out.println(ex.getMessage());
+        switch (inputs) {
+            case "1":
+                System.out.println("City of Aaron Map");
+                displayMap();
+
+                break;
+            case "2":
+                MoveLocation move = new MoveLocation();
+                move.display();
+                displayMap();
+                break;
+            case "3":
+                SellLandView sellLand = new SellLandView();
+                sellLand.display();
+                break;
+            case "4":
+                StorehouseMenu newStorehouseMenu = new StorehouseMenu();
+                newStorehouseMenu.display();
+                break;
+            case "5":
+                System.out.println("Open the reports menu");
+                break;
+            case "6":
+                SortControl sort = new SortControl();
+                sort.sortAnimal();
+                break;
+            case "7": {
+                try {
+                    int wheatLeftover = calcFeedThePeopleControl.calcFeedThePeople(5, 5, 5, 5, -1);
+                    System.out.println("Wheat Leftover = " + wheatLeftover);
+                } catch (GameControlException ex) {
+                    System.out.println(ex.getMessage());
+                }
             }
+            break;
+            case "8":
+                System.out.println("Save your game");
+                break;
+
         }
-            break;
-        case "8":
-            System.out.println("Save your game");
-            break;
-         
-                       
-    }
-    System.out.println();
+        System.out.println();
         return false;
     }
-    
-    public void displayMap(){
-            MapView newMap = new MapView();
-            newMap.displayMap();
+
+    public void displayMap() {
+        MapView newMap = new MapView();
+        newMap.displayMap();
+        
     }
-    
+
 }

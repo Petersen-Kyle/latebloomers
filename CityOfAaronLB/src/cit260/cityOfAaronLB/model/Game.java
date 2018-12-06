@@ -70,12 +70,12 @@ public class Game implements Serializable{
         this.acres = acres;
     }
 
-    public int getWheatInStroage() {
+    public int getWheat() {
         return wheat;
     }
 
-    public void setWheatInStroage(int wheatInStroage) {
-        this.wheat = wheatInStroage;
+    public void setWheat(int wheat) {
+        this.wheat = wheat;
     }
 
     @Override
@@ -113,8 +113,10 @@ public class Game implements Serializable{
 
     @Override
     public String toString() {
-        return "game{" + "currentPopulation=" + population + ", acresOwned=" + acres + ", wheatInStroage=" + wheat + '}';
+        return "Game{" + "population=" + population + ", acres=" + acres + ", wheat=" + wheat + ", map=" + map + ", acresPlanted=" + acresPlanted + '}';
     }
+
+
     
     
     

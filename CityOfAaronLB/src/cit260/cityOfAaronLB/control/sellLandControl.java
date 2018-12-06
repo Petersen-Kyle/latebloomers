@@ -7,7 +7,7 @@ package cit260.cityOfAaronLB.control;
 
 import cit260.cityOfAaronLB.exceptions.GameControlException;
 import cit260.cityOfAaronLB.model.Game;
-import java.util.Random;
+
 
 /**
  *
@@ -32,9 +32,9 @@ public class sellLandControl {
         }
         landPrice = (int) (Math.random() * 10) + 17;
         game.setAcres(game.getAcres() - userLandSell);
-        game.setWheatInStroage(game.getWheatInStroage() + (userLandSell * landPrice));
+        game.setWheat(game.getWheat() + (userLandSell * landPrice));
 
-        return game.getWheatInStroage();
+        return game.getWheat();
     }
 
 }

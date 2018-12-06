@@ -3,11 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package cit260.cityOfAaronLB.view;
+package cit260.cityOfAaronLB.control;
 
 import cit260.cityOfAaronLB.control.GameControl;
 import cit260.cityOfAaronLB.model.Game;
+import cit260.cityOfAaronLB.model.Location;
 import cit260.cityOfAaronLB.model.Map;
+import cit260.cityOfAaronLB.view.View;
 
 /**
  *
@@ -30,6 +32,7 @@ public class MoveLocation extends View {
 
         int inRow = -1;
         int inCol = -1;
+//        String desc = "";
         try {
             inRow = Integer.parseInt(row);
             inCol = Integer.parseInt(col);
@@ -40,9 +43,10 @@ public class MoveLocation extends View {
 
         Game game = CityOfAaronLB.CityOfAaronLB.getGame();
         Map map = game.getMap();
+//        String desc = Location.getDescription();
+                System.out.println();
         try {
             GameControl.movePlayer(map, inRow, inCol);
-
         } catch (ArrayIndexOutOfBoundsException e) {
             System.out.println("Invalid range.");
         }

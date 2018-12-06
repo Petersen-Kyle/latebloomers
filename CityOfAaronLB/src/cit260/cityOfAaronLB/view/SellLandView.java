@@ -31,7 +31,7 @@ public class SellLandView extends View {
         }
         if (newSell >= 0) {
             System.out.println("You sold " + newSell + " achers of land.");
-            System.out.println("You now have " + game.getWheatInStroage() + " Wheat in Storage");
+            System.out.println("You now have " + game.getWheat() + " Wheat in Storage");
         }
         return true;
     }
