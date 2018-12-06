@@ -6,7 +6,6 @@
 package cit260.cityOfAaronLB.control;
 
 import CityOfAaronLB.CityOfAaronLB;
-import static cit260.cityOfAaronLB.control.MapControl.createMap;
 import cit260.cityOfAaronLB.model.Animals;
 import cit260.cityOfAaronLB.model.Player;
 import cit260.cityOfAaronLB.model.Game;
@@ -25,7 +24,7 @@ public class GameControl {
     public static int createNewGame(Player player) {
 
         Game currentGame = new Game();
-        currentGame.setPlayer(player);
+        CityOfAaronLB.setPlayer(player);
         CityOfAaronLB.setGame(currentGame);
         //items = Item.createItems(); //Need to create later!!
         Map map = createMap(currentGame, 5, 5);

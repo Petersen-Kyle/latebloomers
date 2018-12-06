@@ -16,7 +16,7 @@ public class Game implements Serializable{
     private int currentPopulation;
     private int acresOwned;
     private int wheatInStorage;
-    private Player player;
+//    private Player player;
     private Map map;
     private int acresPlanted;
     
@@ -45,14 +45,14 @@ public class Game implements Serializable{
     }
 
     
-    public Player getPlayer() {
-        return player;
-    }
-    
-
-    public void setPlayer(Player player) {
-        this.player = player;
-    }
+//    public Player getPlayer() {
+//        return player;
+//    }
+//    
+//
+//    public void setPlayer(Player player) {
+//        this.player = player;
+//    }
     
     public int getCurrentPopulation() {
         return currentPopulation;
