@@ -5,6 +5,9 @@
  */
 package cit260.cityOfAaronLB.view;
 
+import CityOfAaronLB.CityOfAaronLB;
+import java.io.BufferedReader;
+import java.io.PrintWriter;
 import java.util.Scanner;
 
 /**
@@ -14,6 +17,9 @@ import java.util.Scanner;
 public abstract class View implements ViewInterface {
 
     private String defaultMessage;
+
+    protected final BufferedReader keyboard = CityOfAaronLB.getInFile();
+    protected final PrintWriter console = CityOfAaronLB.getOutFile();
 
     public View() {
 
@@ -37,7 +43,7 @@ public abstract class View implements ViewInterface {
             if (inputs.toLowerCase().trim().equals("q")) {
                 System.out.println("Thanks for playing Late Bloomers City of Aaron");
                 return;
-            } 
+            }
             endView = doAction(inputs);
         } while (endView != true);
     }
@@ -49,20 +55,23 @@ public abstract class View implements ViewInterface {
 
     @Override
     public String getInput(String promptMessage) {
-        String choice = "";
-        Scanner inChoice;
-        inChoice = new Scanner(System.in);
+        String inChoice = null;
         boolean valid = false;
-        while (!valid) {
-            System.out.println(promptMessage);
-            choice = inChoice.nextLine().trim();
-            if (choice.equals("")) {
-                System.out.println("Entry can not be blank. ");
-            } else {
-                valid = true;
+        try {
+            while (!valid) {
+                System.out.println(promptMessage);
+                inChoice = this.keyboard.readLine();
+                inChoice = inChoice.trim();
+                if (inChoice.length() < 1) {
+                    System.out.println("Entry can not be blank. ");
+                    continue;
+                }
+                break;
             }
+        } catch (Exception e) {
+            System.out.println("Error reading input: " + e.getMessage());
         }
 
-        return choice;
+        return inChoice;
     }
 }
