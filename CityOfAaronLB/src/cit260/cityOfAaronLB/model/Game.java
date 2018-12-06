@@ -13,18 +13,18 @@ import java.io.Serializable;
 public class Game implements Serializable{
 
 
-    private int currentPopulation;
-    private int acresOwned;
-    private int wheatInStorage;
+    private int population;
+    private int acres;
+    private int wheat;
 //    private Player player;
     private Map map;
     private int acresPlanted;
     
     
     public Game() {
-        currentPopulation = 100;
-        acresOwned = 1000;
-        wheatInStorage = 2000;
+        population = 100;
+        acres = 1000;
+        wheat = 3000;
         
     }
 
@@ -54,36 +54,36 @@ public class Game implements Serializable{
 //        this.player = player;
 //    }
     
-    public int getCurrentPopulation() {
-        return currentPopulation;
+    public int getPopulation() {
+        return population;
     }
 
-    public void setCurrentPopulation(int currentPopulation) {
-        this.currentPopulation = currentPopulation;
+    public void setPopulation(int population) {
+        this.population = population;
     }
 
-    public int getAcresOwned() {
-        return acresOwned;
+    public int getAcres() {
+        return acres;
     }
 
-    public void setAcresOwned(int acresOwned) {
-        this.acresOwned = acresOwned;
+    public void setAcres(int acres) {
+        this.acres = acres;
     }
 
     public int getWheatInStroage() {
-        return wheatInStorage;
+        return wheat;
     }
 
     public void setWheatInStroage(int wheatInStroage) {
-        this.wheatInStorage = wheatInStroage;
+        this.wheat = wheatInStroage;
     }
 
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 31 * hash + this.currentPopulation;
-        hash = 31 * hash + this.acresOwned;
-        hash = 31 * hash + this.wheatInStorage;
+        hash = 31 * hash + this.population;
+        hash = 31 * hash + this.acres;
+        hash = 31 * hash + this.wheat;
         return hash;
     }
 
@@ -99,13 +99,13 @@ public class Game implements Serializable{
             return false;
         }
         final Game other = (Game) obj;
-        if (this.currentPopulation != other.currentPopulation) {
+        if (this.population != other.population) {
             return false;
         }
-        if (this.acresOwned != other.acresOwned) {
+        if (this.acres != other.acres) {
             return false;
         }
-        if (this.wheatInStorage != other.wheatInStorage) {
+        if (this.wheat != other.wheat) {
             return false;
         }
         return true;
@@ -113,7 +113,7 @@ public class Game implements Serializable{
 
     @Override
     public String toString() {
-        return "game{" + "currentPopulation=" + currentPopulation + ", acresOwned=" + acresOwned + ", wheatInStroage=" + wheatInStorage + '}';
+        return "game{" + "currentPopulation=" + population + ", acresOwned=" + acres + ", wheatInStroage=" + wheat + '}';
     }
     
     

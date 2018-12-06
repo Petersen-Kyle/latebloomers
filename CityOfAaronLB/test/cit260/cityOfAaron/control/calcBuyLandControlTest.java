@@ -5,7 +5,7 @@
  */
 package cit260.cityOfAaron.control;
 
-import cit260.cityOfAaronLB.control.calcBuyLandControl;
+import cit260.cityOfAaronLB.control.buyLandControl;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -54,7 +54,7 @@ public class calcBuyLandControlTest {
         int population = 50;
         int totalAcres = 100;
         int expResult = 200;
-        int result = calcBuyLandControl.calcBuyLand(rnd1, toBuy, wheatInStorage, population, totalAcres);
+        int result = buyLandControl.calcBuyLand(rnd1, toBuy, wheatInStorage, population, totalAcres);
         assertEquals(expResult, result);
         System.out.println("\t\t"+result);
         
@@ -66,7 +66,7 @@ public class calcBuyLandControlTest {
         population = 50;
         totalAcres = 100;
         expResult = -1;
-        result = calcBuyLandControl.calcBuyLand(rnd1, toBuy, wheatInStorage, population, totalAcres);
+        result = buyLandControl.calcBuyLand(rnd1, toBuy, wheatInStorage, population, totalAcres);
         assertEquals(expResult, result);
         System.out.println("\t\t"+result);
         
@@ -78,7 +78,7 @@ public class calcBuyLandControlTest {
         population = 50;
         totalAcres = 100;
         expResult = -2;
-        result = calcBuyLandControl.calcBuyLand(rnd1, toBuy, wheatInStorage, population, totalAcres);
+        result = buyLandControl.calcBuyLand(rnd1, toBuy, wheatInStorage, population, totalAcres);
         assertEquals(expResult, result);
         System.out.println("\t\t"+result);
         
@@ -90,7 +90,7 @@ public class calcBuyLandControlTest {
         population = 10;
         totalAcres = 100;
         expResult = -3;
-        result = calcBuyLandControl.calcBuyLand(rnd1, toBuy, wheatInStorage, population, totalAcres);
+        result = buyLandControl.calcBuyLand(rnd1, toBuy, wheatInStorage, population, totalAcres);
         assertEquals(expResult, result);
         System.out.println("\t\t"+result);
         
@@ -102,7 +102,7 @@ public class calcBuyLandControlTest {
         population = 50;
         totalAcres = 100;
         expResult = 200;
-        result = calcBuyLandControl.calcBuyLand(rnd1, toBuy, wheatInStorage, population, totalAcres);
+        result = buyLandControl.calcBuyLand(rnd1, toBuy, wheatInStorage, population, totalAcres);
         assertEquals(expResult, result);
         System.out.println("\t\t"+result);
     }

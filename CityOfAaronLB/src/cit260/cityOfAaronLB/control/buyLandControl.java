@@ -9,7 +9,7 @@ package cit260.cityOfAaronLB.control;
  *
  * @author kpetersen
  */
-public class calcBuyLandControl {
+public class buyLandControl {
     public static int calcBuyLand(int rnd1, int toBuy, int wheatInStorage, int population, int totalAcres){
         if (toBuy < 0){
 		return -1;}

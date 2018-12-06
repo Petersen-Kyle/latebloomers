@@ -15,26 +15,6 @@ import java.util.Random;
  */
 public class sellLandControl {
 
-    public static int sellLand(String inputs, int landPrice, int acresAvailable, int acresPlanted, int wheatInStorage) {
-        if (landPrice == 0) {
-            landPrice = 27;
-            acresAvailable = 100;
-            acresPlanted = 80;
-            wheatInStorage = 500;
-        }
-
-        int userLandSell = Integer.parseInt(inputs);
-        if (userLandSell <= 0) {
-            return -1;
-        } else if (userLandSell > acresAvailable - acresPlanted) {
-            return -2;
-        }
-        landPrice = (int) (Math.random() * 10) + 17;
-        acresAvailable = acresAvailable - userLandSell;
-        wheatInStorage = wheatInStorage + (userLandSell * landPrice);
-        return wheatInStorage;
-    }
-
     public static int sellLand(String desiredToSell, Game game) throws GameControlException {
 
         int landPrice;
@@ -47,11 +27,11 @@ public class sellLandControl {
 
         if (userLandSell <= 0) {
             throw new GameControlException("Must be a greater than zero...");
-        } else if (userLandSell > game.getAcresOwned() - game.getAcresPlanted()) {
+        } else if (userLandSell > game.getAcres() - game.getAcresPlanted()) {
             throw new GameControlException("Your dont have enough land to sell...");
         }
         landPrice = (int) (Math.random() * 10) + 17;
-        game.setAcresOwned(game.getAcresOwned() - userLandSell);
+        game.setAcres(game.getAcres() - userLandSell);
         game.setWheatInStroage(game.getWheatInStroage() + (userLandSell * landPrice));
 
         return game.getWheatInStroage();
