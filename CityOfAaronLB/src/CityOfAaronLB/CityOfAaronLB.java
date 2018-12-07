@@ -19,9 +19,18 @@ public class CityOfAaronLB {
 
     public static Player player;
     public static Game game;
-    private static PrintWriter outFile = null;
+    private static PrintWriter outPut = null;
     private static BufferedReader inFile = null;
+    private static PrintWriter logFile = null;
 
+    public static PrintWriter getLogFile(){
+        return logFile;
+    }
+    
+    public static void setLogFile(PrintWriter logFile) {
+        CityOfAaronLB.logFile = logFile;
+    }
+    
     public static Player getPlayer() {
         return player;
     }
@@ -38,12 +47,12 @@ public class CityOfAaronLB {
         game = currentGame;
     }
 
-    public static PrintWriter getOutFile() {
-        return outFile;
+    public static PrintWriter getOutPut() {
+        return outPut;
     }
 
-    public static void setOutFile(PrintWriter outFile) {
-        CityOfAaronLB.outFile = outFile;
+    public static void setOutPut(PrintWriter outPut) {
+        CityOfAaronLB.outPut = outPut;
     }
 
     public static BufferedReader getInFile() {
@@ -54,13 +63,12 @@ public class CityOfAaronLB {
         CityOfAaronLB.inFile = inFile;
     }
 
-    private static PrintWriter logFile = null;
-
     public static void main(String[] args) {
-
+        
         try {
+            logFile = new PrintWriter("logFile.txt");
             CityOfAaronLB.inFile = new BufferedReader(new InputStreamReader(System.in));
-            CityOfAaronLB.outFile = new PrintWriter(System.out, true);
+            CityOfAaronLB.outPut = new PrintWriter(System.out, true);
 
             StartProgramView newStart = new StartProgramView();
             newStart.display();
@@ -72,25 +80,21 @@ public class CityOfAaronLB {
             e.printStackTrace();;
         } finally {
             try {
+
+                if (logFile != null) {
+                    logFile.close();
+                }
                 if (CityOfAaronLB.inFile != null) {
                     CityOfAaronLB.inFile.close();
                 }
-                if (CityOfAaronLB.outFile != null) {
-                    CityOfAaronLB.outFile.close();
+                if (CityOfAaronLB.outPut != null) {
+                    CityOfAaronLB.outPut.close();
                 }
             } catch (IOException ex) {
                 System.out.println("Error closing files");
                 return;
             }
         }
-    }
-
-    public static PrintWriter getLogFile() {
-        return logFile;
-    }
-
-    public static void setLogFile(PrintWriter logFile) {
-        CityOfAaronLB.logFile = logFile;
     }
 
 }

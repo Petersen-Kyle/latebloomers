@@ -9,6 +9,7 @@ import CityOfAaronLB.CityOfAaronLB;
 import cit260.cityOfAaronLB.model.Game;
 import cit260.cityOfAaronLB.model.Map;
 import cit260.cityOfAaronLB.model.Location;
+import cit260.cityOfAaronLB.model.Player;
 
 /**
  *
@@ -21,8 +22,12 @@ public class MapView {
         String rightIndicator;
         Game game = CityOfAaronLB.getGame(); // retreive the game
         Map map = game.getMap(); // retreive the map from game
+        Player player = CityOfAaronLB.getPlayer();
         Location[][] locations = map.getLocations(); // retreive the locations from map
         Location currentLocation = map.getCurrentLocation();
+        for (int clear = 0; clear < 1000; clear++) {
+                    System.out.println("\b");
+                }
         // Build the heading of the map
         System.out.print("  |");
         for (int column = 0; column < locations[0].length; column++) {
@@ -56,9 +61,11 @@ public class MapView {
                         + locations[row][column].getSceneSymbol()
                         + rightIndicator);
             }
+
             System.out.println("|");
 
         }
-
+        System.out.println("\nLord " + player.getName());
+        System.out.println("\n" + currentLocation.getDescription());
     }
 }

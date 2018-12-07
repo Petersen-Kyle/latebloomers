@@ -26,7 +26,7 @@ public class MoveLocation extends View {
         String row = inputs;
         String col = getInput("Enter Column(Q to quit): ");
         if (col.toUpperCase().trim().equals("Q")) {
-            System.out.println("You didnt want to move...");
+            this.console.println("You didnt want to move...");
             return true;
         }
 
@@ -37,18 +37,18 @@ public class MoveLocation extends View {
             inRow = Integer.parseInt(row);
             inCol = Integer.parseInt(col);
         } catch (NumberFormatException e) {
-            System.out.println("Invalid entry, must be an number...");
+            this.console.println("Invalid entry, must be an number...");
             return false;
         }
 
         Game game = CityOfAaronLB.CityOfAaronLB.getGame();
         Map map = game.getMap();
 //        String desc = Location.getDescription();
-                System.out.println();
+                this.console.println();
         try {
             GameControl.movePlayer(map, inRow, inCol);
         } catch (ArrayIndexOutOfBoundsException e) {
-            System.out.println("Invalid range.");
+            this.console.println("Invalid range.");
         }
         return true;
     }

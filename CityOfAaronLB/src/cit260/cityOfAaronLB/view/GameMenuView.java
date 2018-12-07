@@ -34,9 +34,8 @@ public class GameMenuView extends View {
 
         switch (inputs) {
             case "1":
-                System.out.println("City of Aaron Map");
+                this.console.println("City of Aaron Map");
                 displayMap();
-
                 break;
             case "2":
                 MoveLocation move = new MoveLocation();
@@ -52,7 +51,7 @@ public class GameMenuView extends View {
                 newStorehouseMenu.display();
                 break;
             case "5":
-                System.out.println("Open the reports menu");
+                this.console.println("Open the reports menu");
                 break;
             case "6":
                 SortControl sort = new SortControl();
@@ -61,25 +60,31 @@ public class GameMenuView extends View {
             case "7": {
                 try {
                     int wheatLeftover = calcFeedThePeopleControl.calcFeedThePeople(5, 5, 5, 5, -1);
-                    System.out.println("Wheat Leftover = " + wheatLeftover);
+                    this.console.println("Wheat Leftover = " + wheatLeftover);
                 } catch (GameControlException ex) {
-                    System.out.println(ex.getMessage());
+                    this.console.println(ex.getMessage());
                 }
             }
             break;
             case "8":
-                System.out.println("Save your game");
+                this.console.println("Save your game");
+//                this.saveGame();
                 break;
 
         }
-        System.out.println();
+        this.console.println();
         return false;
     }
 
     public void displayMap() {
         MapView newMap = new MapView();
         newMap.displayMap();
-        
+
     }
+
+//    public static void saveGame(CityOfAaronLB.CityOfAaronLB game, String filePath) {
+//        SaveGameView saveGameView = new SaveGameView();
+//        saveGameView.display();
+//    }
 
 }

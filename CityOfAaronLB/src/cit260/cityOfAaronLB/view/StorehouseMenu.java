@@ -25,10 +25,10 @@ public class StorehouseMenu extends View{
 
         switch (inputs) {
                 case "1":
-                    System.out.println("Current Resources");
+                    this.console.println("Current Resources");
                     break;
                 case "2":
-                    System.out.println("How to use the resources");
+                    this.console.println("How to use the resources");
                     break;
             }
     System.out.println();

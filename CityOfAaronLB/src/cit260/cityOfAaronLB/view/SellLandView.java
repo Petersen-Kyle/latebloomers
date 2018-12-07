@@ -27,11 +27,11 @@ public class SellLandView extends View {
         try {
             newSell = sellLandControl.sellLand(inputs, game);
         } catch (GameControlException ex) {
-            System.out.println(ex.getMessage());
+            this.console.println(ex.getMessage());
         }
         if (newSell >= 0) {
-            System.out.println("You sold " + newSell + " achers of land.");
-            System.out.println("You now have " + game.getWheat() + " Wheat in Storage");
+            this.console.println("You sold " + newSell + " achers of land.");
+            this.console.println("You now have " + game.getWheat() + " Wheat in Storage");
         }
         return true;
     }

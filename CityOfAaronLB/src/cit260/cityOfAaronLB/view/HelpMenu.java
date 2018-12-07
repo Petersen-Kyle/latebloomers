@@ -5,10 +5,6 @@
  */
 package cit260.cityOfAaronLB.view;
 import cit260.cityOfAaronLB.control.SortMTS;
-import cit260.cityOfAaronLB.control.GameControl;
-import cit260.cityOfAaronLB.model.Weapons;
-import cit260.cityOfAaronLB.model.Weapons;
-import java.util.EnumSet;
 
 import cit260.cityOfAaronLB.control.ToolSortControl;
 
@@ -35,8 +31,8 @@ public class HelpMenu extends View {
 
         switch (inputs) {
             case "1":
-                System.out.println("The Histor of the City of Aaron");
-                System.out.println("According to The Book of Mormon, \n"
+                this.console.println("The Histor of the City of Aaron");
+                this.console.println("According to The Book of Mormon, \n"
                         + "the city of Aaron was located near Nephihah, \n"
                         + "though constructed earlier. Prior to the \n"
                         + "construction of Nephihah, its nearest known \n"
@@ -53,22 +49,22 @@ public class HelpMenu extends View {
                         + "two cities by this name. ");
                 break;
             case "2":
-                System.out.println("The goal of the game");
-                System.out.println("You are the new king of the City of Aaron \n"
+                this.console.println("The goal of the game");
+                this.console.println("You are the new king of the City of Aaron \n"
                         + "As the new leader you should visit the lands under \n"
                         + "your control and find ways to help your people to  \n"
                         + "become more productive as well as direct the planting \n"
                         + "efforts to feed you people and expand your population \n");
                 break;
             case "3":
-                System.out.println("How to make a move");
+                this.console.println("How to make a move");
                 break;
             case "4":
-                System.out.println("Tips and Hints");
+                this.console.println("Tips and Hints");
                 break;
             case "5":
-                System.out.println("Starting resource");
-                System.out.println("Here is a list of your beginning resourses \n"
+                this.console.println("Starting resource");
+                this.console.println("Here is a list of your beginning resourses \n"
                         + "Population = 100 \n"
                         + "Acres of Land = 1000 \n"
                         + "Wheat in Storage = 2700 \n");
@@ -82,7 +78,7 @@ public class HelpMenu extends View {
                 
                 break;
         }
-        System.out.println();
+        this.console.println();
         return false;
     }
 }

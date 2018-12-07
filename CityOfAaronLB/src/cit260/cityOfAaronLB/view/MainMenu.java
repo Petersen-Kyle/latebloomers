@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package cit260.cityOfAaronLB.view;
+import CityOfAaronLB.CityOfAaronLB;
 import cit260.cityOfAaronLB.control.GameControl;
 import cit260.cityOfAaronLB.model.Player;
         
@@ -26,15 +27,16 @@ public class MainMenu extends View {
     public boolean doAction(String inputs) {
         switch (inputs) {
             case "1":
-                System.out.println("Welcome to a new game in the City of Aaron");
-                Player playersName = new Player();
+                this.console.println("Welcome to a new game in the City of Aaron");
+                Player playersName = CityOfAaronLB.getPlayer();
+                
 //                Player player = GameControl.savePlayer(playersName);
                 GameControl.createNewGame(playersName);
                 GameMenuView newGame = new GameMenuView();
                 newGame.display();
                 break;
             case "2":
-                System.out.println("Welcome back to the City of Aaron");
+                this.console.println("Welcome back to the City of Aaron");
                 break;
             case "3":
                 HelpMenu newHelp = new HelpMenu();

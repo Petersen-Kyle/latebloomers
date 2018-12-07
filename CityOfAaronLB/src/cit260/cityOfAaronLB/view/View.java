@@ -8,7 +8,6 @@ package cit260.cityOfAaronLB.view;
 import CityOfAaronLB.CityOfAaronLB;
 import java.io.BufferedReader;
 import java.io.PrintWriter;
-import java.util.Scanner;
 
 /**
  *
@@ -19,7 +18,7 @@ public abstract class View implements ViewInterface {
     private String defaultMessage;
 
     protected final BufferedReader keyboard = CityOfAaronLB.getInFile();
-    protected final PrintWriter console = CityOfAaronLB.getOutFile();
+    protected final PrintWriter console = CityOfAaronLB.getOutPut();
 
     public View() {
 
@@ -41,7 +40,7 @@ public abstract class View implements ViewInterface {
         do {
             String inputs = this.getInput(message);
             if (inputs.toLowerCase().trim().equals("q")) {
-                System.out.println("Thanks for playing Late Bloomers City of Aaron");
+                this.console.println("Thanks for playing Late Bloomers City of Aaron");
                 return;
             }
             endView = doAction(inputs);
@@ -55,23 +54,23 @@ public abstract class View implements ViewInterface {
 
     @Override
     public String getInput(String promptMessage) {
-        String inChoice = null;
+        String selection = null;
         boolean valid = false;
         try {
             while (!valid) {
-                System.out.println(promptMessage);
-                inChoice = this.keyboard.readLine();
-                inChoice = inChoice.trim();
-                if (inChoice.length() < 1) {
-                    System.out.println("Entry can not be blank. ");
+                this.console.println(promptMessage);
+                selection = this.keyboard.readLine();
+                selection = selection.trim();
+                if (selection.length() < 1) {
+                    this.console.println("Entry can not be blank. ");
                     continue;
                 }
                 break;
             }
         } catch (Exception e) {
-            System.out.println("Error reading input: " + e.getMessage());
+            this.console.println("Error reading input: " + e.getMessage());
         }
 
-        return inChoice;
+        return selection;
     }
 }
