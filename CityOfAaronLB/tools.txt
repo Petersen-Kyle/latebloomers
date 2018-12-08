@@ -1,0 +1,7 @@
+     Report Tool List
+Name           Description                             
+====           ===========                             
+Plow           The plow plows 10 fields                
+Hammer         The hammer gains 5 people               
+Sickle         The sickle adds 1 harvested acre        
+Shovel         The shovel prepares 2 fields            

@@ -8,7 +8,7 @@ package cit260.cityOfAaronLB.view;
 import static CityOfAaronLB.CityOfAaronLB.game;
 import cit260.cityOfAaronLB.control.MoveLocation;
 import cit260.cityOfAaronLB.control.SortControl;
-import cit260.cityOfAaronLB.control.calcFeedThePeopleControl;
+import cit260.cityOfAaronLB.control.FeedPeopleControl;
 import cit260.cityOfAaronLB.exceptions.GameControlException;
 import java.util.InputMismatchException;
 
@@ -25,9 +25,9 @@ public class GameMenuView extends View {
                 + "3. Buy/Sell Land\n"
                 + "4. Storehouse\n"
                 + "5. Reports Menu\n"
-                + "6. Animal Adjustments\n"
-                + "7. Feed the People \n"
-                + "8. Save Game\n"
+                + "6. Feed the People\n"
+                + "7. Save Game \n"
+                + "8. Help Menu\n"
                 + "Choose one or (Q to Quit to Main Menu): ");
     }
 
@@ -68,24 +68,19 @@ public class GameMenuView extends View {
                     ReportView newReports = new ReportView();
                     newReports.display();
                     break;
-                case "6":
-                    SortControl sort = new SortControl();
-                    sort.sortAnimal();
-                    break;
-                case "7": {
-                    try {
-                        int wheatLeftover = calcFeedThePeopleControl.calcFeedThePeople(5, 5, 5, 5, -1);
-                        this.console.println("Wheat Leftover = " + wheatLeftover);
-                    } catch (GameControlException ex) {
-                        this.console.println(ex.getMessage());
-                    }
-                }
+                case "6": 
+                    FeedPeopleView feedPeople = new FeedPeopleView();
+                    feedPeople.display();
+                    
+                    
+                
+
                 break;
-                case "8":
+                case "7":
 //                this.console.println("Save your game");
                     this.saveGame();
                     break;
-                case "9":
+                case "8":
                     HelpMenu newHelp = new HelpMenu();
                     newHelp.display();
                     break;

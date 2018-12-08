@@ -37,8 +37,6 @@ public class ReportControl {
         reportStr += String.format(formater, "====", "===========");
         for (Animals animal : Animals.values()) {
             reportStr += String.format(formater, animal.getItemName(), animal.getDescription());
-//        Location[][] locations = CityOfAaronLB.CityOfAaronLB.getGame().getMap().getLocations();
-//        for (Location location : locations){
         }
         return reportStr;
     }
@@ -50,9 +48,11 @@ public class ReportControl {
         reportStr += String.format(formater, "====", "===========");
         for (Tools tool : Tools.values()) {
             reportStr += String.format(formater, tool.getItemName(), tool.getDescription());
-//        Location[][] locations = CityOfAaronLB.CityOfAaronLB.getGame().getMap().getLocations();
-//        for (Location location : locations){
         }
         return reportStr;
     }
 }
+
+
+//        Location[][] locations = CityOfAaronLB.CityOfAaronLB.getGame().getMap().getLocations();
+//        for (Location location : locations){

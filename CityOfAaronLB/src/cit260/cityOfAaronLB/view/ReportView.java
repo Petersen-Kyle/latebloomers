@@ -75,7 +75,7 @@ public class ReportView extends View {
                     break;
                 default:
                     this.console.println("Invalid Input"
-                            + "\nPlease enter a number 1 - 7 or Q to quit");
+                            + "\nPlease enter a number 1 - 3 or Q to quit");
                     break;
             }
         } catch (InputMismatchException err) {
