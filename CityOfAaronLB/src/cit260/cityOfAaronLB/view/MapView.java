@@ -65,7 +65,7 @@ public class MapView {
             System.out.println("|");
 
         }
-        System.out.println("\nLord " + player.getName());
+        System.out.println("\nLord " + player.getName() + " you have entered " + currentLocation.getName());
         System.out.println("\n" + currentLocation.getDescription());
     }
 }
