@@ -5,14 +5,8 @@
  */
 package cit260.cityOfAaronLB.view;
 
-import cit260.cityOfAaronLB.control.GameControl;
-import cit260.cityOfAaronLB.control.SortMTS;
-
 import cit260.cityOfAaronLB.control.ToolSortControl;
-import cit260.cityOfAaronLB.exceptions.GameControlException;
 import java.util.InputMismatchException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  *
@@ -28,7 +22,6 @@ public class HelpMenu extends View {
                 + "4. Tips and Hints\n"
                 + "5. Starting Resources\n"
                 + "6. Tools Bonus Adjustments\n"
-                + "7. Display Weapons Sorted Alphabetically\n"
                 + "Choose one or (Q to Quit to Main Menu): ");
     }
 
@@ -78,22 +71,6 @@ public class HelpMenu extends View {
                 case "6":
                     ToolSortControl sort = new ToolSortControl();
                     sort.sortTools();
-                    break;
-                case "7":
-//                SortMTS sortMTS = new SortMTS();
-                    String reportStr = SortMTS.getAnimalList();
-                    this.console.println(reportStr);
-                    String response = this.getInput("Do you want to save this report y/n?");
-                    if (response.compareToIgnoreCase("y") == 0) {
-                        response = this.getInput("Enter your file name: ");
-                        try {
-                            if (GameControl.saveReport(response, reportStr)) {
-                                this.console.println("Your report was properly saved.");
-                            }
-                        } catch (GameControlException ex) {
-                            ErrorView.display(this.getClass().getName(), ex.getMessage());
-                        }
-                    }
                     break;
                 default:
                     this.console.println("Invalid Input"

@@ -46,8 +46,8 @@ public class SortMTS {
         return Arrays.asList(weapons).toString();
     }
     
-    public static String getAnimalList() {
-        String reportStr = "     Report Animal List\r\n";
+    public static String getWeaponList() {
+        String reportStr = "     Report Weapon List\r\n";
         String formater = "%-15s%-40s\r\n";
         reportStr += String.format(formater, "Name", "Description");
         reportStr += String.format(formater, "====", "===========");
