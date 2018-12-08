@@ -7,7 +7,7 @@ package cit260.cityOfAaronLB.view;
 
 import CityOfAaronLB.CityOfAaronLB;
 import cit260.cityOfAaronLB.model.Player;
-
+import java.util.InputMismatchException;
 
 /**
  *
@@ -54,26 +54,29 @@ public class StartProgramView extends View {
 
     @Override
     public boolean doAction(String inputs) {
-
-        switch (inputs) {
-            case "e":
-                this.console.println("Thanks for playing Late Bloomers City of Aaron");
-                System.exit(0);
-                break;
-            case "":
-                this.console.println("You must enter a non-blank value");
-                break;
-            default:
-                Player player = new Player();
-                player.setName(inputs);
-                CityOfAaronLB.setPlayer(player);
-                for (int clear = 0; clear < 1000; clear++) {
-                    System.out.println("\b");
-                }
-                this.console.println("Welcome to the City of Aaron, Lord " + player.getName());
-                MainMenu newMainMenu = new MainMenu();
-                newMainMenu.display();
-                break;
+        try {
+            switch (inputs) {
+                case "e":
+                    this.console.println("Thanks for playing Late Bloomers City of Aaron");
+                    System.exit(0);
+                    break;
+                case "":
+                    this.console.println("You must enter a non-blank value");
+                    break;
+                default:
+                    Player player = new Player();
+                    player.setName(inputs);
+                    CityOfAaronLB.setPlayer(player);
+                    for (int clear = 0; clear < 1000; clear++) {
+                        System.out.println("\b");
+                    }
+                    this.console.println("Welcome to the City of Aaron, Lord " + player.getName());
+                    MainMenu newMainMenu = new MainMenu();
+                    newMainMenu.display();
+                    break;
+            }
+        } catch (InputMismatchException err) {
+            this.console.println("\nINVALID INPUT!");
         }
         return true;
 

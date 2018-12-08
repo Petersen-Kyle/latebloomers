@@ -7,6 +7,7 @@ package cit260.cityOfAaronLB.view;
 import cit260.cityOfAaronLB.control.SortMTS;
 
 import cit260.cityOfAaronLB.control.ToolSortControl;
+import java.util.InputMismatchException;
 
 /**
  *
@@ -28,7 +29,7 @@ public class HelpMenu extends View {
 
     @Override
     public boolean doAction(String inputs) {
-
+        try {  
         switch (inputs) {
             case "1":
                 this.console.println("The Histor of the City of Aaron");
@@ -75,8 +76,14 @@ public class HelpMenu extends View {
                 break;
             case "7":
                 SortMTS sortMTS = new SortMTS();
-                
                 break;
+            default:
+                this.console.println("Invalid Input" +
+                        "\nPlease enter a number 1 - 7 or Q to quit");
+                break;
+        }
+        } catch (InputMismatchException err){
+            this.console.println("\nINVALID INPUT!");
         }
         this.console.println();
         return false;

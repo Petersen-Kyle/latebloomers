@@ -10,6 +10,7 @@ import cit260.cityOfAaronLB.control.MoveLocation;
 import cit260.cityOfAaronLB.control.SortControl;
 import cit260.cityOfAaronLB.control.calcFeedThePeopleControl;
 import cit260.cityOfAaronLB.exceptions.GameControlException;
+import java.util.InputMismatchException;
 
 /**
  *
@@ -33,6 +34,7 @@ public class GameMenuView extends View {
     @Override
     public boolean doAction(String inputs) {
 
+        try {
         switch (inputs) {
             case "1":
                 this.console.println("City of Aaron Map");
@@ -85,7 +87,14 @@ public class GameMenuView extends View {
                 this.console.println("Save your game");
 //                this.saveGame();
                 break;
+            default:
+                this.console.println("Invalid Input" +
+                        "\nPlease enter a number 1 - 8 or Q to quit");
+                break;
 
+        }
+        } catch (InputMismatchException err){
+            this.console.println("\nINVALID INPUT!");
         }
         this.console.println();
         return false;

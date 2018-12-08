@@ -6,6 +6,7 @@
 package cit260.cityOfAaronLB.view;
 
 import static CityOfAaronLB.CityOfAaronLB.game;
+import java.util.InputMismatchException;
 
 /**
  *
@@ -23,6 +24,7 @@ public class LandControlView extends View {
 
     @Override
     public boolean doAction(String inputs) {
+        try {
         switch (inputs) {
             case "1":
                 BuyLandView buyland = new BuyLandView();
@@ -33,9 +35,14 @@ public class LandControlView extends View {
                 sellLand.display();
                 break;
             default:
-                
+                this.console.println("Invalid Input"
+                        + "\nPlease enter a number 1 - 2 or Q to quit");
+                break;
+
         }
-        
+        } catch (InputMismatchException err){
+            this.console.println("\nINVALID INPUT!");
+        }
         for (int clear = 0; clear < 1000; clear++) {
             System.out.println("\b");
         }

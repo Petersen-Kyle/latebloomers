@@ -5,6 +5,8 @@
  */
 package cit260.cityOfAaronLB.view;
 
+import java.util.InputMismatchException;
+
 /**
  *
  * @author mtsmith
@@ -13,18 +15,25 @@ public class ReportView extends View {
 
     public ReportView() {
         super("Which report would you like to see? "
-        + "\n 1. MTS Report"
-        + "\n Choose one or Q to quit: ");
+                + "\n 1. MTS Report"
+                + "\n Choose one or Q to quit: ");
     }
-    
+
     @Override
     public boolean doAction(String inputs) {
-        switch (inputs) {
-            case "1":
-                
-                break;
+        try {
+            switch (inputs) {
+                case "1":
+
+                    break;
+                default:
+                    this.console.println("Invalid Input"
+                            + "\nPlease enter a number 1 - 7 or Q to quit");
+                    break;
+            }
+        } catch (InputMismatchException err){
+            this.console.println("\nINVALID INPUT!");
         }
-        
-        return false;
+            return false;
+        }
     }
-}
