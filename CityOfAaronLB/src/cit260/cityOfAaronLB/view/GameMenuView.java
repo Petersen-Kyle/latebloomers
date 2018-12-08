@@ -5,6 +5,7 @@
  */
 package cit260.cityOfAaronLB.view;
 
+import static CityOfAaronLB.CityOfAaronLB.game;
 import cit260.cityOfAaronLB.control.MoveLocation;
 import cit260.cityOfAaronLB.control.SortControl;
 import cit260.cityOfAaronLB.control.calcFeedThePeopleControl;
@@ -20,13 +21,12 @@ public class GameMenuView extends View {
         super("Game Menu\n"
                 + "1. View the Map\n"
                 + "2. Move to a new location\n"
-                + "3. Sell Land\n"
-                + "4. Buy Land\n"
-                + "5. Storehouse\n"
-                + "6. Reports Menu\n"
-                + "7. Animal Adjustments\n"
-                + "8. Feed the People \n"
-                + "9. Save Game\n"
+                + "3. Buy/Sell Land\n"
+                + "4. Storehouse\n"
+                + "5. Reports Menu\n"
+                + "6. Animal Adjustments\n"
+                + "7. Feed the People \n"
+                + "8. Save Game\n"
                 + "Choose one or (Q to Quit to Main Menu): ");
     }
 
@@ -44,25 +44,35 @@ public class GameMenuView extends View {
                 displayMap();
                 break;
             case "3":
-                SellLandView sellLand = new SellLandView();
-                sellLand.display();
+                for (int clear = 0; clear < 1000; clear++) {
+                    System.out.println("\b");
+                }
+                this.console.println("Current Population: " + game.getPopulation()
+                        + "\n Current Acres Owned: " + game.getAcres()
+                        + "\n Current Wheat in Storage: " + game.getWheat());
+                LandControlView controlLand = new LandControlView();
+                controlLand.display();
                 break;
+//            case "":
+//                BuyLandView buyland = new BuyLandView();
+//                buyland.display();
+//                break;
             case "4":
-                BuyLandView buyland = new BuyLandView();
-                buyland.display();
-                break;
-            case "5":
                 StorehouseMenu newStorehouseMenu = new StorehouseMenu();
                 newStorehouseMenu.display();
                 break;
-            case "6":
-                this.console.println("Open the reports menu");
+            case "5":
+                for (int clear = 0; clear < 1000; clear++) {
+                    System.out.println("\b");
+                }
+                ReportView newReports = new ReportView();
+                newReports.display();
                 break;
-            case "7":
+            case "6":
                 SortControl sort = new SortControl();
                 sort.sortAnimal();
                 break;
-            case "8": {
+            case "7": {
                 try {
                     int wheatLeftover = calcFeedThePeopleControl.calcFeedThePeople(5, 5, 5, 5, -1);
                     this.console.println("Wheat Leftover = " + wheatLeftover);
@@ -71,7 +81,7 @@ public class GameMenuView extends View {
                 }
             }
             break;
-            case "9":
+            case "8":
                 this.console.println("Save your game");
 //                this.saveGame();
                 break;
@@ -88,8 +98,7 @@ public class GameMenuView extends View {
     }
 
 //    public static void saveGame(CityOfAaronLB.CityOfAaronLB game, String filePath) {
-//        SaveGameView saveGameView = new SaveGameView();
+//        SaveGameV1iew saveGameView = new SaveGameView();
 //        saveGameView.display();
 //    }
-
 }
