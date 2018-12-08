@@ -5,27 +5,34 @@
  */
 package cit260.cityOfAaronLB.view;
 
+import cit260.cityOfAaronLB.control.GameControl;
+import cit260.cityOfAaronLB.exceptions.GameControlException;
+
+
 /**
  *
  * @author pytha
  */
-//public class SaveGameView extends View {
-//    
-//    public SaveGameView() {
-//        super("");
-//    }
-//    
+public class SaveGameView extends View {
+
+    public SaveGameView() {
+        super("Enter file path: ");
+    }
+
 //    private String[] getInputs() {
 //        inputs = new String
 //    }
-//    
-//    @Override
-//    public boolean doAction(String inputs) {
-//        filePath = 
-//        
-//    }
-//    return inputs;
-//    
-//
-//    
-//}
+    @Override
+    public boolean doAction(String inputs) {
+
+        try {
+            GameControl.saveGame(inputs);
+            this.console.println("Your game is saved! ");
+        } catch (GameControlException ex) {
+            ErrorView.display(this.getClass().getName(), ex.getMessage());
+        }
+
+        return true;
+    }
+
+}

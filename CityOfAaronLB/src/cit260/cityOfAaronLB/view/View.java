@@ -73,4 +73,10 @@ public abstract class View implements ViewInterface {
 
         return selection;
     }
+
+    public void clearScreen() {
+        for (int clear = 0; clear < 1000; clear++) {
+            System.out.println("\b");
+        }
+    }
 }

@@ -49,7 +49,7 @@ public class StartProgramView extends View {
                 + "			   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"
                 + "\n"
                 + "\n"
-                + "Enter your name: ");
+                + "What is your name my liege: ");
     }
 
     @Override
@@ -60,8 +60,8 @@ public class StartProgramView extends View {
                     this.console.println("Thanks for playing Late Bloomers City of Aaron");
                     System.exit(0);
                     break;
-                case "":
-                    this.console.println("You must enter a non-blank value");
+                case " ":
+                    this.console.println("You must enter a non-blank value or E to exit the game");
                     break;
                 default:
                     Player player = new Player();

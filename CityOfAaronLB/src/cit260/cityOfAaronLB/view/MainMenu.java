@@ -7,8 +7,12 @@ package cit260.cityOfAaronLB.view;
 
 import CityOfAaronLB.CityOfAaronLB;
 import cit260.cityOfAaronLB.control.GameControl;
+import cit260.cityOfAaronLB.exceptions.GameControlException;
+import cit260.cityOfAaronLB.model.Game;
 import cit260.cityOfAaronLB.model.Player;
 import java.util.InputMismatchException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -39,6 +43,7 @@ public class MainMenu extends View {
                     break;
                 case "2":
                     this.console.println("Welcome back to the City of Aaron");
+                    loadGame();
                     break;
                 case "3":
                     HelpMenu newHelp = new HelpMenu();
@@ -53,6 +58,18 @@ public class MainMenu extends View {
             this.console.println("\nINVALID INPUT!");
         }
         return false;
+    }
+
+    private void loadGame() {
+        String filePath = getInput("Enter your saved game file: ");
+        try {
+            Game game = GameControl.loadGame(filePath);
+            CityOfAaronLB.setGame(game);
+            GameMenuView newGame = new GameMenuView();
+            newGame.display();
+        } catch (GameControlException ex) {
+            ErrorView.display(this.getClass().getName(), ex.getMessage());
+        }
     }
 
 }
