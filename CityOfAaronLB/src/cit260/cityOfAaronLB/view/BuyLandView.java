@@ -4,6 +4,9 @@
  * and open the template in the editor.
  */
 package cit260.cityOfAaronLB.view;
+import cit260.cityOfAaronLB.control.buyLandControl;
+import cit260.cityOfAaronLB.model.Game;
+import cit260.cityOfAaronLB.exceptions.GameControlException;
 
 /**
  *
@@ -18,8 +21,17 @@ public class BuyLandView extends View {
     
     @Override
     public boolean doAction(String inputs) {
+        Game game = CityOfAaronLB.CityOfAaronLB.getGame();
+        int acresToBuy = -1;
+        try{
+            acresToBuy = buyLandControl.calcBuyLand(inputs, game);
+        } catch (GameControlException ex) {
+            this.console.println(ex.getMessage());
+        }
         
-        this.console.println("You bought" + inputs + " land.");
+        if (acresToBuy>=0){
+            this.console.println("You now have " + acresToBuy + " acres of land.");
+        }
         
         return true;
     }
