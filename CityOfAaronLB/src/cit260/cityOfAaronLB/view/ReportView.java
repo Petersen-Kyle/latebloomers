@@ -20,7 +20,7 @@ public class ReportView extends View {
         super("Which report would you like to see? "
                 + "\n 1. MTS Report"
                 + "\n 2. MJL Report"
-                + "\n 3. K7P Report"
+                + "\n 3. KJP Report"
                 + "\n Choose one or Q to quit: ");
     }
 
