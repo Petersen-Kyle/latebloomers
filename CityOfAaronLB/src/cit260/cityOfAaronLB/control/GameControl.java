@@ -6,6 +6,8 @@
 package cit260.cityOfAaronLB.control;
 
 import CityOfAaronLB.CityOfAaronLB;
+import static CityOfAaronLB.CityOfAaronLB.game;
+import static CityOfAaronLB.CityOfAaronLB.player;
 import cit260.cityOfAaronLB.exceptions.GameControlException;
 import cit260.cityOfAaronLB.model.Animals;
 import cit260.cityOfAaronLB.model.Player;
@@ -21,9 +23,6 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
 
 /**
  *
@@ -354,6 +353,20 @@ public class GameControl {
             }
         }
         return success;
+    }
+   
+        public static void gameStats() {
+        this.console.println("Lord " + player.getName() + "you have: \n" +
+                                   "\nYear:               " + game.getYear() +
+                                   "\nPeople Starved:     " + game.getStarved() +
+                                   "\nMoved to City:      " + game.getNewPop() +
+                                   "\nCurrent Population: " + game.getPopulation() +
+                                   "\nAcres Owned:        " + game.getAcres() +
+                                   "\nWheat per Acre:     " + game.getPerAcre() +
+                                   "\nWheat in Storage:   " + game.getWheat() +
+                                   "\nAmount of Tithes:   " + game.getTithe() +
+                                   "\nEaten by Rats:      " + game.getRatsEat() +
+                                   "\n");
     }
     
 }
