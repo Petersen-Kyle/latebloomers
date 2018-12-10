@@ -1,0 +1,9 @@
+     Report Animal List
+Name           Description                             
+====           ===========                             
+Mouse          The mouse subtracts one from the wheat supply
+Cow            The cow feeds 6 people                  
+Ox             The ox adds 5 acres of plowed land      
+Chicken        The chicken feeds 2 people              
+Rabbit         The rabbit subtracts two from the wheat supply
+Bat            The bat scares away birds and adds 3 wheat to your supply

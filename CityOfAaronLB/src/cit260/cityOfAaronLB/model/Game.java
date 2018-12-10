@@ -19,6 +19,7 @@ public class Game implements Serializable{
 //    private Player player;
     private Map map;
     private int acresPlanted;
+    private int deathToll;
     
     
     public Game() {
@@ -28,6 +29,14 @@ public class Game implements Serializable{
         
     }
 
+    public int getDeathToll() {
+        return deathToll;
+    }
+
+    public void setDeathToll(int deathToll) {
+        this.deathToll = deathToll;
+    }
+    
     public int getAcresPlanted() {
         return acresPlanted;
     }
