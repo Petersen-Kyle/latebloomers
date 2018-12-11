@@ -24,8 +24,9 @@ public class GameMenuView extends View {
                 + "4. Storehouse\n"
                 + "5. Reports Menu\n"
                 + "6. Feed the People\n"
-                + "7. Save Game \n"
-                + "8. Help Menu\n"
+                + "7. Pay Tithes \n"
+                + "8. Save Game \n"
+                + "9. Help Menu\n"
                 + "Choose one or (Q to Quit to Main Menu): ");
     }
 
@@ -73,10 +74,14 @@ public class GameMenuView extends View {
                     feedPeople.display();
                     break;
                 case "7":
+                    TithesView tithes = new TithesView();
+                    tithes.display();
+                    break;
+                case "8":
 //                this.console.println("Save your game");
                     this.saveGame();
                     break;
-                case "8":
+                case "9":
                     HelpMenu newHelp = new HelpMenu();
                     newHelp.display();
                     break;
