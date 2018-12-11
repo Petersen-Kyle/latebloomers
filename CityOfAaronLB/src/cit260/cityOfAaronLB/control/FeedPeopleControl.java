@@ -22,6 +22,8 @@ public class FeedPeopleControl {
             throw new GameControlException("There is not enough wheat in storage");
         }
         game.setWheat (game.getWheat() - peopleFed * 20);
+        game.setDeathToll(game.getPopulation() - peopleFed);
+        game.setPopulation(game.getPopulation() - game.getDeathToll());
         return game.getWheat(); 
     }
 }

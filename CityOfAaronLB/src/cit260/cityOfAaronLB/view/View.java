@@ -40,7 +40,6 @@ public abstract class View implements ViewInterface {
         do {
             String inputs = this.getInput(message);
             if (inputs.toLowerCase().trim().equals("q")) {
-                this.console.println("Thanks for playing Late Bloomers City of Aaron");
                 return;
             }
             endView = doAction(inputs);

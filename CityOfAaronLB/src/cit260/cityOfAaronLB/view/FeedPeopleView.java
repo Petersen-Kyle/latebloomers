@@ -32,6 +32,8 @@ public class FeedPeopleView extends View {
         if (feed >= 0) {
             this.console.println("You fed " + inputs + " people.");
             this.console.println("You now have " + game.getWheat() + " Wheat in storage.");
+            this.console.println("Your population is now " + game.getPopulation());
+            this.console.println(game.getDeathToll() + " people died of starvation");
         }
             return true;
         }
