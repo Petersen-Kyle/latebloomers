@@ -6,10 +6,8 @@
 package cit260.cityOfAaronLB.view;
 
 import static CityOfAaronLB.CityOfAaronLB.game;
+import static CityOfAaronLB.CityOfAaronLB.player;
 import cit260.cityOfAaronLB.control.MoveLocation;
-import cit260.cityOfAaronLB.control.SortControl;
-import cit260.cityOfAaronLB.control.FeedPeopleControl;
-import cit260.cityOfAaronLB.exceptions.GameControlException;
 import java.util.InputMismatchException;
 
 /**
@@ -47,35 +45,33 @@ public class GameMenuView extends View {
                     break;
                 case "3":
                     clearScreen();
-                    this.console.println("Current Population: " + game.getPopulation()
-                            + "\n Current Acres Owned: " + game.getAcres()
-                            + "\n Current Wheat in Storage: " + game.getWheat());
+                    this.console.println("Lord " + player.getName() + "you have: \n"
+                            + "\nYear:               " + game.getYear()
+                            + "\nPeople Starved:     " + game.getStarved()
+                            + "\nMoved to City:      " + game.getNewPop()
+                            + "\nCurrent Population: " + game.getPopulation()
+                            + "\nAcres Owned:        " + game.getAcres()
+                            + "\nWheat per Acre:     " + game.getPerAcre()
+                            + "\nWheat in Storage:   " + game.getWheat()
+                            + "\nAmount of Tithes:   " + game.getTithe()
+                            + "\nEaten by Rats:      " + game.getRatsEat()
+                            + "\n");
                     LandControlView controlLand = new LandControlView();
                     controlLand.display();
                     break;
-//            case "":
-//                BuyLandView buyland = new BuyLandView();
-//                buyland.display();
-//                break;
                 case "4":
                     StorehouseMenu newStorehouseMenu = new StorehouseMenu();
                     newStorehouseMenu.display();
                     break;
                 case "5":
-                    for (int clear = 0; clear < 1000; clear++) {
-                        System.out.println("\b");
-                    }
+                    clearScreen();
                     ReportView newReports = new ReportView();
                     newReports.display();
                     break;
-                case "6": 
+                case "6":
                     FeedPeopleView feedPeople = new FeedPeopleView();
                     feedPeople.display();
-                    
-                    
-                
-
-                break;
+                    break;
                 case "7":
 //                this.console.println("Save your game");
                     this.saveGame();

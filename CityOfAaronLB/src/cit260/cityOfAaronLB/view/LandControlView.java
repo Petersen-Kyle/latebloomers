@@ -6,6 +6,7 @@
 package cit260.cityOfAaronLB.view;
 
 import static CityOfAaronLB.CityOfAaronLB.game;
+import static CityOfAaronLB.CityOfAaronLB.player;
 import java.util.InputMismatchException;
 
 /**
@@ -25,30 +26,36 @@ public class LandControlView extends View {
     @Override
     public boolean doAction(String inputs) {
         try {
-        switch (inputs) {
-            case "1":
-                BuyLandView buyland = new BuyLandView();
-                buyland.display();
-                break;
-            case "2":
-                SellLandView sellLand = new SellLandView();
-                sellLand.display();
-                break;
-            default:
-                this.console.println("Invalid Input"
-                        + "\nPlease enter a number 1 - 2 or Q to quit");
-                break;
+            switch (inputs) {
+                case "1":
+                    BuyLandView buyland = new BuyLandView();
+                    buyland.display();
+                    break;
+                case "2":
+                    SellLandView sellLand = new SellLandView();
+                    sellLand.display();
+                    break;
+                default:
+                    this.console.println("Invalid Input"
+                            + "\nPlease enter a number 1 - 2 or Q to quit");
+                    break;
 
-        }
-        } catch (InputMismatchException err){
+            }
+        } catch (InputMismatchException err) {
             this.console.println("\nINVALID INPUT!");
         }
-        for (int clear = 0; clear < 1000; clear++) {
-            System.out.println("\b");
-        }
-        this.console.println("Current Population: " + game.getPopulation()
-                + "\n Current Acres Owned: " + game.getAcres()
-                + "\n Current Wheat in Storage: " + game.getWheat());
+        clearScreen();
+        this.console.println("Lord " + player.getName() + "you have: \n"
+                + "\nYear:               " + game.getYear()
+                + "\nPeople Starved:     " + game.getStarved()
+                + "\nMoved to City:      " + game.getNewPop()
+                + "\nCurrent Population: " + game.getPopulation()
+                + "\nAcres Owned:        " + game.getAcres()
+                + "\nWheat per Acre:     " + game.getPerAcre()
+                + "\nWheat in Storage:   " + game.getWheat()
+                + "\nAmount of Tithes:   " + game.getTithe()
+                + "\nEaten by Rats:      " + game.getRatsEat()
+                + "\n");
         return false;
 
     }

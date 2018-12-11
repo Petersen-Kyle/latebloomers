@@ -5,7 +5,7 @@
  */
 package cit260.cityOfAaron.control;
 
-import cit260.cityOfAaronLB.control.calcLandHarvestControl;
+import cit260.cityOfAaronLB.control.LandHarvestControl;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -42,7 +42,7 @@ public class calcLandHarvestControlTest {
         int acresAvailable = 60;
         int wheatInStorage = 30;
         int expResult = 5;
-        int result = calcLandHarvestControl.calcLandHarvested(population, userPlanting, acresAvailable, wheatInStorage);
+        int result = LandHarvestControl.calcLandHarvested(population, userPlanting, acresAvailable, wheatInStorage);
         assertEquals(expResult, result);
         
         //Test case 2
@@ -52,7 +52,7 @@ public class calcLandHarvestControlTest {
         acresAvailable = 50;
         wheatInStorage = 15;
         expResult = 0;
-        result = calcLandHarvestControl.calcLandHarvested(population, userPlanting, acresAvailable, wheatInStorage);
+        result = LandHarvestControl.calcLandHarvested(population, userPlanting, acresAvailable, wheatInStorage);
         assertEquals(expResult, result);
         
         //Test case 3
@@ -62,7 +62,7 @@ public class calcLandHarvestControlTest {
         acresAvailable = 60;
         wheatInStorage = 30;
         expResult = -1;
-        result = calcLandHarvestControl.calcLandHarvested(population, userPlanting, acresAvailable, wheatInStorage);
+        result = LandHarvestControl.calcLandHarvested(population, userPlanting, acresAvailable, wheatInStorage);
         assertEquals(expResult, result);
         
         //Test case 4
@@ -72,7 +72,7 @@ public class calcLandHarvestControlTest {
         acresAvailable = 60;
         wheatInStorage = 70;
         expResult = -2;
-        result = calcLandHarvestControl.calcLandHarvested(population, userPlanting, acresAvailable, wheatInStorage);
+        result = LandHarvestControl.calcLandHarvested(population, userPlanting, acresAvailable, wheatInStorage);
         assertEquals(expResult, result);
         
         //Test case 5
@@ -82,7 +82,7 @@ public class calcLandHarvestControlTest {
         acresAvailable = 60;
         wheatInStorage = 25;
         expResult = -3;
-        result = calcLandHarvestControl.calcLandHarvested(population, userPlanting, acresAvailable, wheatInStorage);
+        result = LandHarvestControl.calcLandHarvested(population, userPlanting, acresAvailable, wheatInStorage);
         assertEquals(expResult, result);
         
         //Test case 6
@@ -92,7 +92,7 @@ public class calcLandHarvestControlTest {
         acresAvailable = 60;
         wheatInStorage = 30;
         expResult = -4;
-        result = calcLandHarvestControl.calcLandHarvested(population, userPlanting, acresAvailable, wheatInStorage);
+        result = LandHarvestControl.calcLandHarvested(population, userPlanting, acresAvailable, wheatInStorage);
         assertEquals(expResult, result);
         
         //Test case 7
@@ -102,7 +102,7 @@ public class calcLandHarvestControlTest {
         acresAvailable = 60;
         wheatInStorage = 70;
         expResult = 69;
-        result = calcLandHarvestControl.calcLandHarvested(population, userPlanting, acresAvailable, wheatInStorage);
+        result = LandHarvestControl.calcLandHarvested(population, userPlanting, acresAvailable, wheatInStorage);
         assertEquals(expResult, result);
     }
     

@@ -6,13 +6,13 @@
 package cit260.cityOfAaronLB.view;
 
 import CityOfAaronLB.CityOfAaronLB;
+import static CityOfAaronLB.CityOfAaronLB.game;
+import static CityOfAaronLB.CityOfAaronLB.player;
 import cit260.cityOfAaronLB.control.GameControl;
 import cit260.cityOfAaronLB.exceptions.GameControlException;
 import cit260.cityOfAaronLB.model.Game;
 import cit260.cityOfAaronLB.model.Player;
 import java.util.InputMismatchException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  *
@@ -33,12 +33,30 @@ public class MainMenu extends View {
         try {
             switch (inputs) {
                 case "1":
-                    this.console.println("Welcome to a new game in the City of Aaron");
-                    Player playersName = CityOfAaronLB.getPlayer();
-
-//                Player player = GameControl.savePlayer(playersName);
-                    GameControl.createNewGame(playersName);
+                    clearScreen();
                     GameMenuView newGame = new GameMenuView();
+                    Player playersName = CityOfAaronLB.getPlayer();
+                    GameControl.createNewGame(playersName);
+                    this.console.println("Lord " + player.getName() + "you have: \n"
+                            + "\nYear:               " + game.getYear()
+                            + "\nPeople Starved:     " + game.getStarved()
+                            + "\nMoved to City:      " + game.getNewPop()
+                            + "\nCurrent Population: " + game.getPopulation()
+                            + "\nAcres Owned:        " + game.getAcres()
+                            + "\nWheat per Acre:     " + game.getPerAcre()
+                            + "\nWheat in Storage:   " + game.getWheat()
+                            + "\nAmount of Tithes:   " + game.getTithe()
+                            + "\nEaten by Rats:      " + game.getRatsEat()
+                            + "\n");
+                    this.console.println("Welcome to a new game in the City of Aaron \r\n");
+                    this.console.printf("\n According to The Book of Mormon, the city of Aaron was located near Nephihah, \n"
+                            + "Nephihah, though constructed earlier. Prior to the construction of Nephihah, its \n"
+                            + "nearest known neighbor was Moroni. The book first tells of the city of Aaron when \n"
+                            + "Alma, rejected at Ammonihah, departed and took his journey toward the city of Aaron \n"
+                            + "about 82 BC (Alma 8:13), but he stopped and returned to Ammonihah. The only other \n"
+                            + "verse mentioning the city of Aaron is when the foundation is laid for the city of \n"
+                            + "Nephihah around 72 BC. (Alma 50:14). In the index of the 1989 edition (and others) \n"
+                            + "of the book, it is acknowledged that there may have been two cities by this name. \r\n\n\n");
                     newGame.display();
                     break;
                 case "2":
@@ -63,6 +81,18 @@ public class MainMenu extends View {
     private void loadGame() {
         String filePath = getInput("Enter your saved game file: ");
         try {
+            System.out.println("Lord " + player.getName() + "you have: \n"
+                    + "\nYear:               " + game.getYear()
+                    + "\nPeople Starved:     " + game.getStarved()
+                    + "\nMoved to City:      " + game.getNewPop()
+                    + "\nCurrent Population: " + game.getPopulation()
+                    + "\nAcres Owned:        " + game.getAcres()
+                    + "\nWheat per Acre:     " + game.getPerAcre()
+                    + "\nWheat in Storage:   " + game.getWheat()
+                    + "\nAmount of Tithes:   " + game.getTithe()
+                    + "\nEaten by Rats:      " + game.getRatsEat()
+                    + "\n");
+
             Game game = GameControl.loadGame(filePath);
             CityOfAaronLB.setGame(game);
             GameMenuView newGame = new GameMenuView();

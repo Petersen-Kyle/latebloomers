@@ -67,9 +67,7 @@ public class StartProgramView extends View {
                     Player player = new Player();
                     player.setName(inputs);
                     CityOfAaronLB.setPlayer(player);
-                    for (int clear = 0; clear < 1000; clear++) {
-                        System.out.println("\b");
-                    }
+                    clearScreen();
                     this.console.println("Welcome to the City of Aaron, Lord " + player.getName());
                     MainMenu newMainMenu = new MainMenu();
                     newMainMenu.display();

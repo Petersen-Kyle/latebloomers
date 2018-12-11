@@ -12,19 +12,30 @@ import java.io.Serializable;
  */
 public class Game implements Serializable{
 
-
+    private int starved;
+    private int newPop;
+    private int year;
+    private int perAcre;
+    private int tithe;
+    private int perWheat;
+    private int ratsEat;
     private int population;
     private int acres;
     private int wheat;
-//    private Player player;
     private Map map;
     private int acresPlanted;
     
     
     public Game() {
+        year = 1;
+        starved = 0;
+        newPop = 0;
         population = 100;
         acres = 1000;
+        perAcre = 0;
         wheat = 3000;
+        tithe = 0;
+        ratsEat = 0;
         
     }
 
@@ -44,16 +55,63 @@ public class Game implements Serializable{
         this.map = map;
     }
 
-    
-//    public Player getPlayer() {
-//        return player;
-//    }
-//    
-//
-//    public void setPlayer(Player player) {
-//        this.player = player;
-//    }
-    
+    public int getStarved() {
+        return starved;
+    }
+
+    public void setStarved(int starved) {
+        this.starved = starved;
+    }
+
+    public int getNewPop() {
+        return newPop;
+    }
+
+    public void setNewPop(int newPop) {
+        this.newPop = newPop;
+    }
+
+    public int getYear() {
+        return year;
+    }
+
+    public void setYear(int year) {
+        this.year = year;
+    }
+
+    public int getPerAcre() {
+        return perAcre;
+    }
+
+    public void setPerAcre(int perAcre) {
+        this.perAcre = perAcre;
+    }
+
+    public int getTithe() {
+        return tithe;
+    }
+
+    public void setTithe(int tithe) {
+        this.tithe = tithe;
+    }
+
+    public int getPerWheat() {
+        return perWheat;
+    }
+
+    public void setPerWheat(int perWheat) {
+        this.perWheat = perWheat;
+    }
+
+    public int getRatsEat() {
+        return ratsEat;
+    }
+
+    public void setRatsEat(int ratsEat) {
+        this.ratsEat = ratsEat;
+    }
+
+   
     public int getPopulation() {
         return population;
     }

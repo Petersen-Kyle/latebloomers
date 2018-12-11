@@ -21,11 +21,11 @@ public class ReportControl {
 
     public static String getWeaponList() {
         String reportStr = "     Report Weapon List\r\n";
-        String formater = "%-15s%-40s\r\n";
-        reportStr += String.format(formater, "Name", "Description");
-        reportStr += String.format(formater, "====", "===========");
+        String formater = "%-15s%-40s%-5s\r\n";
+        reportStr += String.format(formater, "Name", "Description", "Adjustment");
+        reportStr += String.format(formater, "====", "===========", "=========="  );
         for (Weapons weapon : Weapons.values()) {
-            reportStr += String.format(formater, weapon.getItemName(), weapon.getDescription());
+            reportStr += String.format(formater, weapon.getItemName(), weapon.getDescription(), weapon.getAdjustments());
         }
         return reportStr;
     }

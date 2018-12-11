@@ -1,0 +1,9 @@
+     Report Weapon List
+Name           Description                             
+====           ===========                             
+Bow and Arrow  A Bow and Arrow gains 5 food to your store
+Sling          The sling gives the chance for rats to eat food
+Spear          The spear adds 10 food to your store    
+Bolo           The bolo is used to snare small animals on the run
+Knife          A knife can be used to better prepare meat so there is no waste
+Javelin        A javelin can be thrown to bring down small game

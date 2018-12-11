@@ -9,7 +9,7 @@ package cit260.cityOfAaronLB.control;
  *
  * @author lafon
  */
-public class calcLandHarvestControl {
+public class LandHarvestControl {
     public static int calcLandHarvested(int population, int userPlanting, int acresAvailable, int wheatInStorage){
         if(userPlanting>acresAvailable){
             return -1;

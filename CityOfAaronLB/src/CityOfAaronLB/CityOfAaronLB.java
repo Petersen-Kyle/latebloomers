@@ -64,7 +64,9 @@ public class CityOfAaronLB {
     }
 
     public static void main(String[] args) {
-        
+        for (int clear = 0; clear < 1000; clear++) {
+            System.out.println("\b");
+        }
         try {
             logFile = new PrintWriter("logFile.txt");
             CityOfAaronLB.inFile = new BufferedReader(new InputStreamReader(System.in));
