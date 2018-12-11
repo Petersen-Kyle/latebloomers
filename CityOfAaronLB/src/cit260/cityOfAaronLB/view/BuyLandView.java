@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package cit260.cityOfAaronLB.view;
-import cit260.cityOfAaronLB.control.buyLandControl;
+import cit260.cityOfAaronLB.control.BuyLandControl;
 import cit260.cityOfAaronLB.model.Game;
 import cit260.cityOfAaronLB.exceptions.GameControlException;
 
@@ -24,7 +24,7 @@ public class BuyLandView extends View {
         Game game = CityOfAaronLB.CityOfAaronLB.getGame();
         int acresToBuy = -1;
         try{
-            acresToBuy = buyLandControl.calcBuyLand(inputs, game);
+            acresToBuy = BuyLandControl.calcBuyLand(inputs, game);
         } catch (GameControlException ex) {
             this.console.println(ex.getMessage());
         }

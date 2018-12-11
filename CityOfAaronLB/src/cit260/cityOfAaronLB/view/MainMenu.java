@@ -37,7 +37,7 @@ public class MainMenu extends View {
                     GameMenuView newGame = new GameMenuView();
                     Player playersName = CityOfAaronLB.getPlayer();
                     GameControl.createNewGame(playersName);
-                    this.console.println("Lord " + player.getName() + "you have: \n"
+                    this.console.println("Lord " + player.getName() + " you have: \n"
                             + "\nYear:               " + game.getYear()
                             + "\nPeople Starved:     " + game.getStarved()
                             + "\nMoved to City:      " + game.getNewPop()

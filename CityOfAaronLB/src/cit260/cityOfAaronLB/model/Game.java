@@ -17,6 +17,7 @@ public class Game implements Serializable{
     private int year;
     private int perAcre;
     private int tithe;
+    private int titheBonus;
     private int perWheat;
     private int ratsEat;
     private int population;
@@ -24,7 +25,6 @@ public class Game implements Serializable{
     private int wheat;
     private Map map;
     private int acresPlanted;
-    private int deathToll;
     
     
     public Game() {
@@ -40,12 +40,12 @@ public class Game implements Serializable{
         
     }
 
-    public int getDeathToll() {
-        return deathToll;
+    public int getTitheBonus() {
+        return titheBonus;
     }
 
-    public void setDeathToll(int deathToll) {
-        this.deathToll = deathToll;
+    public void setTitheBonus(int titheBonus) {
+        this.titheBonus = titheBonus;
     }
     
     public int getAcresPlanted() {

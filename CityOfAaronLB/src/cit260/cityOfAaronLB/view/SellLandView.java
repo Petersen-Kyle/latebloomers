@@ -5,7 +5,7 @@
  */
 package cit260.cityOfAaronLB.view;
 
-import cit260.cityOfAaronLB.control.sellLandControl;
+import cit260.cityOfAaronLB.control.SellLandControl;
 import cit260.cityOfAaronLB.exceptions.GameControlException;
 import cit260.cityOfAaronLB.model.Game;
 
@@ -25,7 +25,7 @@ public class SellLandView extends View {
         Game game = CityOfAaronLB.CityOfAaronLB.getGame();
         int newSell = -1;
         try {
-            newSell = sellLandControl.sellLand(inputs, game);
+            newSell = SellLandControl.sellLand(inputs, game);
         } catch (GameControlException ex) {
             this.console.println(ex.getMessage());
         }

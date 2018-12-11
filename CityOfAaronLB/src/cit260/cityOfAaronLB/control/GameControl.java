@@ -61,7 +61,6 @@ public class GameControl {
 
     public static Location[][] createLocations(int rows, int columns) {
         Location[][] locations = new Location[rows][columns];
-        Item items = new Item();
         for (int row = 0; row < rows; row++) {
             for (int column = 0; column < columns; column++) {
                 Location location = new Location();

@@ -53,8 +53,8 @@ public class MapControl {
                 + "humbled by its shear magisty and the sacrifice made by the \n"
                 + "people to make it so beautiful.");
         locations[0][0].setSceneSymbol("TE");
-
         locations[0][0].setItem(createItem(Weapons.sling));
+        
         locations[0][1].setName("Wheat Field");
         locations[0][1].setDescription("The Wheat Field is flowing in the breeze, ready to harvest");
         locations[0][1].setSceneSymbol("WF");
@@ -253,36 +253,7 @@ public class MapControl {
         item.setAdjustments(adjustment);
         return item;
     }
-//    public static Item[] createItemList(){
-//        
-//        Item[] items = new Item[10];
-//        Animals.Chicken.getItemName();
-//        Weapons.bowAndArrow.toString();
-//        item[0]=createItem("Weapons", "");
-//        items[0].setItemType("Weapons");
-//        items[0].setItemName("bowAndArrow");
-//        items[0].setDescription("Made of wood and strung with sinew.  The bow is the perfect tool for hunting.  Finding this bow will allow you to produce more food this year.");
-//        items[0].setAdjustments(5);
-//        
-//        items[1].setItemType("Weapons");
-//        items[1].setItemName("Sling");
-//        items[1].setDescription("A small patch of cloth with string attached to both sides.  Every child in the village has spent hours building proficiency with this weapon.");
-//        items[1].setAdjustments(2);
-//        
-//        items[2].setItemType("Weapons");
-//        items[2].setItemName("Spear");
-//        items[2].setDescription("The spear is a long handed weapon.  It is used to take down boar with their wicked tusks.");
-//        items[2].setAdjustments(10);
-
-//         locations[0][0].item.setTools(Tools.hammer);
-//         locations[0][1].item.setTools(Tools.plow);
-//         locations[0][2].item.setTools(Tools.sickle);
-//         locations[0][3].item.setWeapons(Weapons.bowAndArrow);
-//         locations[0][4].item.setWeapons(Weapons.sling);
-//         locations[1][0].item.setWeapons(Weapons.spear);
-//        
-//        return null;
-//    }
+    
     public static void movePlayerToStartingLocation(Map map) {
         movePlayer(map, 2, 2); // or instead of 0,0 you can select a different starting location
     }

@@ -31,6 +31,7 @@ public class TithesView extends View {
         if (tithe >= 0) {
             this.console.println("You paid " + inputs + "% of tithes.");
             this.console.println("You now have " + game.getWheat() + " Wheat in storage.");
+            this.console.println("You got " + game.getTitheBonus() + " extra bushels for paying " + inputs + "% of tithing");
         }
             return true;
         }

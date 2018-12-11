@@ -33,7 +33,7 @@ public class FeedPeopleView extends View {
             this.console.println("You fed " + inputs + " people.");
             this.console.println("You now have " + game.getWheat() + " Wheat in storage.");
             this.console.println("Your population is now " + game.getPopulation());
-            this.console.println(game.getDeathToll() + " people died of starvation");
+            this.console.println(game.getStarved() + " people died of starvation");
         }
             return true;
         }
