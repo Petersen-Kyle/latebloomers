@@ -322,15 +322,15 @@ public class GameControl {
 
     public static Game loadGame(String filePath) throws GameControlException {
         Game game;
-        try (ObjectInputStream in = new ObjectInputStream(new FileInputStream(filePath))){
-            game = (Game)in.readObject();
+        try (ObjectInputStream in = new ObjectInputStream(new FileInputStream(filePath))) {
+            game = (Game) in.readObject();
         } catch (Exception ex) {
             throw new GameControlException("Cannot load the specified file: " + ex.getMessage());
         }
-        
+
         return game;
     }
-    
+
     public static boolean saveReport(String filePath, String reportStr) throws GameControlException {
         boolean success = false;
         FileWriter outFile = null;
@@ -352,5 +352,21 @@ public class GameControl {
         }
         return success;
     }
-   
+
+    public static int endOfYear(Game game) {
+        game.setYear(game.getYear() + 1);
+        game.setNewPop((int) (Math.random() * 3) + 1);
+        game.setPerWheat((int) (Math.random() * 10) + 17);
+        if (game.getTithe() <= (game.getWheat() * .08)) {
+            game.setPerAcre((int) (Math.random() * 3) + 1);
+        } else if (game.getTithe() >= (game.getWheat() * .12)) {
+            game.setPerAcre((int) (Math.random() * 4) + 2);
+        } else {
+            game.setPerAcre((int) (Math.random() * 5) + 2);
+
+        }
+
+        return 0;
+    }
+
 }

@@ -7,6 +7,7 @@ package cit260.cityOfAaronLB.view;
 
 import static CityOfAaronLB.CityOfAaronLB.game;
 import static CityOfAaronLB.CityOfAaronLB.player;
+import cit260.cityOfAaronLB.control.GameControl;
 import java.util.InputMismatchException;
 
 /**
@@ -32,6 +33,7 @@ public class LandControlView extends View {
                     buyland.display();
                     break;
                 case "2":
+                    GameControl.endOfYear(game);
                     SellLandView sellLand = new SellLandView();
                     sellLand.display();
                     break;
