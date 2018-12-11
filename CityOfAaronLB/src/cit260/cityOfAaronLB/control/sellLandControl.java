@@ -29,7 +29,7 @@ public class sellLandControl {
         } else if (userLandSell > game.getAcres() - game.getAcresPlanted()) {
             throw new GameControlException("Your dont have enough land to sell...");
         }
-        landPrice = (int) (Math.random() * 10) + 17;
+        landPrice = game.getPerWheat();
         game.setAcres(game.getAcres() - userLandSell);
         game.setWheat(game.getWheat() + (userLandSell * landPrice));
 
