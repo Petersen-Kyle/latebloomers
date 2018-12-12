@@ -31,8 +31,8 @@ public class AdjustmentsControl {
         Item item = new Item();
         Location location = map.getCurrentLocation();
         Location[][] locations = map.getLocations();
-        for (int row = 0; row < locations.length; row++) {
-            for (int column = 0; column < locations[row].length; column++) {
+            int row = map.getCurrentRow();
+            int column = map.getCurrentColumn();
                 if (locations[row][column].isVisited()) {
                     System.out.println("\nYou have already received the bonus for this spot.");
                     return item;
@@ -53,8 +53,8 @@ public class AdjustmentsControl {
                     map.getCurrentLocation().setVisited(true);
                     return item;
 
-                }
-            }
+                //}
+            //}
         }
         return item;
     }
