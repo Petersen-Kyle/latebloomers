@@ -83,10 +83,12 @@ public class GameControl {
         locations[0][1].setName("Wheat Field");
         locations[0][1].setDescription("The Wheat Field is flowing in the breeze, ready to harvest");
         locations[0][1].setSceneSymbol("WF");
+        locations[0][1].setItem(createItem(Adjustments.mouse));
 
         locations[0][2].setName("Wheat Field");
         locations[0][2].setDescription("The golden wheat field glows in the noon day sun");
         locations[0][2].setSceneSymbol("WF");
+        locations[0][2].setItem(createItem(Adjustments.plow));
 
         locations[0][3].setName("River");
         locations[0][3].setDescription("The great river Sidon enters the Land of Aaron here. \n"
@@ -94,6 +96,7 @@ public class GameControl {
                 + "touches.  Care must be taken not to live or plant too \n"
                 + "near the river due to its nature to flood in the spring.");
         locations[0][3].setSceneSymbol("RV");
+        locations[0][3].setItem(createItem(Adjustments.sling));
 
         locations[0][4].setName("Granary");
         locations[0][4].setDescription("This large set of granary bins is used by all \n"
@@ -101,6 +104,7 @@ public class GameControl {
                 + "In times of famine these grain bins provide a steady \n"
                 + "source of food for the people of Aaron.");
         locations[0][4].setSceneSymbol("GN");
+        locations[0][4].setItem(createItem(Adjustments.cow));
 
         locations[1][0].setName("Wheat Field");
         locations[1][0].setDescription("This field is full of new rising wheat plants. \n"
@@ -108,6 +112,7 @@ public class GameControl {
                 + "weeding the rows, destroying bugs that might cause \n"
                 + "harm to the growing plants.");
         locations[1][0].setSceneSymbol("WF");
+        locations[1][0].setItem(createItem(Adjustments.hammer));
 
         locations[1][1].setName("Wheat Field");
         locations[1][1].setDescription("The tender shoots of a newly planted field are \n"
@@ -116,6 +121,7 @@ public class GameControl {
                 + "throughout the area to keep the wild birds from /n"
                 + "eating the tiny growths.");
         locations[1][1].setSceneSymbol("WF");
+        locations[1][1].setItem(createItem(Adjustments.spear));
 
         locations[1][2].setName("River");
         locations[1][2].setDescription("The river speads out in this area. Slowing its \n"
@@ -123,6 +129,7 @@ public class GameControl {
                 + "travelers.  You can see youth spashing around in \n"
                 + "the water cooling off in the heat of the day.  ");
         locations[1][2].setSceneSymbol("RV");
+        locations[1][2].setItem(createItem(Adjustments.ox));
 
         locations[1][3].setName("Wheat Field");
         locations[1][3].setDescription("This wheat field is almost completely grown. \n"
@@ -131,12 +138,14 @@ public class GameControl {
                 + "that once the harvest begins it can be completed \n"
                 + "quickly.");
         locations[1][3].setSceneSymbol("WF");
+        locations[1][3].setItem(createItem(Adjustments.sickle));
 
         locations[1][4].setName("Wheat Field");
         locations[1][4].setDescription("The nearly grown wheat in this field is completly \n"
                 + "unattended.  Only the soft breeze, the sound of small \n"
                 + "insects and the distant river can be heard here.");
         locations[1][4].setSceneSymbol("WF");
+        locations[1][4].setItem(createItem(Adjustments.bolo));
 
         locations[2][0].setName("Wheat Field");
         locations[2][0].setDescription("The land here slopes down slightly from the river \n"
@@ -145,6 +154,7 @@ public class GameControl {
                 + "deepen and stabalize the irragation furrows to keep the \n"
                 + "plants watered. ");
         locations[2][0].setSceneSymbol("WF");
+        locations[2][0].setItem(createItem(Adjustments.chicken));
 
         locations[2][1].setName("River");
         locations[2][1].setDescription("The river becomes very deep here, flowing quickly \n"
@@ -152,6 +162,7 @@ public class GameControl {
                 + "fishermen often come to this area catching the fish \n"
                 + "that hide in the shadows from the trees.");
         locations[2][1].setSceneSymbol("RV");
+        locations[2][1].setItem(createItem(Adjustments.shovel));
 
         locations[2][2].setName("Rulers Court");
         locations[2][2].setDescription("Deeply dug trenches lead to tall mounds of earth \n"
@@ -170,24 +181,28 @@ public class GameControl {
                 + "You are excited to replant as the sun goes down on \n"
                 + "a days hard work.");
         locations[2][3].setSceneSymbol("WF");
+        locations[2][3].setItem(createItem(Adjustments.rabbit));
 
         locations[2][4].setName("Storehouse");
         locations[2][4].setDescription("You can tell that hard work has been done \n"
                 + "as the shelves are filled with items of all \n"
                 + "kinds.");
         locations[2][4].setSceneSymbol("SH");
+        locations[2][4].setItem(createItem(Adjustments.javelin));
 
         locations[3][0].setName("River");
         locations[3][0].setDescription("You hear the frogs croak as the river makes \n"
                 + "its way through. Water cascading down over \n"
                 + "rocks and fallen branches.");
         locations[3][0].setSceneSymbol("RV");
+        locations[3][0].setItem(createItem(Adjustments.bat));
 
         locations[3][1].setName("Wheat Field");
         locations[3][1].setDescription("Children running thorugh the stalks playing hide \n"
                 + "and seek fill your view and the stalks gently \n"
                 + "sway from the tiny feet running past them.");
         locations[3][1].setSceneSymbol("WF");
+        locations[3][1].setItem(createItem(Adjustments.bowAndArrow));
 
         locations[3][2].setName("Wheat Field");
         locations[3][2].setDescription("The smell of wheat fills your nostrils as you \n"
@@ -195,36 +210,42 @@ public class GameControl {
                 + "colors of brown and yellow dance before your eyes \n"
                 + "as the stalks sway in the wind.");
         locations[3][2].setSceneSymbol("WF");
+        locations[3][2].setItem(createItem(Adjustments.mouse));
 
         locations[3][3].setName("Wheat Field");
         locations[3][3].setDescription("Nothing but wheat for miles around. You stare \n"
                 + "as the ensuing sunset casts shadows over the \n"
                 + "the field illuminating it different colors.");
         locations[3][3].setSceneSymbol("WF");
+        locations[3][3].setItem(createItem(Adjustments.plow));
 
         locations[3][4].setName("Wheat Field");
         locations[3][4].setDescription("The tall stalks brush across your face as you make \n"
                 + "your way through the golden fields. The sun shines \n"
                 + "even brighter as it glints off the stalks.");
         locations[3][4].setSceneSymbol("WF");
+        locations[3][4].setItem(createItem(Adjustments.sling));
 
         locations[4][0].setName("Undeveloped");
         locations[4][0].setDescription("You smell the sweet aroma of flowers as you gaze \n "
                 + "at the beauty around you. Weeds liter the ground \n"
                 + "with bits of color scaterred between them.");
         locations[4][0].setSceneSymbol("??");
+        locations[4][0].setItem(createItem(Adjustments.cow));
 
         locations[4][1].setName("Undeveloped");
         locations[4][1].setDescription("Trees loom high above you as you watch in awe \n"
                 + "at the birds fluttering about. you catch a glimpse \n"
                 + "of a deer making its way through the brush.");
         locations[4][1].setSceneSymbol("??");
+        locations[4][1].setItem(createItem(Adjustments.hammer));
 
         locations[4][2].setName("Undeveloped");
         locations[4][2].setDescription("Tall greass liters that land with all kinds of \n"
                 + "flowers growing between the blades. It seems \n"
                 + "peaceful as the sun warms your face.");
         locations[4][2].setSceneSymbol("??");
+        locations[4][2].setItem(createItem(Adjustments.spear));
 
         locations[4][3].setName("Villiage");
         locations[4][3].setDescription("Humble homes line the streets and children are running \n"
@@ -234,6 +255,7 @@ public class GameControl {
                 + "tending to fields and cattle preparing to feed thier\n"
                 + "families and those in need.");
         locations[4][3].setSceneSymbol("VG");
+        locations[4][3].setItem(createItem(Adjustments.ox));
 
         locations[4][4].setName("Undeveloped");
         locations[4][4].setDescription("You enter a large field of dirt and fresh mud \n"
@@ -241,6 +263,7 @@ public class GameControl {
                 + "your step as you move around envisioning the \n"
                 + "potential the land has to become something great.");
         locations[4][4].setSceneSymbol("??");
+        locations[4][4].setItem(createItem(Adjustments.sickle));
 
         return locations;
     }
@@ -265,7 +288,7 @@ public class GameControl {
         item.setPositiveDescription(weapon.getPositiveDescription());
         item.setNegativeDescription(weapon.getNegativeDescription());
         item.setAdjustments(weapon.getAdjustments());
-        
+
         if (item.getAdjustments() < 0) {
             item.setDescription(item.getNegativeDescription());
         } else if (item.getAdjustments() > 0) {
@@ -277,47 +300,16 @@ public class GameControl {
         return item;
     }
 
-//    public static Item createItem(Tools tool) {
-//        Item item = new Item();
-//        item.setItemType(tool.getItemType());
-//        item.setItemName(tool.getItemName());
-//        item.setDescription(tool.getDescription());
-//        item.setAdjustments(tool.getAdjustments());
-//        return item;
-//
-//    }
-//
-//    public static Item createItem(Animals animal) {
-//        Item item = new Item();
-//        item.setItemType(animal.getItemType());
-//        item.setItemName(animal.getItemName());
-//        item.setDescription(animal.getDescription());
-//        item.setAdjustments(animal.getAdjustments());
-//        return item;
-//    }
-//
-//    public static Item createItem(String itemType, String itemName, String description, int adjustment) {
-//        if (itemName == null) {
-//            return null;
-//        }
-//        Item item = new Item();
-//
-//        item.setItemType(itemType);
-//        item.setItemName(itemName);
-//        item.setDescription(description);
-//        item.setAdjustments(adjustment);
-//        return item;
-//    }
-    public static Item adjustments(Adjustments weapon) {
-        Item item = new Item();
-        if (item.getAdjustments() < 0) {
-            System.out.println(weapon.getNegativeDescription());
-        } else if (item.getAdjustments() > 0) {
-            System.out.println(weapon.getPositiveDescription());
-        } else {
-            System.out.println("Sorry, nothing has been added to your storehouse.");
+    public static Item createItem(String itemType, String itemName, String description, int adjustment) {
+        if (itemName == null) {
+            return null;
         }
-        game.setWheat(game.getWheat() + item.getAdjustments());
+        Item item = new Item();
+
+        item.setItemType(itemType);
+        item.setItemName(itemName);
+        item.setDescription(description);
+        item.setAdjustments(adjustment);
         return item;
     }
 
