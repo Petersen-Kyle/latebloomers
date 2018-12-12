@@ -175,6 +175,7 @@ public class GameControl {
                 + "all the poeple of the village, and surrounding area would come \n"
                 + "to the rulers court for protection from the invaders.");
         locations[2][2].setSceneSymbol("RC");
+        locations[2][2].setItem(createItem(Adjustments.rulersCourt));
 
         locations[2][3].setName("Wheat Field");
         locations[2][3].setDescription("A freshly husked field is laid before your eyes. \n"
@@ -288,15 +289,6 @@ public class GameControl {
         item.setPositiveDescription(weapon.getPositiveDescription());
         item.setNegativeDescription(weapon.getNegativeDescription());
         item.setAdjustments(weapon.getAdjustments());
-
-        if (item.getAdjustments() < 0) {
-            item.setDescription(item.getNegativeDescription());
-        } else if (item.getAdjustments() > 0) {
-            item.setDescription(item.getPositiveDescription());
-        } else {
-            System.out.println("Out of luck, the wind was strong and blew away the extra wheat.");
-        }
-        game.setWheat(game.getWheat() + item.getAdjustments());
         return item;
     }
 

@@ -7,7 +7,11 @@ package cit260.cityOfAaronLB.view;
 
 import static CityOfAaronLB.CityOfAaronLB.game;
 import static CityOfAaronLB.CityOfAaronLB.player;
+import cit260.cityOfAaronLB.control.AdjustmentsControl;
+//import cit260.cityOfAaronLB.control.AdjustmentsControl;
 import cit260.cityOfAaronLB.control.MoveLocation;
+import cit260.cityOfAaronLB.model.Location;
+import cit260.cityOfAaronLB.model.Map;
 import java.util.InputMismatchException;
 
 /**
@@ -43,6 +47,9 @@ public class GameMenuView extends View {
                     MoveLocation move = new MoveLocation();
                     move.display();
                     displayMap();
+                    AdjustmentsControl adjustments = new AdjustmentsControl();                   
+                    adjustments.adjustments();
+                    
                     break;
                 case "3":
                     clearScreen();
@@ -59,7 +66,7 @@ public class GameMenuView extends View {
                             + "\n");
                     LandControlView controlLand = new LandControlView();
                     controlLand.display();
-                    
+
                     break;
                 case "4":
                     StorehouseMenu newStorehouseMenu = new StorehouseMenu();
