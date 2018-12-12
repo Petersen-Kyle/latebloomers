@@ -79,7 +79,6 @@ public class GameControl {
                 + "people to make it so beautiful.");
         locations[0][0].setSceneSymbol("TE");
         locations[0][0].setItem(createItem(Weapons.bowAndArrow));
-        locations[0][0].setItem(adjustments(Weapons.bowAndArrow));
 
         locations[0][1].setName("Wheat Field");
         locations[0][1].setDescription("The Wheat Field is flowing in the breeze, ready to harvest");
@@ -267,14 +266,14 @@ public class GameControl {
         item.setNegativeDescription(weapon.getNegativeDescription());
         item.setAdjustments(weapon.getAdjustments());
         
-//        if (item.getAdjustments() < 0) {
-//            System.out.println(item.getNegativeDescription());
-//        } else if (item.getAdjustments() > 0) {
-//            System.out.println(item.getPositiveDescription());
-//        } else {
-//            System.out.println("Sorry, nothing has been added to your storehouse.");
-//        }
-//        game.setWheat(game.getWheat() + item.getAdjustments());
+        if (item.getAdjustments() < 0) {
+            item.setDescription(item.getNegativeDescription());
+        } else if (item.getAdjustments() > 0) {
+            item.setDescription(item.getPositiveDescription());
+        } else {
+            System.out.println("Sorry, nothing has been added to your storehouse.");
+        }
+        game.setWheat(game.getWheat() + item.getAdjustments());
         return item;
     }
 
@@ -311,14 +310,14 @@ public class GameControl {
 //    }
     public static Item adjustments(Weapons weapon) {
         Item item = new Item();
-        if (weapon.getAdjustments() < 0) {
+        if (item.getAdjustments() < 0) {
             System.out.println(weapon.getNegativeDescription());
-        } else if (weapon.getAdjustments() > 0) {
+        } else if (item.getAdjustments() > 0) {
             System.out.println(weapon.getPositiveDescription());
         } else {
             System.out.println("Sorry, nothing has been added to your storehouse.");
         }
-        game.setWheat(game.getWheat() + weapon.getAdjustments());
+        game.setWheat(game.getWheat() + item.getAdjustments());
         return item;
     }
 

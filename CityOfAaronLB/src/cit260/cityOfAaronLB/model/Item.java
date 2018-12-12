@@ -15,12 +15,21 @@ public class Item implements Serializable{
     private String itemType;
     private String itemName;
     private int adjustments;
+    private String description;
     private String negativeDescription;
     private String positiveDescription;
     private Tools tools;
     private Weapons weapons;
     
     public Item() {
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
     
     public Weapons getWeapons() {
@@ -130,6 +139,8 @@ public class Item implements Serializable{
     public String toString() {
         return "Item{" + "itemType=" + itemType + ", itemName=" + itemName + ", adjustments=" + adjustments + ", negativeDescription=" + negativeDescription + ", positiveDescription=" + positiveDescription + ", tools=" + tools + ", weapons=" + weapons + '}';
     }
+
+
 
     static class itemName {
 
