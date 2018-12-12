@@ -1,22 +1,22 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package cit260.cityOfAaronLB.control;
-
-import cit260.cityOfAaronLB.model.Animals;
-import cit260.cityOfAaronLB.model.Game;
-import cit260.cityOfAaronLB.model.Item;
-import cit260.cityOfAaronLB.model.Location;
-import cit260.cityOfAaronLB.model.Map;
-import cit260.cityOfAaronLB.model.Tools;
-import cit260.cityOfAaronLB.model.Weapons;
-
-/**
- *
- * @author lafon
- */
+///*
+// * To change this license header, choose License Headers in Project Properties.
+// * To change this template file, choose Tools | Templates
+// * and open the template in the editor.
+// */
+//package cit260.cityOfAaronLB.control;
+//
+//import cit260.cityOfAaronLB.model.Animals;
+//import cit260.cityOfAaronLB.model.Game;
+//import cit260.cityOfAaronLB.model.Item;
+//import cit260.cityOfAaronLB.model.Location;
+//import cit260.cityOfAaronLB.model.Map;
+//import cit260.cityOfAaronLB.model.Tools;
+//import cit260.cityOfAaronLB.model.Weapons;
+//
+///**
+// *
+// * @author lafon
+// */
 //public class MapControl {
 //
 //    public static Map createMap(Game game, int noOfRows, int noOfColumns) {
@@ -215,29 +215,29 @@ import cit260.cityOfAaronLB.model.Weapons;
 //        Item item = new Item();
 //        item.setItemType(weapon.getItemType());
 //        item.setItemName(weapon.getItemName());
-//        item.setDescription(weapon.getDescription());
+//        item.setPostiveDescription(weapon.getPositiveDescription());
 //        item.setAdjustments(weapon.getAdjustments());
 //        return item;
 //    }
-//
-//    public static Item createItem(Tools tool) {
-//        Item item = new Item();
-//        item.setItemType(tool.getItemType());
-//        item.setItemName(tool.getItemName());
-//        item.setDescription(tool.getDescription());
-//        item.setAdjustments(tool.getAdjustments());
-//        return item;
-//
-//    }
-//
-//    public static Item createItem(Animals animal) {
-//        Item item = new Item();
-//        item.setItemType(animal.getItemType());
-//        item.setItemName(animal.getItemName());
-//        item.setDescription(animal.getDescription());
-//        item.setAdjustments(animal.getAdjustments());
-//        return item;
-//    }
+////
+////    public static Item createItem(Tools tool) {
+////        Item item = new Item();
+////        item.setItemType(tool.getItemType());
+////        item.setItemName(tool.getItemName());
+////        item.setDescription(tool.getDescription());
+////        item.setAdjustments(tool.getAdjustments());
+////        return item;
+////
+////    }
+////
+////    public static Item createItem(Animals animal) {
+////        Item item = new Item();
+////        item.setItemType(animal.getItemType());
+////        item.setItemName(animal.getItemName());
+////        item.setDescription(animal.getDescription());
+////        item.setAdjustments(animal.getAdjustments());
+////        return item;
+////    }
 //    
 //    
 //

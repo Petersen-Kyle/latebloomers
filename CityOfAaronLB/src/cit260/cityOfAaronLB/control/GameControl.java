@@ -6,6 +6,7 @@
 package cit260.cityOfAaronLB.control;
 
 import CityOfAaronLB.CityOfAaronLB;
+import static CityOfAaronLB.CityOfAaronLB.game;
 import cit260.cityOfAaronLB.exceptions.GameControlException;
 import cit260.cityOfAaronLB.model.Animals;
 import cit260.cityOfAaronLB.model.Player;
@@ -77,6 +78,8 @@ public class GameControl {
                 + "humbled by its shear magisty and the sacrifice made by the \n"
                 + "people to make it so beautiful.");
         locations[0][0].setSceneSymbol("TE");
+        locations[0][0].setItem(createItem(Weapons.bowAndArrow));
+        locations[0][0].setItem(adjustments(Weapons.bowAndArrow));
 
         locations[0][1].setName("Wheat Field");
         locations[0][1].setDescription("The Wheat Field is flowing in the breeze, ready to harvest");
@@ -260,40 +263,62 @@ public class GameControl {
         Item item = new Item();
         item.setItemType(weapon.getItemType());
         item.setItemName(weapon.getItemName());
-        item.setDescription(weapon.getDescription());
+        item.setPositiveDescription(weapon.getPositiveDescription());
+        item.setNegativeDescription(weapon.getNegativeDescription());
         item.setAdjustments(weapon.getAdjustments());
+        
+//        if (item.getAdjustments() < 0) {
+//            System.out.println(item.getNegativeDescription());
+//        } else if (item.getAdjustments() > 0) {
+//            System.out.println(item.getPositiveDescription());
+//        } else {
+//            System.out.println("Sorry, nothing has been added to your storehouse.");
+//        }
+//        game.setWheat(game.getWheat() + item.getAdjustments());
         return item;
     }
 
-    public static Item createItem(Tools tool) {
+//    public static Item createItem(Tools tool) {
+//        Item item = new Item();
+//        item.setItemType(tool.getItemType());
+//        item.setItemName(tool.getItemName());
+//        item.setDescription(tool.getDescription());
+//        item.setAdjustments(tool.getAdjustments());
+//        return item;
+//
+//    }
+//
+//    public static Item createItem(Animals animal) {
+//        Item item = new Item();
+//        item.setItemType(animal.getItemType());
+//        item.setItemName(animal.getItemName());
+//        item.setDescription(animal.getDescription());
+//        item.setAdjustments(animal.getAdjustments());
+//        return item;
+//    }
+//
+//    public static Item createItem(String itemType, String itemName, String description, int adjustment) {
+//        if (itemName == null) {
+//            return null;
+//        }
+//        Item item = new Item();
+//
+//        item.setItemType(itemType);
+//        item.setItemName(itemName);
+//        item.setDescription(description);
+//        item.setAdjustments(adjustment);
+//        return item;
+//    }
+    public static Item adjustments(Weapons weapon) {
         Item item = new Item();
-        item.setItemType(tool.getItemType());
-        item.setItemName(tool.getItemName());
-        item.setDescription(tool.getDescription());
-        item.setAdjustments(tool.getAdjustments());
-        return item;
-
-    }
-
-    public static Item createItem(Animals animal) {
-        Item item = new Item();
-        item.setItemType(animal.getItemType());
-        item.setItemName(animal.getItemName());
-        item.setDescription(animal.getDescription());
-        item.setAdjustments(animal.getAdjustments());
-        return item;
-    }
-
-    public static Item createItem(String itemType, String itemName, String description, int adjustment) {
-        if (itemName == null) {
-            return null;
+        if (weapon.getAdjustments() < 0) {
+            System.out.println(weapon.getNegativeDescription());
+        } else if (weapon.getAdjustments() > 0) {
+            System.out.println(weapon.getPositiveDescription());
+        } else {
+            System.out.println("Sorry, nothing has been added to your storehouse.");
         }
-        Item item = new Item();
-
-        item.setItemType(itemType);
-        item.setItemName(itemName);
-        item.setDescription(description);
-        item.setAdjustments(adjustment);
+        game.setWheat(game.getWheat() + weapon.getAdjustments());
         return item;
     }
 

@@ -22,7 +22,6 @@ public class Location implements Serializable {
     private Item item;
     private String sceneSymbol; 
     
-    
     public Location() {
     }
 
