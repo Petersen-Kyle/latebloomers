@@ -71,7 +71,7 @@ public class MapView {
         System.out.println("\nLord " + player.getName() + " you have entered " + currentLocation.getName());
         System.out.println("\n" + currentLocation.getDescription());
         System.out.println("\nYou found a " + currentLocation.getItem().getItemName());
-        System.out.println("\n" + GameControl.adjustments(weapons));
+        System.out.println("\n" + currentLocation.getItem().getDescription());
         System.out.println("\nYou now have " + game.getWheat() + " wheat in storage");
     }
 }
