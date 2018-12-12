@@ -339,7 +339,7 @@ public class GameControl {
             outFile.flush();
             success = true;
         } catch (IOException ex) {
-            throw new GameControlException("Failed to save report : " + ex.getMessage());
+            throw new GameControlException("Failed to save report: " + ex.getMessage());
         } finally {
             if (outFile != null) {
                 try {
