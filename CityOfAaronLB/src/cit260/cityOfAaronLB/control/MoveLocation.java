@@ -46,16 +46,15 @@ public class MoveLocation extends View {
         Game game = CityOfAaronLB.CityOfAaronLB.getGame();
         Map map = game.getMap();
 //        String desc = Location.getDescription();
-        Location location = map.getCurrentLocation();
-        this.console.println("\nYou found a " + location.getItem().getItemName());
-                this.console.println();
+        this.console.println();
+
         try {
             GameControl.movePlayer(map, inRow, inCol);
         } catch (ArrayIndexOutOfBoundsException e) {
             this.console.println("Invalid range.");
         }
-        return true;   
-        
+        return true;
+
     }
-    
+
 }
