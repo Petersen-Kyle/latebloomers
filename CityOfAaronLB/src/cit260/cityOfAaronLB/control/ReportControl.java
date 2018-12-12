@@ -7,7 +7,7 @@ package cit260.cityOfAaronLB.control;
 
 import cit260.cityOfAaronLB.model.Animals;
 import cit260.cityOfAaronLB.model.Tools;
-import cit260.cityOfAaronLB.model.Weapons;
+import cit260.cityOfAaronLB.model.Adjustments;
 
 /**
  *
@@ -24,7 +24,7 @@ public class ReportControl {
         String formater = "%-15s%-40s%-5s\r\n";
         reportStr += String.format(formater, "Name");
         reportStr += String.format(formater, "====");
-        for (Weapons weapon : Weapons.values()) {
+        for (Adjustments weapon : Adjustments.values()) {
             reportStr += String.format(formater, weapon.getItemName());
         }
         return reportStr;

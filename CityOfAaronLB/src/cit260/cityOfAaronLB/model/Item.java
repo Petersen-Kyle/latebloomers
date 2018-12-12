@@ -19,7 +19,7 @@ public class Item implements Serializable{
     private String negativeDescription;
     private String positiveDescription;
     private Tools tools;
-    private Weapons weapons;
+    private Adjustments weapons;
     
     public Item() {
     }
@@ -32,11 +32,11 @@ public class Item implements Serializable{
         this.description = description;
     }
     
-    public Weapons getWeapons() {
+    public Adjustments getWeapons() {
         return weapons;
     }
 
-    public void setWeapons(Weapons weapons) {
+    public void setWeapons(Adjustments weapons) {
         this.weapons = weapons;
     }
 

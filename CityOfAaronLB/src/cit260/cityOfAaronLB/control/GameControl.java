@@ -15,7 +15,7 @@ import cit260.cityOfAaronLB.model.Location;
 import cit260.cityOfAaronLB.model.Map;
 import cit260.cityOfAaronLB.model.Item;
 import cit260.cityOfAaronLB.model.Tools;
-import cit260.cityOfAaronLB.model.Weapons;
+import cit260.cityOfAaronLB.model.Adjustments;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.FileWriter;
@@ -78,7 +78,7 @@ public class GameControl {
                 + "humbled by its shear magisty and the sacrifice made by the \n"
                 + "people to make it so beautiful.");
         locations[0][0].setSceneSymbol("TE");
-        locations[0][0].setItem(createItem(Weapons.bowAndArrow));
+        locations[0][0].setItem(createItem(Adjustments.bowAndArrow));
 
         locations[0][1].setName("Wheat Field");
         locations[0][1].setDescription("The Wheat Field is flowing in the breeze, ready to harvest");
@@ -258,7 +258,7 @@ public class GameControl {
 
     }
 
-    public static Item createItem(Weapons weapon) {
+    public static Item createItem(Adjustments weapon) {
         Item item = new Item();
         item.setItemType(weapon.getItemType());
         item.setItemName(weapon.getItemName());
@@ -271,7 +271,7 @@ public class GameControl {
         } else if (item.getAdjustments() > 0) {
             item.setDescription(item.getPositiveDescription());
         } else {
-            System.out.println("Sorry, nothing has been added to your storehouse.");
+            System.out.println("Out of luck, the wind was strong and blew away the extra wheat.");
         }
         game.setWheat(game.getWheat() + item.getAdjustments());
         return item;
@@ -308,7 +308,7 @@ public class GameControl {
 //        item.setAdjustments(adjustment);
 //        return item;
 //    }
-    public static Item adjustments(Weapons weapon) {
+    public static Item adjustments(Adjustments weapon) {
         Item item = new Item();
         if (item.getAdjustments() < 0) {
             System.out.println(weapon.getNegativeDescription());
