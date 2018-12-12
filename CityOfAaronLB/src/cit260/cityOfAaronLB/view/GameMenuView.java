@@ -59,6 +59,7 @@ public class GameMenuView extends View {
                             + "\n");
                     LandControlView controlLand = new LandControlView();
                     controlLand.display();
+                    
                     break;
                 case "4":
                     StorehouseMenu newStorehouseMenu = new StorehouseMenu();

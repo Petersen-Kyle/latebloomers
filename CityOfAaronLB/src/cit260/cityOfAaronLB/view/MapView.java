@@ -6,7 +6,9 @@
 package cit260.cityOfAaronLB.view;
 
 import CityOfAaronLB.CityOfAaronLB;
+import cit260.cityOfAaronLB.control.GameControl;
 import cit260.cityOfAaronLB.model.Game;
+import cit260.cityOfAaronLB.model.Item;
 import cit260.cityOfAaronLB.model.Map;
 import cit260.cityOfAaronLB.model.Location;
 import cit260.cityOfAaronLB.model.Player;
@@ -65,7 +67,11 @@ public class MapView {
             System.out.println("|");
 
         }
+        
         System.out.println("\nLord " + player.getName() + " you have entered " + currentLocation.getName());
         System.out.println("\n" + currentLocation.getDescription());
+        System.out.println("\nYou found a " + currentLocation.getItem().getItemName());
+        System.out.println("\n" + GameControl.adjustments(weapons));
+        System.out.println("\nYou now have " + game.getWheat() + " wheat in storage");
     }
 }

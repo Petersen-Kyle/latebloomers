@@ -15,7 +15,8 @@ public class Item implements Serializable{
     private String itemType;
     private String itemName;
     private int adjustments;
-    private String description;
+    private String negativeDescription;
+    private String positiveDescription;
     private Tools tools;
     private Weapons weapons;
     
@@ -62,23 +63,38 @@ public class Item implements Serializable{
         this.adjustments = adjustments;
     }
 
-    public String getDescription() {
-        return description;
+    public String getNegativeDescription() {
+        return negativeDescription;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setNegativeDescription(String negativeDescription) {
+        this.negativeDescription = negativeDescription;
+    }
+
+    public String getPositiveDescription() {
+        return positiveDescription;
+    }
+
+    public void setPositiveDescription(String positiveDescription) {
+        this.positiveDescription = positiveDescription;
     }
 
     @Override
     public int hashCode() {
-        int hash = 3;
-        hash = 41 * hash + Objects.hashCode(this.itemType);
-        hash = 41 * hash + Objects.hashCode(this.itemName);
-        hash = 41 * hash + this.adjustments;
-        hash = 41 * hash + Objects.hashCode(this.description);
+        int hash = 7;
+        hash = 23 * hash + Objects.hashCode(this.itemType);
+        hash = 23 * hash + Objects.hashCode(this.itemName);
+        hash = 23 * hash + this.adjustments;
+        hash = 23 * hash + Objects.hashCode(this.negativeDescription);
+        hash = 23 * hash + Objects.hashCode(this.positiveDescription);
+        hash = 23 * hash + Objects.hashCode(this.tools);
+        hash = 23 * hash + Objects.hashCode(this.weapons);
         return hash;
     }
+
+    
+
+
 
     @Override
     public boolean equals(Object obj) {
@@ -101,7 +117,10 @@ public class Item implements Serializable{
         if (!Objects.equals(this.itemName, other.itemName)) {
             return false;
         }
-        if (!Objects.equals(this.description, other.description)) {
+        if (!Objects.equals(this.positiveDescription, other.positiveDescription)) {
+            return false;
+        }
+        if (!Objects.equals(this.negativeDescription, other.negativeDescription)) {
             return false;
         }
         return true;
@@ -109,7 +128,7 @@ public class Item implements Serializable{
 
     @Override
     public String toString() {
-        return "InventoryItem{" + "itemType=" + itemType + ", itemName=" + itemName + ", adjustments=" + adjustments + ", description=" + description + '}';
+        return "Item{" + "itemType=" + itemType + ", itemName=" + itemName + ", adjustments=" + adjustments + ", negativeDescription=" + negativeDescription + ", positiveDescription=" + positiveDescription + ", tools=" + tools + ", weapons=" + weapons + '}';
     }
 
     static class itemName {

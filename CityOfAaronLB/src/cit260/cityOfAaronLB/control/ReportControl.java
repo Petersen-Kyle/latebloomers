@@ -22,10 +22,10 @@ public class ReportControl {
     public static String getWeaponList() {
         String reportStr = "     Report Weapon List\r\n";
         String formater = "%-15s%-40s%-5s\r\n";
-        reportStr += String.format(formater, "Name", "Description", "Adjustment");
-        reportStr += String.format(formater, "====", "===========", "=========="  );
+        reportStr += String.format(formater, "Name");
+        reportStr += String.format(formater, "====");
         for (Weapons weapon : Weapons.values()) {
-            reportStr += String.format(formater, weapon.getItemName(), weapon.getDescription(), weapon.getAdjustments());
+            reportStr += String.format(formater, weapon.getItemName());
         }
         return reportStr;
     }
