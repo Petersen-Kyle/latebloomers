@@ -47,8 +47,7 @@ public class GameMenuView extends View {
                     MoveLocation move = new MoveLocation();
                     move.display();
                     displayMap();
-                    AdjustmentsControl adjustments = new AdjustmentsControl();                   
-                    adjustments.adjustments();
+                    AdjustmentsControl.adjustments();
                     
                     break;
                 case "3":

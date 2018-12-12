@@ -303,7 +303,7 @@ public class GameControl {
         item.setDescription(description);
         item.setAdjustments(adjustment);
         return item;
-    }
+    }    
 
     public static void movePlayerToStartingLocation(Map map) {
         // If starting location is not supposed to be 0,0 then use the correct values here.
@@ -312,7 +312,7 @@ public class GameControl {
 
     public static void movePlayer(Map map, int row, int column) {
         map.setCurrentLocation(map.getLocations()[row][column]);
-        map.getCurrentLocation().setVisited(true);
+//        map.getCurrentLocation().setVisited(true);
         map.setCurrentRow(row);
         map.setCurrentColumn(column);
     }
