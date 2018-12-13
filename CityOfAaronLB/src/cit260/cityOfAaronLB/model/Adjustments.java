@@ -14,7 +14,7 @@ package cit260.cityOfAaronLB.model;
 public enum Adjustments {
     
     
-    bowAndArrow("Weapon", "Bow and Arrow", (int) (Math.random() * 10) + -10, "A Bow and Arrow can also shoot nerf arrows. Wheat is added to the storehouse.", "The bow and the arrow get in a fight as to who is sharper mentally and/or physically. You lose wheat in the storehouse."),
+    bowAndArrow("Weapon", "Bow and Arrow", ((int) (Math.random() * 10) + -10), "A Bow and Arrow can also shoot nerf arrows. Wheat is added to the storehouse.", "The bow and the arrow get in a fight as to who is sharper mentally and/or physically. You lose wheat in the storehouse."),
     sling("Weapon", "Sling", (int) (Math.random() * 5) + -5, "The sling gains a pet rock. Wheat is added to the storehouse.", "The sling decided it likes holding puppies instead of stones. Wheat is lost from the storehouse."),
     spear("Weapon", "Spear", (int) (Math.random() * 10) + -10, "The spear has confused itself as a magical sphere and begins to tell the future and grants wishes.", "The spear lies about its whereabouts last night. Wheat is lost from the storehouse."),
     bolo("Weapon", "Bolo", (int) (Math.random() * 5) + -5, "The bolo has found a purpose other than cutting open coconuts. Wheat has been added to the storehouse.", "The bolo has found a machete and they are getting married. Wheat is lost from the storehouse."),
