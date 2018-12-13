@@ -23,10 +23,9 @@ public class GameMenuView extends View {
                 + "3. Buy/Sell Land\n"
                 + "4. Storehouse\n"
                 + "5. Reports Menu\n"
-                + "6. Feed the People\n"
+                + "6. End of the year \n"
                 + "7. Save Game \n"
                 + "8. Help Menu\n"
-                + "9. Tithes \n"
                 + "Choose one or (Q to Quit to Main Menu): ");
     }
 
@@ -71,8 +70,8 @@ public class GameMenuView extends View {
                     newReports.display();
                     break;
                 case "6":
-                    FeedPeopleView feedPeople = new FeedPeopleView();
-                    feedPeople.display();
+                    EndOfTheYear eOTY = new EndOfTheYear();
+                    eOTY.display();
                     break;
                 case "7":
 //                this.console.println("Save your game");
