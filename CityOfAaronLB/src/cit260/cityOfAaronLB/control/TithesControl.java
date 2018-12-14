@@ -34,20 +34,20 @@ public class TithesControl {
             throw new GameControlException("You need to enter a positive number");
         } else if (tithesToPay > game.getWheat()) {
             throw new GameControlException("You dont have that much Wheat");
-        } else if (((tithesToPay / game.getIncrease()) * 100) <= 8) {
-            game.setPerAcre((int) (Math.random() * 2) + 1);
-        } else if (((tithesToPay / game.getIncrease()) * 100) >= 12) {
+        } else if ((double)tithesToPay / (double)game.getIncrease() <= .08) {
+            game.setPerAcre((int)((Math.random() * 2) + 1));
+        } else if ((double)tithesToPay / (double)game.getIncrease() >= .12) {
             game.setPerAcre((int) (Math.random() * 3) + 2);
         } else {
             game.setPerAcre((int) (Math.random() * 2) + 2);
         }
         
-        int chanceOfRats = ((int) (Math.random() * 100) + 1);
-        if (chanceOfRats < 30 && ((tithesToPay / game.getIncrease()) * 100) < 8 ) {
-            game.setRatsEat(game.getWheat() * (((int)(Math.random() * 4) + 6) / 100));
-        } else if (chanceOfRats < 30 && ((tithesToPay / game.getIncrease()) * 100) > 12){
-            game.setRatsEat(game.getWheat() * (((int)(Math.random() * 2) + 3) / 100));
-        } else {game.setRatsEat(game.getWheat() * (((int)(Math.random() * 4) + 3) / 100));        
+        int chanceOfRats = ((int)(Math.random() * 100) + 1);
+        if (chanceOfRats < 30 && (double)((tithesToPay / game.getIncrease()) * 100) < 8 ) {
+            game.setRatsEat((int)((game.getWheat() * (((Math.random() * 4) + 6) / 100))));
+        } else if (chanceOfRats < 30 && (double)((tithesToPay / game.getIncrease()) * 100) > 12){
+            game.setRatsEat((int)((game.getWheat() * (((Math.random() * 2) + 3) / 100))));
+        } else {game.setRatsEat((int)(game.getWheat() * (((Math.random() * 4) + 3) / 100)));        
         }
 
         game.setTithe(tithesToPay);

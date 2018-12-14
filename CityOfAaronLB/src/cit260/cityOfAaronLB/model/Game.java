@@ -32,7 +32,7 @@ public class Game implements Serializable{
     
     
     public Game() {
-        increase = 1;
+        increase = 1000;
         year = 1;
         starved = 0;
         newPop = 0;
