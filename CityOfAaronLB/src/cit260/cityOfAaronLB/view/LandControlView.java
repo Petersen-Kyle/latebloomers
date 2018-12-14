@@ -53,6 +53,7 @@ public class LandControlView extends View {
                 + "\nMoved to City:      " + game.getNewPop()
                 + "\nCurrent Population: " + game.getPopulation()
                 + "\nAcres Owned:        " + game.getAcres()
+                + "\nPrice per Arce:     " + game.getPerWheat()
                 + "\nWheat per Acre:     " + game.getPerAcre()
                 + "\nWheat in Storage:   " + game.getWheat()
                 + "\nAmount of Tithes:   " + game.getTithe()

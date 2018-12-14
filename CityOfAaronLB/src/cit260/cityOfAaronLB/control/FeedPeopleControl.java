@@ -7,7 +7,7 @@ package cit260.cityOfAaronLB.control;
 
 import cit260.cityOfAaronLB.exceptions.GameControlException;
 import cit260.cityOfAaronLB.model.Game;
-import cit260.cityOfAaronLB.view.EndOfTheYear;
+import cit260.cityOfAaronLB.view.EndOfYearView;
 
 /**
  *
@@ -21,7 +21,7 @@ public class FeedPeopleControl {
         
         if(game.isPeopleFed()){
             System.out.println("You have already fed the people\n");
-            EndOfTheYear end = new EndOfTheYear();
+            EndOfYearView end = new EndOfYearView();
             end.display();
         }
         

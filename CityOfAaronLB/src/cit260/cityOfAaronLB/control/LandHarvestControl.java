@@ -7,7 +7,7 @@ package cit260.cityOfAaronLB.control;
 
 import cit260.cityOfAaronLB.exceptions.GameControlException;
 import cit260.cityOfAaronLB.model.Game;
-import cit260.cityOfAaronLB.view.EndOfTheYear;
+import cit260.cityOfAaronLB.view.EndOfYearView;
 
 /**
  *
@@ -20,7 +20,7 @@ public class LandHarvestControl {
 
         if (game.isAcresTheyPlanted()) {
             System.out.println("You have already harvested acres.\n");
-            EndOfTheYear end = new EndOfTheYear();
+            EndOfYearView end = new EndOfYearView();
             end.display();
         }
 
@@ -40,6 +40,7 @@ public class LandHarvestControl {
             throw new GameControlException("You need to enter a positive number");
         }
         game.setWheat(game.getWheat() - acresPlanted / 2);
+        game.setIncrease(game.getAcresPlanted() * game.getPerWheat());
         return acresPlanted;
     }
 }

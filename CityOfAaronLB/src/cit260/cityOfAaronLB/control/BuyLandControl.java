@@ -11,28 +11,27 @@ import cit260.cityOfAaronLB.model.Game;
  * @author kpetersen
  */
 public class BuyLandControl {
-    public static int calcBuyLand(String amountToBuy, Game game) throws GameControlException{
-        
-        int acrePrice;
-        int acresToBuy = -1;
-        acrePrice = (int) (Math.random() * 10) +17;
-        
-        try{
-            acresToBuy = Integer.parseInt(amountToBuy);
+
+    public static int buyLand(String desiredToBuy, Game game) throws GameControlException {
+
+        int landPrice;
+        int userLandBuy = -1;
+        try {
+            userLandBuy = Integer.parseInt(desiredToBuy);
         } catch (NumberFormatException e) {
-            throw new GameControlException("Invalid entry, must be a number.");
+            throw new GameControlException("Invalid entry, must be an number...");
         }
-        
-        if (acresToBuy < 0){
-		throw new GameControlException("You must enter a number greater than 0");}
-	else if (game.getWheat()-(acrePrice * acresToBuy) < 0){
-		throw new GameControlException("You do not have ennough wheat for this purchase");}
-	else if ((acresToBuy + game.getAcres())/10 > game.getPopulation()){
-		throw new GameControlException("You do not have enough people to harvest that amount of land");}
-	        
-	game.setAcres(game.getAcres()+acresToBuy);
-        
-        return game.getAcres();
+
+        if (userLandBuy <= 0) {
+            throw new GameControlException("Must be a greater than zero...");
+        } else if (userLandBuy > (game.getWheat() / game.getPerWheat())) {
+            throw new GameControlException("Your dont have enough wheat to buy that much land...");
+        }
+        landPrice = game.getPerWheat();
+        game.setAcres(game.getAcres() + userLandBuy);
+        game.setWheat(game.getWheat() - (userLandBuy * landPrice));
+
+        return game.getWheat();
     }
-            
+
 }

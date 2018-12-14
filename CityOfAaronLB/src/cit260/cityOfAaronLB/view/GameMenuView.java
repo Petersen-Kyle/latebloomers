@@ -76,7 +76,7 @@ public class GameMenuView extends View {
                     newReports.display();
                     break;
                 case "6":
-                    EndOfTheYear eOTY = new EndOfTheYear();
+                    EndOfYearView eOTY = new EndOfYearView();
                     eOTY.display();
                     break;
                 case "7":

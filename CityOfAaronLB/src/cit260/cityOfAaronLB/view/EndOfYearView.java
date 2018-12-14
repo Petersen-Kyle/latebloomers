@@ -13,9 +13,9 @@ import java.util.InputMismatchException;
  *
  * @author pytha
  */
-public class EndOfTheYear extends View {
+public class EndOfYearView extends View {
 
-    public EndOfTheYear() {
+    public EndOfYearView() {
         super("End of the year\n"
                 + "1. Feed the people\n"
                 + "2. Plant acres\n"
@@ -47,7 +47,7 @@ public class EndOfTheYear extends View {
                         System.out.println("You need to Feed the People\n");
                         break;
                     } else if (!game.isAcresTheyPlanted()) {
-                        System.out.println("You need to harvest acres\n");
+                        System.out.println("You need to plant acres\n");
                         break;
                     } else if (!game.isTithesPaid()) {
                         System.out.println("You need to enter how much tithes you want to pay\n");
@@ -59,7 +59,8 @@ public class EndOfTheYear extends View {
                                 + "\nMoved to City:      " + game.getNewPop()
                                 + "\nCurrent Population: " + game.getPopulation()
                                 + "\nAcres Owned:        " + game.getAcres()
-                                + "\nWheat per Acre:     " + game.getPerAcre()
+                                + "\nReturn per Acre:    " + game.getPerAcre()
+                                + "\nAcres Value:        " + game.getPerWheat()
                                 + "\nWheat in Storage:   " + game.getWheat()
                                 + "\nAmount of Tithes:   " + game.getTithe()
                                 + "\nEaten by Rats:      " + game.getRatsEat()
@@ -80,6 +81,7 @@ public class EndOfTheYear extends View {
                     game.setYear(game.getYear() + 1);
                     game.setNewPop((int) (Math.random() * 4) + 2);
                     game.setPopulation(game.getPopulation() + game.getNewPop());
+                    game.setWheat(game.getWheat() + game.getIncrease());
                     this.console.println(game.getNewPop() + " people moved to the city");
                     this.console.println("Your population is now " + game.getPopulation() + " people\n");
                     break;

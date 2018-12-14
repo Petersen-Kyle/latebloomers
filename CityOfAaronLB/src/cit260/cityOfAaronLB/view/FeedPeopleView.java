@@ -19,7 +19,7 @@ public class FeedPeopleView extends View {
         super("Your population is " + game.getPopulation() + "\n"
                 + "Your wheat in storage is " + game.getWheat() + "\n"
                 + "You need 20 bushels to feed 1 person.\n"
-                + "Enter the amount of people to feed:\n");
+                + "Enter the amount of wheat to feed your people:\n");
     }
 
     @Override

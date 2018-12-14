@@ -362,7 +362,7 @@ public class GameControl {
 
     public static int endOfYear(Game game) {
         game.setYear(game.getYear() + 1);
-        game.setNewPop((int) (Math.random() * 3) + 1);
+        game.setNewPop((int) (Math.random() * 4) + 1);
         game.setPerWheat((int) (Math.random() * 10) + 17);
         if (game.getTithe() <= (game.getWheat() * .08)) {
             game.setPerAcre((int) (Math.random() * 3) + 1);

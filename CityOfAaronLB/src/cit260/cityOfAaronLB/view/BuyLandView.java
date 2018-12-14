@@ -22,15 +22,16 @@ public class BuyLandView extends View {
     @Override
     public boolean doAction(String inputs){
         Game game = CityOfAaronLB.CityOfAaronLB.getGame();
-        int acresToBuy = -1;
+        int newBuy = -1;
         try{
-            acresToBuy = BuyLandControl.calcBuyLand(inputs, game);
-        } catch (Exception ex) {
+            newBuy = BuyLandControl.buyLand(inputs, game);
+        } catch (GameControlException ex) {
             this.console.println(ex.getMessage());
         }
         
-        if (acresToBuy>=0){
-            this.console.println("You now have " + acresToBuy + " acres of land.");
+        if (newBuy >= 0){
+            this.console.println("You baught " + newBuy + " acres of land.");
+            this.console.println("You now have " + game.getWheat() + " Wheat in storage");
         }
         
         return true;

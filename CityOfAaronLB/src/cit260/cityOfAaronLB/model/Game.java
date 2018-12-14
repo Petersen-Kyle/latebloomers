@@ -12,25 +12,27 @@ import java.io.Serializable;
  */
 public class Game implements Serializable{
 
-    private int starved;
-    private int newPop;
-    private int year;
-    private int perAcre;
-    private int tithe;
-    private int titheBonus;
-    private int perWheat;
-    private int ratsEat;
-    private int population;
-    private int acres;
-    private int wheat;
+    private int starved; //number of people who didnt get fed
+    private int newPop; //random number of people who moved to town
+    private int year; //current year
+    private int perAcre; // random amount of wheat returned when planted
+    private int tithe; //amount of wheat paid to tithe
+    private int increase; //amount of wheat harvested after planting
+    private int titheBonus; // not used
+    private int perWheat; //random value of 1 acre of land
+    private int ratsEat; //amount that rats ate
+    private int population; //number of people in the city
+    private int acres; //number of acres owned
+    private int wheat; //amount of wheat in storage
     private Map map;
-    private int acresPlanted;
+    private int acresPlanted; //number of acres that were planted
     private boolean peopleFed;
     private boolean acresTheyPlanted;
     private boolean tithesPaid;
     
     
     public Game() {
+        increase = 1;
         year = 1;
         starved = 0;
         newPop = 0;
@@ -38,11 +40,20 @@ public class Game implements Serializable{
         acres = 1000;
         perAcre = 0;
         wheat = 3000;
-        tithe = 0;
+        tithe = 1;
         ratsEat = 0;
         
     }
 
+    public int getIncrease() {
+        return increase;
+    }
+
+    public void setIncrease(int increase) {
+        this.increase = increase;
+    }
+
+    
     public boolean isTithesPaid() {
         return tithesPaid;
     }

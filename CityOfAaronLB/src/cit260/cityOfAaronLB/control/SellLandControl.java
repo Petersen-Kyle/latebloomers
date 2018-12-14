@@ -4,7 +4,6 @@
  * and open the template in the editor.
  */
 package cit260.cityOfAaronLB.control;
-
 import cit260.cityOfAaronLB.exceptions.GameControlException;
 import cit260.cityOfAaronLB.model.Game;
 
