@@ -32,13 +32,14 @@ public class Game implements Serializable{
     
     
     public Game() {
-        increase = 1000;
+        increase = 1;
         year = 1;
         starved = 0;
         newPop = 0;
         population = 100;
         acres = 1000;
-        perAcre = 0;
+        perWheat = ((int) (Math.random() * 10) + 17);
+        perAcre = ((int) (Math.random() * 3) + 1);
         wheat = 3000;
         tithe = 1;
         ratsEat = 0;

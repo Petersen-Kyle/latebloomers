@@ -28,7 +28,7 @@ public class TithesView extends View {
         } catch (GameControlException ex) {
             this.console.println(ex.getMessage());
         }
-        int perTithe = (Integer.parseInt(inputs) / game.getIncrease());
+        double perTithe = (Integer.parseInt(inputs) / game.getIncrease());
         if (newTithe >= 0) {
             this.console.println("You paid " + perTithe + "% of your increase in tithes.");
             this.console.println("You paid " + game.getTithe() + " bushels of wheat in tithing");
