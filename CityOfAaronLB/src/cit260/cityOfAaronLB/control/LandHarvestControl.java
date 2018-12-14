@@ -5,25 +5,41 @@
  */
 package cit260.cityOfAaronLB.control;
 
+import cit260.cityOfAaronLB.exceptions.GameControlException;
+import cit260.cityOfAaronLB.model.Game;
+import cit260.cityOfAaronLB.view.EndOfTheYear;
+
 /**
  *
  * @author lafon
  */
 public class LandHarvestControl {
-    public static int calcLandHarvested(int population, int userPlanting, int acresAvailable, int wheatInStorage){
-        if(userPlanting>acresAvailable){
-            return -1;
+
+    public static int calcLandHarvested(String acres, Game game) throws GameControlException {
+        int acresPlanted = Integer.parseInt(acres);
+
+        if (game.isAcresTheyPlanted()) {
+            System.out.println("You have already harvested acres.\n");
+            EndOfTheYear end = new EndOfTheYear();
+            end.display();
         }
-        else if(userPlanting>10*population){
-            return -2;
+
+        game.setAcresTheyPlanted(false);
+
+        if (acresPlanted >= 0) {
+            game.setAcresTheyPlanted(true);
         }
-        else if(userPlanting/2>wheatInStorage){
-            return -3;
+
+        if (acresPlanted > game.getAcres()) {
+            throw new GameControlException("You don't have enough acres to plant");
+        } else if (acresPlanted > 10 * game.getPopulation()) {
+            throw new GameControlException("You don't have enough people to plant the wheat.");
+        } else if (acresPlanted / 2 > game.getWheat()) {
+            throw new GameControlException("You don't have enough wheat in storage to plant");
+        } else if (acresPlanted <= 1) {
+            throw new GameControlException("You need to enter a positive number");
         }
-        else if(userPlanting<=1){
-            return -4;
-        }
-        wheatInStorage=wheatInStorage-userPlanting/2;
-        return wheatInStorage;
+        game.setWheat(game.getWheat() - acresPlanted / 2);
+        return acresPlanted;
     }
 }

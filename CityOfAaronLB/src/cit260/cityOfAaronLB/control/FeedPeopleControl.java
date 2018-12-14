@@ -18,6 +18,7 @@ public class FeedPeopleControl {
     public static int feedPeople(String peopleToFeed, Game game) throws GameControlException {
         int bushelsToFeed = Integer.parseInt(peopleToFeed);
         
+        
         if(game.isPeopleFed()){
             System.out.println("You have already fed the people\n");
             EndOfTheYear end = new EndOfTheYear();

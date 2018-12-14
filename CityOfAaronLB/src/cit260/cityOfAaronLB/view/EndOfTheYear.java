@@ -35,7 +35,8 @@ public class EndOfTheYear extends View {
                     feed.display();
                     break;
                 case "2":
-
+                    LandHarvestedView land = new LandHarvestedView();
+                    land.display();
                     break;
                 case "3":
                     TithesView tithes = new TithesView();
@@ -45,8 +46,9 @@ public class EndOfTheYear extends View {
                     if (!game.isPeopleFed()) {
                         System.out.println("You need to Feed the People\n");
                         break;
-//                    } else if (game.getAcresTheyPlanted() == 0) {
-//                        System.out.println("You need to plant acres\n");
+                    } else if (!game.isAcresTheyPlanted()) {
+                        System.out.println("You need to harvest acres\n");
+                        break;
                     } else if (!game.isTithesPaid()) {
                         System.out.println("You need to enter how much tithes you want to pay\n");
                         break;
