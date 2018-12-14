@@ -7,6 +7,7 @@ package cit260.cityOfAaronLB.control;
 
 import cit260.cityOfAaronLB.exceptions.GameControlException;
 import cit260.cityOfAaronLB.model.Game;
+import cit260.cityOfAaronLB.view.EndOfTheYear;
 
 /**
  *
@@ -17,6 +18,18 @@ public class TithesControl {
     public static int tithes(String tithesPaid, Game game) throws GameControlException {
         int tithesToPay = Integer.parseInt(tithesPaid);
         
+        if (game.isTithesPaid()) {
+            System.out.println("You have already paid tithes.\n");
+            EndOfTheYear end = new EndOfTheYear();
+            end.display();
+        }
+
+        game.setTithesPaid(false);
+
+        if (tithesToPay >= 0) {
+            game.setTithesPaid(true);
+        }
+
         if (tithesToPay < 0) {
             throw new GameControlException("You need to enter a positive number");
         } else if (tithesToPay > 100) {
@@ -28,9 +41,11 @@ public class TithesControl {
         } else {
             game.setTitheBonus((int) (Math.random() * 4) + 2 * game.getAcres());
         }
+        
+        game.setRatsEat((int) (Math.random() * 4) + 2);
 
-        game.setTithe((tithesToPay) / 100 * game.getWheat());
-        game.setWheat(game.getWheat() - game.getTithe() + game.getTitheBonus());
-        return game.getTithe();
+        game.setTithe(tithesToPay/game.getWheat() * 100);
+        game.setWheat(game.getWheat() - game.getTithe() + game.getTitheBonus() - game.getRatsEat());
+        return game.getWheat();
     }
 }

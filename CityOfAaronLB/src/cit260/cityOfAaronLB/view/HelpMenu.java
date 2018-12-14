@@ -19,7 +19,7 @@ public class HelpMenu extends View {
                 + "1. History of the City of Aaron\n"
                 + "2. What is the goal of the game?\n"
                 + "3. How to make a move\n"
-                + "4. Tips and Hints\n"
+                + "4. How to play the game\n"
                 + "5. Starting Resources\n"
                 + "6. Tools Bonus Adjustments\n"
                 + "Choose one or (Q to Quit to Main Menu): ");
@@ -57,9 +57,12 @@ public class HelpMenu extends View {
                     break;
                 case "3":
                     this.console.println("How to make a move");
+                    this.console.println("1. Go to 'Move to a new location on the Game Menu\n"
+                                       + "2. Enter the row and the column numbers of the place you wish to visit.");
+                    
                     break;
                 case "4":
-                    this.console.println("Tips and Hints");
+                    this.console.println("How to play the game");
                     break;
                 case "5":
                     this.console.println("Starting resource");

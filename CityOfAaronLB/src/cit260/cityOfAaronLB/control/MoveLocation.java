@@ -5,11 +5,7 @@
  */
 package cit260.cityOfAaronLB.control;
 
-import cit260.cityOfAaronLB.control.GameControl;
-import cit260.cityOfAaronLB.model.Adjustments;
 import cit260.cityOfAaronLB.model.Game;
-import cit260.cityOfAaronLB.model.Item;
-import cit260.cityOfAaronLB.model.Location;
 import cit260.cityOfAaronLB.model.Map;
 import cit260.cityOfAaronLB.view.View;
 

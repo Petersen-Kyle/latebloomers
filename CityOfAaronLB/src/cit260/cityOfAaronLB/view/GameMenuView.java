@@ -25,7 +25,7 @@ public class GameMenuView extends View {
                 + "1. View the Map\n"
                 + "2. Move to a new location\n"
                 + "3. Buy/Sell Land\n"
-                + "4. Storehouse\n"
+                + "4. Storehouse/Statistics\n"
                 + "5. Reports Menu\n"
                 + "6. End of the year \n"
                 + "7. Save Game \n"
@@ -67,8 +67,8 @@ public class GameMenuView extends View {
 
                     break;
                 case "4":
-                    StorehouseMenu newStorehouseMenu = new StorehouseMenu();
-                    newStorehouseMenu.display();
+                    StorehouseMenu storehouse = new StorehouseMenu();
+                    storehouse.display();
                     break;
                 case "5":
                     clearScreen();

@@ -5,18 +5,19 @@
  */
 package cit260.cityOfAaronLB.view;
 
+import static CityOfAaronLB.CityOfAaronLB.game;
+import cit260.cityOfAaronLB.model.Adjustments;
 
 /**
  *
  * @author lafon
  */
-public class StorehouseMenu extends View{
-    
+public class StorehouseMenu extends View {
+
     public StorehouseMenu() {
-        super("Store House\n"
+        super("Storehouse/Statistics\n"
                 + "1. Current resources\n"
-                + "2. How to use the resources\n"
-                + "3. Manage Crops and Land\n"
+                + "2. Statistics\n"
                 + "Choose one or (Q to Quit to Main Menu): ");
     }
 
@@ -24,14 +25,23 @@ public class StorehouseMenu extends View{
     public boolean doAction(String inputs) {
 
         switch (inputs) {
-                case "1":
-                    this.console.println("Current Resources");
-                    break;
-                case "2":
-                    this.console.println("How to use the resources");
-                    break;
-            }
-    System.out.println();
+            case "1":
+                this.console.println("Current Resources");
+                this.console.println("Acres of Land:    " + game.getAcres());
+                this.console.println("Wheat in Storage: " + game.getWheat());
+                this.console.println("Wheat per Acre:   " + game.getPerAcre());
+                break;
+            case "2":
+                this.console.println("Statistics");
+                this.console.println("\nYear:               " + game.getYear()
+                                   + "\nPeople Starved:     " + game.getStarved()
+                                   + "\nMoved to City:      " + game.getNewPop()
+                                   + "\nCurrent Population: " + game.getPopulation()
+                                   + "\nAmount of Tithes:   " + game.getTithe()
+                                   + "\nEaten by Rats:      " + game.getRatsEat());
+                break;
+        }
+        System.out.println();
         return false;
     }
 }

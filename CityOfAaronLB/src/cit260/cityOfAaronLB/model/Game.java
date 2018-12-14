@@ -25,6 +25,9 @@ public class Game implements Serializable{
     private int wheat;
     private Map map;
     private int acresPlanted;
+    private boolean peopleFed;
+    private boolean acresTheyPlanted;
+    private boolean tithesPaid;
     
     
     public Game() {
@@ -40,6 +43,42 @@ public class Game implements Serializable{
         
     }
 
+    public boolean isTithesPaid() {
+        return tithesPaid;
+    }
+
+    public void setTithesPaid(boolean tithesPaid) {
+        this.tithesPaid = tithesPaid;
+    }
+
+    public int getAcresPlanted() {
+        return acresPlanted;
+    }
+
+    public void setAcresPlanted(int acresPlanted) {
+        this.acresPlanted = acresPlanted;
+    }
+
+
+
+    public boolean isPeopleFed() {
+        return peopleFed;
+    }
+
+    public void setPeopleFed(boolean peopleFed) {
+        this.peopleFed = peopleFed;
+    }
+
+    public boolean isAcresTheyPlanted() {
+        return acresTheyPlanted;
+    }
+
+    public void setAcresTheyPlanted(boolean acresTheyPlanted) {
+        this.acresTheyPlanted = acresTheyPlanted;
+    }
+
+
+    
     public int getTitheBonus() {
         return titheBonus;
     }
@@ -48,13 +87,6 @@ public class Game implements Serializable{
         this.titheBonus = titheBonus;
     }
     
-    public int getAcresPlanted() {
-        return acresPlanted;
-    }
-
-    public void setAcresPlanted(int acresPlanted) {
-        this.acresPlanted = acresPlanted;
-    }
 
     public Map getMap() {
         return map;

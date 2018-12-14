@@ -7,6 +7,7 @@ package cit260.cityOfAaronLB.control;
 
 import cit260.cityOfAaronLB.exceptions.GameControlException;
 import cit260.cityOfAaronLB.model.Game;
+import cit260.cityOfAaronLB.view.EndOfTheYear;
 
 /**
  *
@@ -15,14 +16,27 @@ import cit260.cityOfAaronLB.model.Game;
 public class FeedPeopleControl {
 
     public static int feedPeople(String peopleToFeed, Game game) throws GameControlException {
-        int peopleFed = Integer.parseInt(peopleToFeed);
-        if (peopleFed <= 0) { //Number is negative
+        int bushelsToFeed = Integer.parseInt(peopleToFeed);
+        
+        if(game.isPeopleFed()){
+            System.out.println("You have already fed the people\n");
+            EndOfTheYear end = new EndOfTheYear();
+            end.display();
+        }
+        
+        game.setPeopleFed(false);
+        
+        if(bushelsToFeed >= 0){
+            game.setPeopleFed(true);
+        }
+        
+        if (bushelsToFeed <= 0) { //Number is negative
             throw new GameControlException("You need to enter a positive number");
-        } else if (peopleFed > game.getWheat() / 20) { //Not enough wheat in storage
+        } else if (bushelsToFeed > game.getWheat()) { //Not enough wheat in storage
             throw new GameControlException("There is not enough wheat in storage");
         }
-        game.setWheat (game.getWheat() - peopleFed * 20);
-        game.setStarved(game.getPopulation() - peopleFed);
+        game.setWheat (game.getWheat() - bushelsToFeed);
+        game.setStarved(game.getPopulation() - bushelsToFeed / 20);
         game.setPopulation(game.getPopulation() - game.getStarved());
         return game.getWheat(); 
     }

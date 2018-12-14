@@ -20,12 +20,12 @@ public class BuyLandView extends View {
     }
     
     @Override
-    public boolean doAction(String inputs) {
+    public boolean doAction(String inputs){
         Game game = CityOfAaronLB.CityOfAaronLB.getGame();
         int acresToBuy = -1;
         try{
             acresToBuy = BuyLandControl.calcBuyLand(inputs, game);
-        } catch (GameControlException ex) {
+        } catch (Exception ex) {
             this.console.println(ex.getMessage());
         }
         

@@ -30,8 +30,10 @@ public class TithesView extends View {
         }
         if (tithe >= 0) {
             this.console.println("You paid " + inputs + "% of tithes.");
-            this.console.println("You now have " + game.getWheat() + " Wheat in storage.");
-            this.console.println("You got " + game.getTitheBonus() + " extra bushels for paying " + inputs + "% of tithing");
+            this.console.println("You paid " + game.getTithe() + " bushels of wheat in tithing");
+            this.console.println("You got " + game.getTitheBonus() + " extra bushels for paying " + inputs + "% of tithing\n");
+            this.console.println("Unfortunately while you were away paying tithing, the rats ate " + game.getRatsEat() + " bushels of wheat.\n");
+            this.console.println("You now have " + game.getWheat() + " Wheat in storage.\n");
         }
             return true;
         }

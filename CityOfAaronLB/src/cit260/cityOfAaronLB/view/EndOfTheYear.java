@@ -5,24 +5,16 @@
  */
 package cit260.cityOfAaronLB.view;
 
-import CityOfAaronLB.CityOfAaronLB;
 import static CityOfAaronLB.CityOfAaronLB.game;
 import static CityOfAaronLB.CityOfAaronLB.player;
-import cit260.cityOfAaronLB.control.FeedPeopleControl;
-import cit260.cityOfAaronLB.control.GameControl;
-import cit260.cityOfAaronLB.exceptions.GameControlException;
-import cit260.cityOfAaronLB.model.Game;
-import cit260.cityOfAaronLB.model.Player;
 import java.util.InputMismatchException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  *
  * @author pytha
  */
 public class EndOfTheYear extends View {
-    
+
     public EndOfTheYear() {
         super("End of the year\n"
                 + "1. Feed the people\n"
@@ -33,7 +25,7 @@ public class EndOfTheYear extends View {
 //        super("Enter the amount of wheat to feed your people: (or Q to quit back to Game Menu)");
 
     }
-    
+
     @Override
     public boolean doAction(String inputs) {
         try {
@@ -43,21 +35,23 @@ public class EndOfTheYear extends View {
                     feed.display();
                     break;
                 case "2":
-                    
+
                     break;
                 case "3":
                     TithesView tithes = new TithesView();
                     tithes.display();
                     break;
                 case "4":
-                    if (game.getPeopleFed() == 0) {
-                        System.out.println("You need to Feed the People");
-                    } else if (game.getAcresTheyPlanted() == 0) {
-                        System.out.println("You need to plant acres");
-                    } else if (game.getTithe() == 0) {
-                        System.out.println("You need to enter how much tithes you want to pay");
+                    if (!game.isPeopleFed()) {
+                        System.out.println("You need to Feed the People\n");
+                        break;
+//                    } else if (game.getAcresTheyPlanted() == 0) {
+//                        System.out.println("You need to plant acres\n");
+                    } else if (!game.isTithesPaid()) {
+                        System.out.println("You need to enter how much tithes you want to pay\n");
+                        break;
                     } else {
-                        this.console.println("Lord " + player.getName() + " you have: \n"
+                        System.out.println("Lord " + player.getName() + " you have: \n"
                                 + "\nYear:               " + game.getYear()
                                 + "\nPeople Starved:     " + game.getStarved()
                                 + "\nMoved to City:      " + game.getNewPop()
@@ -68,8 +62,24 @@ public class EndOfTheYear extends View {
                                 + "\nAmount of Tithes:   " + game.getTithe()
                                 + "\nEaten by Rats:      " + game.getRatsEat()
                                 + "\n");
-                        game.setYear(game.getYear() + 1);
                     }
+                    if (game.getYear() > 10) {
+                        this.console.println("Congratulations! You won!");
+                        System.exit(0);
+                    }
+                    if (game.getPopulation() < game.getStarved()) {
+                        System.out.println("The people have dethroned you. Too many people starved.");
+                        System.exit(0);
+                    }
+
+                    game.setPeopleFed(false);
+                    game.setAcresTheyPlanted(false);
+                    game.setTithesPaid(false);
+                    game.setYear(game.getYear() + 1);
+                    game.setNewPop((int) (Math.random() * 4) + 2);
+                    game.setPopulation(game.getPopulation() + game.getNewPop());
+                    this.console.println(game.getNewPop() + " people moved to the city");
+                    this.console.println("Your population is now " + game.getPopulation() + " people\n");
                     break;
                 default:
                     this.console.println("Invalid Input"

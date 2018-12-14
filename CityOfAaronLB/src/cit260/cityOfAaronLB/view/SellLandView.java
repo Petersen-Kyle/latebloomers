@@ -26,7 +26,7 @@ public class SellLandView extends View {
         int newSell = -1;
         try {
             newSell = SellLandControl.sellLand(inputs, game);
-        } catch (GameControlException ex) {
+        } catch (Exception ex) {
             this.console.println(ex.getMessage());
         }
         if (newSell >= 0) {
