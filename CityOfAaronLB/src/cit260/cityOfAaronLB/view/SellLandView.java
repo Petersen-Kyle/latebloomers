@@ -5,6 +5,7 @@
  */
 package cit260.cityOfAaronLB.view;
 
+import static CityOfAaronLB.CityOfAaronLB.game;
 import cit260.cityOfAaronLB.control.SellLandControl;
 import cit260.cityOfAaronLB.exceptions.GameControlException;
 import cit260.cityOfAaronLB.model.Game;
@@ -16,7 +17,10 @@ import cit260.cityOfAaronLB.model.Game;
 public class SellLandView extends View {
 
     public SellLandView() {
-        super("Enter the amount of land to sell: ");
+        super("You have " + game.getWheat() + " wheat in storage."
+                + "You have " + game.getAcres() + " acres."
+                + "Your return per acre is " + game.getPerAcre()
+                + "Enter the amount of land to sell: ");
 
     }
 

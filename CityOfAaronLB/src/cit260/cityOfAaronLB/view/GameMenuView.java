@@ -8,10 +8,7 @@ package cit260.cityOfAaronLB.view;
 import static CityOfAaronLB.CityOfAaronLB.game;
 import static CityOfAaronLB.CityOfAaronLB.player;
 import cit260.cityOfAaronLB.control.AdjustmentsControl;
-//import cit260.cityOfAaronLB.control.AdjustmentsControl;
 import cit260.cityOfAaronLB.control.MoveLocation;
-import cit260.cityOfAaronLB.model.Location;
-import cit260.cityOfAaronLB.model.Map;
 import java.util.InputMismatchException;
 
 /**
@@ -81,7 +78,6 @@ public class GameMenuView extends View {
                     eOTY.display();
                     break;
                 case "7":
-//                this.console.println("Save your game");
                     this.saveGame();
                     break;
                 case "8":

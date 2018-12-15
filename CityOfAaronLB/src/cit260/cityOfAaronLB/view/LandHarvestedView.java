@@ -5,6 +5,7 @@
  */
 package cit260.cityOfAaronLB.view;
 
+import static CityOfAaronLB.CityOfAaronLB.game;
 import cit260.cityOfAaronLB.control.LandHarvestControl;
 import cit260.cityOfAaronLB.exceptions.GameControlException;
 import cit260.cityOfAaronLB.model.Game;
@@ -15,7 +16,9 @@ import cit260.cityOfAaronLB.model.Game;
  */
 public class LandHarvestedView extends View{
     public LandHarvestedView() {
-        super("Enter the amount of acres you want to plant: ");
+        super("You have " + game.getWheat() + " wheat in storage."
+                + "You can plant 2 acres with 1 bushel of wheat."
+               + "Enter the amount of acres you want to plant: ");
 
     }
 

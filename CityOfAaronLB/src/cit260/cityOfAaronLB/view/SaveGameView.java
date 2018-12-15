@@ -19,9 +19,6 @@ public class SaveGameView extends View {
         super("Enter file path: ");
     }
 
-//    private String[] getInputs() {
-//        inputs = new String
-//    }
     @Override
     public boolean doAction(String inputs) {
 

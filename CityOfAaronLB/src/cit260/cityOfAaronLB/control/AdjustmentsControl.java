@@ -15,7 +15,6 @@ package cit260.cityOfAaronLB.control;
  * and open the template in the editor.
  */
 import static CityOfAaronLB.CityOfAaronLB.game;
-import cit260.cityOfAaronLB.model.Adjustments;
 import cit260.cityOfAaronLB.model.Item;
 import cit260.cityOfAaronLB.model.Location;
 import cit260.cityOfAaronLB.model.Map;
@@ -52,9 +51,6 @@ public class AdjustmentsControl {
                     System.out.println("\nYou now have " + game.getWheat() + " wheat in storage");
                     map.getCurrentLocation().setVisited(true);
                     return item;
-
-                //}
-            //}
         }
         return item;
     }

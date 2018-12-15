@@ -6,8 +6,6 @@
 package cit260.cityOfAaronLB.control;
 
 import cit260.cityOfAaronLB.model.Animals;
-import cit260.cityOfAaronLB.model.Item;
-import java.util.Arrays;
 
 /**
  *

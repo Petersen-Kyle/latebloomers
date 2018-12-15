@@ -5,9 +5,9 @@
  */
 package cit260.cityOfAaronLB.control;
 
-import cit260.cityOfAaronLB.model.Animals;
 import cit260.cityOfAaronLB.model.Tools;
 import cit260.cityOfAaronLB.model.Adjustments;
+import cit260.cityOfAaronLB.model.Animals;
 
 /**
  *
@@ -52,7 +52,3 @@ public class ReportControl {
         return reportStr;
     }
 }
-
-
-//        Location[][] locations = CityOfAaronLB.CityOfAaronLB.getGame().getMap().getLocations();
-//        for (Location location : locations){

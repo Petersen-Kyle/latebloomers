@@ -30,7 +30,7 @@ public enum Adjustments {
     hammer("Tool", "Hammer", (int) (Math.random() * (10 + 1)) + -5, "The hammer bonds with the nails. They make incredible silos togeher. Wheat is added to the storehouse", "Your hammer decides that it would rather be with a screwdriver than you. You lose wheat from the storehouse."),
     sickle("Tool", "Sickle", (int) (Math.random() * (6 + 1)) + -3, "The sickle has been waltching tutorials on the best way to harvest wheat. Wheat is added to the storehouse", "The grim reaper comes back to repo your sickle. Wheat has been taken from the storehouse."),
     shovel("Tool", "Shovel", (int) (Math.random() * (4 + 1)) + -2, "The shovel was inspired by the movie holes. Wheat is added to the storehouse.", "You had to use your shovel to break the window in your car after you locked the keys in it. You lose wheat from the storehouse."),
-    rulersCourt("Rulers Court", "place of refuge", 0, "The Rulers Court is a place of refuge.", "The Rulers Court is a place of refuge.");
+    rulersCourt("Rulers Court", "place of refuge", 10, "The Rulers Court is a place of refuge. You gain 10 wheat for protecting your people.", "The Rulers Court is a place of refuge. You gain 10 wheat for protecting your people.");
     
     private String itemType;
     private String itemName;

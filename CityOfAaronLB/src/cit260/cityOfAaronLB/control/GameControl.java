@@ -6,15 +6,12 @@
 package cit260.cityOfAaronLB.control;
 
 import CityOfAaronLB.CityOfAaronLB;
-import static CityOfAaronLB.CityOfAaronLB.game;
 import cit260.cityOfAaronLB.exceptions.GameControlException;
-import cit260.cityOfAaronLB.model.Animals;
 import cit260.cityOfAaronLB.model.Player;
 import cit260.cityOfAaronLB.model.Game;
 import cit260.cityOfAaronLB.model.Location;
 import cit260.cityOfAaronLB.model.Map;
 import cit260.cityOfAaronLB.model.Item;
-import cit260.cityOfAaronLB.model.Tools;
 import cit260.cityOfAaronLB.model.Adjustments;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;

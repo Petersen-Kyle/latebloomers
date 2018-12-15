@@ -6,7 +6,6 @@
 package cit260.cityOfAaronLB.view;
 
 import static CityOfAaronLB.CityOfAaronLB.game;
-import cit260.cityOfAaronLB.model.Adjustments;
 
 /**
  *

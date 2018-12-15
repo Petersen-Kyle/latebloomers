@@ -22,7 +22,6 @@ public class EndOfYearView extends View {
                 + "3. Pay tithing\n"
                 + "4. End Year\n"
                 + "Choose one or (Q to quit to game menu)");
-//        super("Enter the amount of wheat to feed your people: (or Q to quit back to Game Menu)");
 
     }
 

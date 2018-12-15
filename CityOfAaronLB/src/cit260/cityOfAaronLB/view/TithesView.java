@@ -5,6 +5,7 @@
  */
 package cit260.cityOfAaronLB.view;
 
+import static CityOfAaronLB.CityOfAaronLB.game;
 import cit260.cityOfAaronLB.control.TithesControl;
 import cit260.cityOfAaronLB.exceptions.GameControlException;
 import cit260.cityOfAaronLB.model.Game;
@@ -15,7 +16,8 @@ import cit260.cityOfAaronLB.model.Game;
  */
 public class TithesView extends View {
     public TithesView() {
-        super("Enter the amount of wheat to pay in tithes: ");
+        super("You have " + game.getWheat() + " wheat in storage."
+               + "Enter the amount of wheat to pay in tithes: ");
 
     }
 

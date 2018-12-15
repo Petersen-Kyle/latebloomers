@@ -6,9 +6,7 @@
 package cit260.cityOfAaronLB.view;
 
 import CityOfAaronLB.CityOfAaronLB;
-import cit260.cityOfAaronLB.control.GameControl;
 import cit260.cityOfAaronLB.model.Game;
-import cit260.cityOfAaronLB.model.Item;
 import cit260.cityOfAaronLB.model.Map;
 import cit260.cityOfAaronLB.model.Location;
 import cit260.cityOfAaronLB.model.Player;
@@ -54,11 +52,6 @@ public class MapView {
                     rightIndicator = "<"; // same as above
                 }
                 System.out.print("|"); // start map with a |
-//            if(locations[row][column].getSceneSymbol() = null) {
-//                 // No scene assigned here so use ?? for the symbol
-//                 System.out.print(leftIndicator + "??" + rightIndicator);
-//            }
-//            else
                 System.out.print(leftIndicator
                         + locations[row][column].getSceneSymbol()
                         + rightIndicator);

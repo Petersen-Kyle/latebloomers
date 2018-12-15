@@ -30,7 +30,6 @@ public class MoveLocation extends View {
 
         int inRow = -1;
         int inCol = -1;
-//        String desc = "";
         try {
             inRow = Integer.parseInt(row);
             inCol = Integer.parseInt(col);
@@ -41,7 +40,6 @@ public class MoveLocation extends View {
 
         Game game = CityOfAaronLB.CityOfAaronLB.getGame();
         Map map = game.getMap();
-//        String desc = Location.getDescription();
         this.console.println();
 
         try {
