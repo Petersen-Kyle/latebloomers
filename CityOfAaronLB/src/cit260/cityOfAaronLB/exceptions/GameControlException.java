@@ -5,12 +5,11 @@ package cit260.cityOfAaronLB.exceptions;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
  * @author pytha
  */
-public class GameControlException extends Exception{
+public class GameControlException extends Exception {
 
     public GameControlException() {
     }
@@ -30,5 +29,5 @@ public class GameControlException extends Exception{
     public GameControlException(String string, Throwable thrwbl, boolean bln, boolean bln1) {
         super(string, thrwbl, bln, bln1);
     }
-    
+
 }

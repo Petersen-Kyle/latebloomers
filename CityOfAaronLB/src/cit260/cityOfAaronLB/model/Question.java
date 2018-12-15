@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package cit260.cityOfAaronLB.model;
+
 import java.io.Serializable;
 import java.util.Objects;
 
@@ -12,6 +13,7 @@ import java.util.Objects;
  * @author lafon
  */
 public class Question implements Serializable {
+
     private String questionText;
     private String answer1;
     private String answer2;
@@ -148,7 +150,4 @@ public class Question implements Serializable {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    
-    
-    
 }

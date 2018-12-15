@@ -8,7 +8,6 @@ package cit260.cityOfAaronLB.view;
 import cit260.cityOfAaronLB.control.GameControl;
 import cit260.cityOfAaronLB.exceptions.GameControlException;
 
-
 /**
  *
  * @author pytha

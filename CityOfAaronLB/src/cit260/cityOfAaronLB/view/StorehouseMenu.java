@@ -33,11 +33,11 @@ public class StorehouseMenu extends View {
             case "2":
                 this.console.println("Statistics");
                 this.console.println("\nYear:               " + game.getYear()
-                                   + "\nPeople Starved:     " + game.getStarved()
-                                   + "\nMoved to City:      " + game.getNewPop()
-                                   + "\nCurrent Population: " + game.getPopulation()
-                                   + "\nAmount of Tithes:   " + game.getTithe()
-                                   + "\nEaten by Rats:      " + game.getRatsEat());
+                        + "\nPeople Starved:     " + game.getStarved()
+                        + "\nMoved to City:      " + game.getNewPop()
+                        + "\nCurrent Population: " + game.getPopulation()
+                        + "\nAmount of Tithes:   " + game.getTithe()
+                        + "\nEaten by Rats:      " + game.getRatsEat());
                 break;
         }
         System.out.println();

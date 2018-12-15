@@ -5,7 +5,6 @@
  */
 package cit260.cityOfAaronLB.view;
 
-import cit260.cityOfAaronLB.control.ToolSortControl;
 import java.util.InputMismatchException;
 
 /**
@@ -58,8 +57,8 @@ public class HelpMenu extends View {
                 case "3":
                     this.console.println("How to make a move");
                     this.console.println("1. Go to 'Move to a new location on the Game Menu\n"
-                                       + "2. Enter the row and the column numbers of the place you wish to visit.");
-                    
+                            + "2. Enter the row and the column numbers of the place you wish to visit.");
+
                     break;
                 case "4":
                     this.console.println("How to play the game");
@@ -70,10 +69,6 @@ public class HelpMenu extends View {
                             + "Population = 100 \n"
                             + "Acres of Land = 1000 \n"
                             + "Wheat in Storage = 2700 \n");
-                    break;
-                case "6":
-                    ToolSortControl sort = new ToolSortControl();
-                    sort.sortTools();
                     break;
                 default:
                     this.console.println("Invalid Input"

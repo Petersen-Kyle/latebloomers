@@ -10,17 +10,17 @@ package cit260.cityOfAaronLB.model;
  * @author kpetersen
  */
 public enum Author {
-    
-    Michael("Michael","Smith","CIT260"),
-    MJ("MJ","LaFond","CIT260"),
-    Donovan("Donovan","Jones","CIT260"),
-    Kyle("Kyle","Petersen","CIT260");
-    
+
+    Michael("Michael", "Smith", "CIT260"),
+    MJ("MJ", "LaFond", "CIT260"),
+    Donovan("Donovan", "Jones", "CIT260"),
+    Kyle("Kyle", "Petersen", "CIT260");
+
     private String firstname;
     private String lastname;
     private String classname;
 
-    Author(String firstname, String lastname, String classname){
+    Author(String firstname, String lastname, String classname) {
         this.firstname = firstname;
         this.lastname = lastname;
         this.classname = classname;
@@ -42,6 +42,5 @@ public enum Author {
     public String toString() {
         return "Author{" + "firstname=" + firstname + ", lastname=" + lastname + ", classname=" + classname + '}';
     }
-    
-    
+
 }

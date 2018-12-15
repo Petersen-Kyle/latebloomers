@@ -4,15 +4,16 @@
  * and open the template in the editor.
  */
 package cit260.cityOfAaronLB.model;
+
 import java.io.Serializable;
 import java.util.Objects;
-
 
 /**
  *
  * @author lafon
  */
 public class Location implements Serializable {
+
     private int column;
     private int row;
     private boolean visited;
@@ -20,8 +21,8 @@ public class Location implements Serializable {
     private String description;
     private Question question;
     private Item item;
-    private String sceneSymbol; 
-    
+    private String sceneSymbol;
+
     public Location() {
     }
 
@@ -33,7 +34,6 @@ public class Location implements Serializable {
         this.sceneSymbol = sceneSymbol;
     }
 
-    
     public String getName() {
         return name;
     }
@@ -144,10 +144,4 @@ public class Location implements Serializable {
         return "Location{" + "column=" + column + ", row=" + row + ", visited=" + visited + ", name=" + name + ", description=" + description + ", question=" + question + ", sceneSymbol=" + sceneSymbol + '}';
     }
 
-
-
-
-
-    
-    
 }

@@ -4,13 +4,14 @@
  * and open the template in the editor.
  */
 package cit260.cityOfAaronLB.model;
+
 import java.io.Serializable;
 
 /**
  *
  * @author pytha
  */
-public class Game implements Serializable{
+public class Game implements Serializable {
 
     private int starved; //number of people who didnt get fed
     private int newPop; //random number of people who moved to town
@@ -28,8 +29,7 @@ public class Game implements Serializable{
     private boolean peopleFed;
     private boolean acresTheyPlanted;
     private boolean tithesPaid;
-    
-    
+
     public Game() {
         increase = 1;
         year = 1;
@@ -42,7 +42,7 @@ public class Game implements Serializable{
         wheat = 3000;
         tithe = 1;
         ratsEat = 0;
-        
+
     }
 
     public int getIncrease() {
@@ -53,7 +53,6 @@ public class Game implements Serializable{
         this.increase = increase;
     }
 
-    
     public boolean isTithesPaid() {
         return tithesPaid;
     }
@@ -70,8 +69,6 @@ public class Game implements Serializable{
         this.acresPlanted = acresPlanted;
     }
 
-
-
     public boolean isPeopleFed() {
         return peopleFed;
     }
@@ -86,7 +83,7 @@ public class Game implements Serializable{
 
     public void setAcresTheyPlanted(boolean acresTheyPlanted) {
         this.acresTheyPlanted = acresTheyPlanted;
-    }   
+    }
 
     public Map getMap() {
         return map;
@@ -152,7 +149,6 @@ public class Game implements Serializable{
         this.ratsEat = ratsEat;
     }
 
-   
     public int getPopulation() {
         return population;
     }
@@ -215,8 +211,4 @@ public class Game implements Serializable{
         return "Game{" + "population=" + population + ", acres=" + acres + ", wheat=" + wheat + ", map=" + map + ", acresPlanted=" + acresPlanted + '}';
     }
 
-
-    
-    
-    
 }

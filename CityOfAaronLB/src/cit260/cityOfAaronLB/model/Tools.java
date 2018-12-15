@@ -10,23 +10,23 @@ package cit260.cityOfAaronLB.model;
  * @author lafon
  */
 public enum Tools {
-    
+
     plow("Tool", "Plow", 10, "The plow plows 10 fields"),
     hammer("Tool", "Hammer", 5, "The hammer gains 5 people"),
     sickle("Tool", "Sickle", 1, "The sickle adds 1 harvested acre"),
     shovel("Tool", "Shovel", 2, "The shovel prepares 2 fields");
-    
+
     private String itemType;
     private String itemName;
     private int adjustments;
     private String description;
 
-    Tools(String itemType, String itemName, int adjustments, String description){
-            this.itemType = itemType;
-            this.itemName = itemName;
-            this.adjustments = adjustments;
-            this.description = description;
-        }
+    Tools(String itemType, String itemName, int adjustments, String description) {
+        this.itemType = itemType;
+        this.itemName = itemName;
+        this.adjustments = adjustments;
+        this.description = description;
+    }
 
     public String getItemType() {
         return itemType;
@@ -48,6 +48,5 @@ public enum Tools {
     public String toString() {
         return "Tools{" + "itemType=" + itemType + ", itemName=" + itemName + ", adjustments=" + adjustments + ", description=" + description + '}';
     }
-    
-    
+
 }
