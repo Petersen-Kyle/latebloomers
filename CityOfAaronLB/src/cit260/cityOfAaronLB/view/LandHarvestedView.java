@@ -16,8 +16,8 @@ import cit260.cityOfAaronLB.model.Game;
  */
 public class LandHarvestedView extends View{
     public LandHarvestedView() {
-        super("You have " + game.getWheat() + " wheat in storage."
-                + "You can plant 2 acres with 1 bushel of wheat."
+        super("You have " + game.getWheat() + " wheat in storage.\n"
+                + "You can plant 2 acres with 1 bushel of wheat.\n"
                + "Enter the amount of acres you want to plant: ");
 
     }

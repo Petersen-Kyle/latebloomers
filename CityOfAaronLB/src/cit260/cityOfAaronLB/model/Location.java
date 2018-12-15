@@ -144,6 +144,10 @@ public class Location implements Serializable {
         return "Location{" + "column=" + column + ", row=" + row + ", visited=" + visited + ", name=" + name + ", description=" + description + ", question=" + question + ", sceneSymbol=" + sceneSymbol + '}';
     }
 
+    public int getColumn(int column) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
 
 
 
