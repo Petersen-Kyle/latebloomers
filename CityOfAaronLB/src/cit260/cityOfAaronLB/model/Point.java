@@ -4,16 +4,15 @@
  * and open the template in the editor.
  */
 package cit260.cityOfAaronLB.model;
+
 import java.io.Serializable;
-
-
 
 /**
  *
  * @author kpetersen
  */
 public class Point implements Serializable {
-    
+
     private int row;
     private int column;
 
@@ -69,7 +68,5 @@ public class Point implements Serializable {
     public String toString() {
         return "Point{" + "row=" + row + ", column=" + column + '}';
     }
-    
-    
-    
+
 }

@@ -14,11 +14,12 @@ import cit260.cityOfAaronLB.model.Game;
  *
  * @author lafon
  */
-public class LandHarvestedView extends View{
+public class LandHarvestedView extends View {
+
     public LandHarvestedView() {
-        super("You have " + game.getWheat() + " wheat in storage.\n"
-                + "You can plant 2 acres with 1 bushel of wheat.\n"
-               + "Enter the amount of acres you want to plant: ");
+        super("You have " + game.getWheat() + " wheat in storage."
+                + "You can plant 2 acres with 1 bushel of wheat."
+                + "Enter the amount of acres you want to plant: ");
 
     }
 
@@ -33,8 +34,8 @@ public class LandHarvestedView extends View{
         }
         if (land >= 0) {
             this.console.println("You have planted " + inputs + " acres");
-            this.console.println("You now have " + game.getWheat()+ " wheat in storage.\n");
+            this.console.println("You now have " + game.getWheat() + " wheat in storage.\n");
         }
-            return true;
-        }
+        return true;
+    }
 }

@@ -4,19 +4,22 @@
  * and open the template in the editor.
  */
 package cit260.cityOfAaronLB.model;
+
 import java.io.Serializable;
 import java.util.Objects;
+
 /**
  *
  * @author lafon
  */
 public class StoreHouse implements Serializable {
+
     private Author author;
     private Item inventoryItem;
 
     public StoreHouse() {
     }
-    
+
     public Author getAuthor() {
         return author;
     }
@@ -66,6 +69,5 @@ public class StoreHouse implements Serializable {
     public String toString() {
         return "StoreHouse{" + "author=" + author + ", inventoryItem=" + inventoryItem + '}';
     }
-    
-    
+
 }

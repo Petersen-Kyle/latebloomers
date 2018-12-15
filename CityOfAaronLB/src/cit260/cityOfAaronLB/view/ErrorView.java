@@ -13,20 +13,20 @@ import java.io.PrintWriter;
  * @author pytha
  */
 public class ErrorView {
-    
+
     private static PrintWriter console = CityOfAaronLB.getOutPut();
     private static PrintWriter log = CityOfAaronLB.getLogFile();
-    
+
     public ErrorView() {
 
     }
-    
+
     public static void display(String className, String errorMessage) {
-               console.println(
-                "\n----ERROR------------------------------" 
-               + "\n" + errorMessage 
-               + "\n---------------------------------------");
-        log.printf("%n%n%s", className + " - " + errorMessage); 
+        console.println(
+                "\n----ERROR------------------------------"
+                + "\n" + errorMessage
+                + "\n---------------------------------------");
+        log.printf("%n%n%s", className + " - " + errorMessage);
     }
 
     public static PrintWriter getConsole() {
@@ -44,6 +44,5 @@ public class ErrorView {
     public static void setLog(PrintWriter log) {
         ErrorView.log = log;
     }
-    
-    
+
 }

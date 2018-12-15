@@ -13,6 +13,7 @@ import java.util.Objects;
  * @author lafon
  */
 public class Location implements Serializable {
+
     private int column;
     private int row;
     private boolean visited;
@@ -20,8 +21,8 @@ public class Location implements Serializable {
     private String description;
     private Question question;
     private Item item;
-    private String sceneSymbol; 
-    
+    private String sceneSymbol;
+
     public Location() {
     }
 
@@ -33,7 +34,6 @@ public class Location implements Serializable {
         this.sceneSymbol = sceneSymbol;
     }
 
-    
     public String getName() {
         return name;
     }
@@ -148,10 +148,4 @@ public class Location implements Serializable {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-
-
-
-
-    
-    
 }

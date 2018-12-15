@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package cit260.cityOfAaronLB.model;
+
 import java.io.Serializable;
 import java.util.Objects;
 
@@ -11,18 +12,16 @@ import java.util.Objects;
  *
  * @author kpetersen
  */
-public class Scene implements Serializable  {
-    
-        private String name;
-        private String description;
-        private Question question;
-        private Item item;
+public class Scene implements Serializable {
+
+    private String name;
+    private String description;
+    private Question question;
+    private Item item;
 
     public Scene() {
     }
-        
-        
-        
+
     /**
      * Get the value of name
      *
@@ -40,8 +39,6 @@ public class Scene implements Serializable  {
     public void setName(String name) {
         this.name = name;
     }
-
-   
 
     /**
      * Get the value of description
@@ -130,9 +127,5 @@ public class Scene implements Serializable  {
     public void setQuestion(String would_you_like_to_pick_up_the_sling) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
-    
- 
-    
-    
+
 }

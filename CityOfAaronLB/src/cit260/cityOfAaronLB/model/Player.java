@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package cit260.cityOfAaronLB.model;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Objects;
@@ -12,11 +13,11 @@ import java.util.Objects;
  *
  * @author pytha
  */
-public class Player implements Serializable{
+public class Player implements Serializable {
 
     private String name;
     private ArrayList<Game> games = new ArrayList<>();
-    
+
     public Player() {
     }
 
@@ -26,8 +27,8 @@ public class Player implements Serializable{
 
     public void setGames(ArrayList<Game> games) {
         this.games = games;
-    }    
-    
+    }
+
     public String getName() {
         return name;
     }
@@ -65,5 +66,5 @@ public class Player implements Serializable{
     public String toString() {
         return "player{" + "name=" + name + '}';
     }
-    
+
 }

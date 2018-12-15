@@ -15,9 +15,10 @@ import cit260.cityOfAaronLB.model.Game;
  * @author lafon
  */
 public class TithesView extends View {
+
     public TithesView() {
         super("You have " + game.getWheat() + " wheat in storage."
-               + "Enter the amount of wheat to pay in tithes: ");
+                + "Enter the amount of wheat to pay in tithes: ");
 
     }
 
@@ -38,6 +39,6 @@ public class TithesView extends View {
 //            this.console.println("Unfortunately while you were away paying tithing, the rats ate " + game.getRatsEat() + " bushels of wheat.\n");
             this.console.println("You now have " + game.getWheat() + " Wheat in storage.\n");
         }
-            return true;
-        }
+        return true;
+    }
 }

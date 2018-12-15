@@ -26,8 +26,8 @@ public class MapView {
         Location[][] locations = map.getLocations(); // retreive the locations from map
         Location currentLocation = map.getCurrentLocation();
         for (int clear = 0; clear < 1000; clear++) {
-                    System.out.println("\b");
-                }
+            System.out.println("\b");
+        }
         // Build the heading of the map
         System.out.print("  |");
         for (int column = 0; column < locations[0].length; column++) {
@@ -60,7 +60,7 @@ public class MapView {
             System.out.println("|");
 
         }
-        
+
         System.out.println("\nLord " + player.getName() + " you have entered " + currentLocation.getName());
         System.out.println("\n" + currentLocation.getDescription());
 

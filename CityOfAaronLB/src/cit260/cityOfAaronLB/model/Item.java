@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package cit260.cityOfAaronLB.model;
+
 import java.io.Serializable;
 import java.util.Objects;
 
@@ -11,7 +12,8 @@ import java.util.Objects;
  *
  * @author lafon
  */
-public class Item implements Serializable{
+public class Item implements Serializable {
+
     private String itemType;
     private String itemName;
     private int adjustments;
@@ -20,7 +22,7 @@ public class Item implements Serializable{
     private String positiveDescription;
     private Tools tools;
     private Adjustments weapons;
-    
+
     public Item() {
     }
 
@@ -31,7 +33,7 @@ public class Item implements Serializable{
     public void setDescription(String description) {
         this.description = description;
     }
-    
+
     public Adjustments getWeapons() {
         return weapons;
     }
@@ -47,7 +49,7 @@ public class Item implements Serializable{
     public void setTools(Tools tools) {
         this.tools = tools;
     }
-    
+
     public String getItemType() {
         return itemType;
     }
@@ -101,10 +103,6 @@ public class Item implements Serializable{
         return hash;
     }
 
-    
-
-
-
     @Override
     public boolean equals(Object obj) {
         if (this == obj) {
@@ -140,15 +138,10 @@ public class Item implements Serializable{
         return "Item{" + "itemType=" + itemType + ", itemName=" + itemName + ", adjustments=" + adjustments + ", negativeDescription=" + negativeDescription + ", positiveDescription=" + positiveDescription + ", tools=" + tools + ", weapons=" + weapons + '}';
     }
 
-
-
     static class itemName {
 
         public itemName() {
         }
     }
-    
-    
-            
-    
+
 }

@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package cit260.cityOfAaronLB.model;
+
 import java.io.Serializable;
 import java.util.Arrays;
 import java.util.Objects;
@@ -13,13 +14,13 @@ import java.util.Objects;
  * @author lafon
  */
 public class Map implements Serializable {
+
     Location locations[][];
     Location currentLocation;
     private int rows;
     private int columns;
     private int currentRow;
     private int currentColumn;
-    
 
     public Map() {
     }
@@ -47,7 +48,6 @@ public class Map implements Serializable {
     public void setLocations(Location[][] locations) {
         this.locations = locations;
     }
-    
 
     public Location getCurrentLocation() {
         return currentLocation;
@@ -115,8 +115,4 @@ public class Map implements Serializable {
         return "Map{" + "locations=" + locations + ", currentLocation=" + currentLocation + ", rows=" + rows + ", columns=" + columns + '}';
     }
 
-
-    
-    
-    
 }

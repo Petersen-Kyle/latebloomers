@@ -44,7 +44,7 @@ public class GameMenuView extends View {
                     move.display();
                     displayMap();
                     AdjustmentsControl.adjustments();
-                    
+
                     break;
                 case "3":
                     clearScreen();
