@@ -18,7 +18,7 @@ public class LandHarvestControl {
     public static int calcLandHarvested(String acres, Game game) throws GameControlException {
         game.setAcresPlanted(Integer.parseInt(acres));
 
-        if (game.isAcresTheyPlanted()) {
+        if (game.isAcresTheyPlanted() && game.getAcresPlanted() >= 0) {
             System.out.println("You have already harvested acres.\n");
             EndOfYearView end = new EndOfYearView();
             end.display();

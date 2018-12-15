@@ -18,7 +18,7 @@ public class TithesControl {
     public static int tithes(String tithesPaid, Game game) throws GameControlException {
         int tithesToPay = Integer.parseInt(tithesPaid);
         
-        if (game.isTithesPaid()) {
+        if (game.isTithesPaid() && tithesToPay >= 0) {
             System.out.println("You have already paid tithes this year.\n");
             EndOfYearView end = new EndOfYearView();
             end.display();

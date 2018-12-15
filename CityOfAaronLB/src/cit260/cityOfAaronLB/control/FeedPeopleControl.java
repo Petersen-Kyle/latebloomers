@@ -19,7 +19,7 @@ public class FeedPeopleControl {
         int bushelsToFeed = Integer.parseInt(peopleToFeed);
         
         
-        if(game.isPeopleFed()){
+        if(game.isPeopleFed() && bushelsToFeed >= 0){
             System.out.println("You have already fed the people\n");
             EndOfYearView end = new EndOfYearView();
             end.display();
@@ -36,6 +36,7 @@ public class FeedPeopleControl {
         } else if (bushelsToFeed > game.getWheat()) { //Not enough wheat in storage
             throw new GameControlException("There is not enough wheat in storage");
         }
+        
         game.setWheat (game.getWheat() - bushelsToFeed);
         game.setStarved(game.getPopulation() - bushelsToFeed / 20);
         game.setPopulation(game.getPopulation() - game.getStarved());
