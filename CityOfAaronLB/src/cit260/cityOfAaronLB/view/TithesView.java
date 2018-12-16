@@ -17,7 +17,7 @@ import cit260.cityOfAaronLB.model.Game;
 public class TithesView extends View {
 
     public TithesView() {
-        super("You have " + game.getWheat() + " wheat in storage."
+        super("You have " + game.getWheat() + " wheat in storage.\n"
                 + "Enter the amount of wheat to pay in tithes: ");
 
     }

@@ -73,7 +73,7 @@ public class MainMenu extends View {
                     break;
             }
         } catch (Exception err) {
-            this.console.println("\nINVALID INPUT!");
+            this.console.println("\nINVALID INPUT!\n");
         }
         return false;
     }
