@@ -14,22 +14,17 @@ public class BuyLandControl {
 
     public static int buyLand(String desiredToBuy, Game game) throws GameControlException {
 
-        int landPrice;
-        int userLandBuy = -1;
-        try {
-            userLandBuy = Integer.parseInt(desiredToBuy);
-        } catch (NumberFormatException e) {
-            throw new GameControlException("Invalid entry, must be an number...");
-        }
+
+            int userLandBuy = Integer.parseInt(desiredToBuy);
 
         if (userLandBuy <= 0) {
             throw new GameControlException("Must be a greater than zero...");
         } else if (userLandBuy > (game.getWheat() / game.getPerWheat())) {
             throw new GameControlException("Your dont have enough wheat to buy that much land...");
         }
-        landPrice = game.getPerWheat();
+
         game.setAcres(game.getAcres() + userLandBuy);
-        game.setWheat(game.getWheat() - (userLandBuy * landPrice));
+        game.setWheat(game.getWheat() - (userLandBuy * game.getPerWheat()));
 
         return game.getWheat();
     }

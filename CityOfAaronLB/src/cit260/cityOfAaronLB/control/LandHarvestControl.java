@@ -40,7 +40,8 @@ public class LandHarvestControl {
             throw new GameControlException("You need to enter a positive number");
         }
         game.setWheat(game.getWheat() - (game.getAcresPlanted() / 2));
-        game.setIncrease(game.getAcresPlanted() * game.getPerAcre());
+        game.setHarvestReturn(game.getAcresPlanted() * game.getPerAcre());
+        game.setAcresPlanted(0);
         return game.getAcresPlanted();
     }
 }

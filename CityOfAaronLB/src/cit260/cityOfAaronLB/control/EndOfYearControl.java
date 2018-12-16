@@ -25,7 +25,7 @@ public class EndOfYearControl {
                     game.setYear(game.getYear() + 1);
                     game.setNewPop((int) (Math.random() * 4) + 2);
                     game.setPopulation(game.getPopulation() + game.getNewPop());
-                    game.setWheat(game.getWheat() + game.getIncrease());
+                    game.setWheat(game.getWheat() + game.getHarvestReturn());
        
     }
 }

@@ -47,7 +47,6 @@ public class GameMenuView extends View {
 
                     break;
                 case "3":
-                    clearScreen();
                     this.console.println("Lord " + player.getName() + " you have: \n"
                             + "\nYear:               " + game.getYear()
                             + "\nPeople Starved:     " + game.getStarved()
@@ -69,7 +68,6 @@ public class GameMenuView extends View {
                     storehouse.display();
                     break;
                 case "5":
-                    clearScreen();
                     ReportView newReports = new ReportView();
                     newReports.display();
                     break;
@@ -94,9 +92,9 @@ public class GameMenuView extends View {
                     break;
 
             }
-        } catch (InputMismatchException err) {
-            this.console.println("\nINVALID INPUT!");
-        }
+            } catch (Exception err) {
+                this.console.println("\nINVALID INPUT!");
+            }
         this.console.println();
         return false;
     }

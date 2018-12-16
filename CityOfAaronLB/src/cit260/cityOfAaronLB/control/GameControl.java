@@ -308,7 +308,6 @@ public class GameControl {
 
     public static void movePlayer(Map map, int row, int column) {
         map.setCurrentLocation(map.getLocations()[row][column]);
-//        map.getCurrentLocation().setVisited(true);
         map.setCurrentRow(row);
         map.setCurrentColumn(column);
     }
@@ -318,7 +317,6 @@ public class GameControl {
         try (ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(filePath))) {
             out.writeObject(game);
         } catch (IOException ex) {
-//            Logger.getLogger(GameControl.class.getName()).log(Level.SEVERE, null, ex);
             throw new GameControlException("Cannot save to specified file: " + ex.getMessage());
         }
     }
@@ -354,22 +352,6 @@ public class GameControl {
             }
         }
         return success;
-    }
-
-    public static int endOfYear(Game game) {
-        game.setYear(game.getYear() + 1);
-        game.setNewPop((int) (Math.random() * 4) + 1);
-        game.setPerWheat((int) (Math.random() * 10) + 17);
-        if (game.getTithe() <= (game.getWheat() * .08)) {
-            game.setPerAcre((int) (Math.random() * 3) + 1);
-        } else if (game.getTithe() >= (game.getWheat() * .12)) {
-            game.setPerAcre((int) (Math.random() * 4) + 2);
-        } else {
-            game.setPerAcre((int) (Math.random() * 5) + 2);
-
-        }
-
-        return 0;
     }
 
 }

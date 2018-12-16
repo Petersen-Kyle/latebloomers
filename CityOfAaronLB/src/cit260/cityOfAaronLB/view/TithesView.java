@@ -31,12 +31,13 @@ public class TithesView extends View {
         } catch (GameControlException ex) {
             this.console.println(ex.getMessage());
         }
-        double perTithe = (Integer.parseInt(inputs) / game.getIncrease());
+        double perTithe = ((Double.parseDouble(inputs) / (double) game.getHarvestReturn()) * 100);
+        Math.round(perTithe);
         if (newTithe >= 0) {
             this.console.println("You paid " + perTithe + "% of your increase in tithes.");
             this.console.println("You paid " + game.getTithe() + " bushels of wheat in tithing");
-//            this.console.println("You got " + game.getPerAcre() + " bushels of wheat per acre for paying " + perTithe + "% of tithing\n");
-//            this.console.println("Unfortunately while you were away paying tithing, the rats ate " + game.getRatsEat() + " bushels of wheat.\n");
+            this.console.println("You got " + game.getPerAcre() + " bushels of wheat per acre for paying " + perTithe + "% of tithing\n");
+            this.console.println("Unfortunately while you were away paying tithing, the rats ate " + game.getRatsEat() + " bushels of wheat.\n");
             this.console.println("You now have " + game.getWheat() + " Wheat in storage.\n");
         }
         return true;

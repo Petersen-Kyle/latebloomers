@@ -23,24 +23,32 @@ public class StorehouseMenu extends View {
     @Override
     public boolean doAction(String inputs) {
 
-        switch (inputs) {
-            case "1":
-                this.console.println("Current Resources");
-                this.console.println("Acres of Land:    " + game.getAcres());
-                this.console.println("Wheat in Storage: " + game.getWheat());
-                this.console.println("Wheat per Acre:   " + game.getPerAcre());
-                break;
-            case "2":
-                this.console.println("Statistics");
-                this.console.println("\nYear:               " + game.getYear()
-                        + "\nPeople Starved:     " + game.getStarved()
-                        + "\nMoved to City:      " + game.getNewPop()
-                        + "\nCurrent Population: " + game.getPopulation()
-                        + "\nAmount of Tithes:   " + game.getTithe()
-                        + "\nEaten by Rats:      " + game.getRatsEat());
-                break;
+        try {
+            switch (inputs) {
+                case "1":
+                    this.console.println("Current Resources");
+                    this.console.println("Acres of Land:    " + game.getAcres());
+                    this.console.println("Wheat in Storage: " + game.getWheat());
+                    this.console.println("Wheat per Acre:   " + game.getPerAcre());
+                    break;
+                case "2":
+                    this.console.println("Statistics");
+                    this.console.println("\nYear:               " + game.getYear()
+                            + "\nPeople Starved:     " + game.getStarved()
+                            + "\nMoved to City:      " + game.getNewPop()
+                            + "\nCurrent Population: " + game.getPopulation()
+                            + "\nAmount of Tithes:   " + game.getTithe()
+                            + "\nEaten by Rats:      " + game.getRatsEat());
+                    break;
+                default:
+                    this.console.println("Invalid Input"
+                            + "\nPlease enter a number 1 - 2 or Q to quit");
+                    break;
+            }
+        } catch (Exception err) {
+            this.console.println("\nINVALID INPUT!");
         }
-        System.out.println();
+        this.console.println();
         return false;
     }
 }

@@ -6,8 +6,8 @@
 package cit260.cityOfAaronLB.control;
 
 import cit260.cityOfAaronLB.model.Tools;
-import cit260.cityOfAaronLB.model.Adjustments;
 import cit260.cityOfAaronLB.model.Animals;
+import cit260.cityOfAaronLB.model.Weapons;
 
 /**
  *
@@ -19,13 +19,13 @@ public class ReportControl {
 
     }
 
-    public static String getWeaponList() {
+        public static String getWeaponList() {
         String reportStr = "     Report Weapon List\r\n";
-        String formater = "%-15s%-40s%-5s\r\n";
-        reportStr += String.format(formater, "Name");
-        reportStr += String.format(formater, "====");
-        for (Adjustments weapon : Adjustments.values()) {
-            reportStr += String.format(formater, weapon.getItemName());
+        String formater = "%-15s%-40s\r\n";
+        reportStr += String.format(formater, "Name", "Description");
+        reportStr += String.format(formater, "====", "===========");
+        for (Weapons weapon : Weapons.values()) {
+            reportStr += String.format(formater, weapon.getItemName(), weapon.getdescription());
         }
         return reportStr;
     }

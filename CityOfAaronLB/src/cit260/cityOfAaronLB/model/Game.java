@@ -19,6 +19,7 @@ public class Game implements Serializable {
     private int perAcre; // random amount of wheat returned when planted
     private int tithe; //amount of wheat paid to tithe
     private int increase; //amount of wheat harvested after planting
+    private int harvestReturn;
     private int perWheat; //random value of 1 acre of land
     private int ratsEat; //amount that rats ate
     private int population; //number of people in the city
@@ -31,7 +32,7 @@ public class Game implements Serializable {
     private boolean tithesPaid;
 
     public Game() {
-        increase = 1;
+        harvestReturn = 1 / 1000;
         year = 1;
         starved = 0;
         newPop = 0;
@@ -43,6 +44,14 @@ public class Game implements Serializable {
         tithe = 1;
         ratsEat = 0;
 
+    }
+
+    public int getHarvestReturn() {
+        return harvestReturn;
+    }
+
+    public void setHarvestReturn(int harvestReturn) {
+        this.harvestReturn = harvestReturn;
     }
 
     public int getIncrease() {

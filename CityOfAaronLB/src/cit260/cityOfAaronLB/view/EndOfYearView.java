@@ -7,8 +7,6 @@ package cit260.cityOfAaronLB.view;
 
 import static CityOfAaronLB.CityOfAaronLB.game;
 import static CityOfAaronLB.CityOfAaronLB.player;
-import cit260.cityOfAaronLB.model.Adjustments;
-import cit260.cityOfAaronLB.model.Item;
 import cit260.cityOfAaronLB.model.Location;
 import cit260.cityOfAaronLB.model.Map;
 
@@ -56,7 +54,7 @@ public class EndOfYearView extends View {
                         break;
                     } else {
 
-                        if (game.getYear() > 10) {
+                        if (game.getYear() >= 10) {
                             this.console.println("Congratulations! You won!");
                             System.exit(0);
                         }
@@ -86,7 +84,7 @@ public class EndOfYearView extends View {
                         game.setYear(game.getYear() + 1);
                         game.setNewPop((int) (Math.random() * 4) + 2);
                         game.setPopulation(game.getPopulation() + game.getNewPop());
-                        game.setWheat(game.getWheat() + game.getIncrease());
+                        game.setWheat(game.getWheat() + game.getHarvestReturn());
                         this.console.println(game.getNewPop() + " people moved to the city");
                         this.console.println("Your population is now " + game.getPopulation() + " people\n");
                         System.out.println("Lord " + player.getName() + " you have: \n"

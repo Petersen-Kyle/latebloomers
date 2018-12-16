@@ -8,7 +8,6 @@ package cit260.cityOfAaronLB.view;
 import cit260.cityOfAaronLB.control.GameControl;
 import cit260.cityOfAaronLB.control.ReportControl;
 import cit260.cityOfAaronLB.exceptions.GameControlException;
-import java.util.InputMismatchException;
 
 /**
  *
@@ -78,7 +77,7 @@ public class ReportView extends View {
                             + "\nPlease enter a number 1 - 3 or Q to quit");
                     break;
             }
-        } catch (InputMismatchException err) {
+        } catch (Exception err) {
             this.console.println("\nINVALID INPUT!");
         }
         return false;

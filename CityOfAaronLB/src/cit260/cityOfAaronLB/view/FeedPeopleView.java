@@ -9,7 +9,6 @@ import static CityOfAaronLB.CityOfAaronLB.game;
 import cit260.cityOfAaronLB.control.FeedPeopleControl;
 import cit260.cityOfAaronLB.exceptions.GameControlException;
 import cit260.cityOfAaronLB.model.Game;
-import java.util.InputMismatchException;
 
 /**
  *
