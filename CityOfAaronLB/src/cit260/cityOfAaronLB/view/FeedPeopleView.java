@@ -7,7 +7,9 @@ package cit260.cityOfAaronLB.view;
 
 import static CityOfAaronLB.CityOfAaronLB.game;
 import cit260.cityOfAaronLB.control.FeedPeopleControl;
+import cit260.cityOfAaronLB.exceptions.GameControlException;
 import cit260.cityOfAaronLB.model.Game;
+import java.util.InputMismatchException;
 
 /**
  *
@@ -29,7 +31,7 @@ public class FeedPeopleView extends View {
         int feed = -1;
         try {
             feed = FeedPeopleControl.feedPeople(inputs, game);
-        } catch (Exception ex) {
+        } catch (GameControlException ex) {
             this.console.println(ex.getMessage());
         }
         if (feed >= 0) {

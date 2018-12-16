@@ -8,7 +8,6 @@ package cit260.cityOfAaronLB.view;
 import static CityOfAaronLB.CityOfAaronLB.game;
 import static CityOfAaronLB.CityOfAaronLB.player;
 import cit260.cityOfAaronLB.control.GameControl;
-import java.util.InputMismatchException;
 
 /**
  *
@@ -29,13 +28,21 @@ public class LandControlView extends View {
         try {
             switch (inputs) {
                 case "1":
-                    BuyLandView buyland = new BuyLandView();
-                    buyland.display();
+                    try {
+                        BuyLandView buyland = new BuyLandView();
+                        buyland.display();
+                    } catch (Exception e) {
+                        this.console.println("You must enter a number.\n");
+                    }
                     break;
                 case "2":
-                    GameControl.endOfYear(game);
-                    SellLandView sellLand = new SellLandView();
-                    sellLand.display();
+                    try {
+                        GameControl.endOfYear(game);
+                        SellLandView sellLand = new SellLandView();
+                        sellLand.display();
+                    } catch (Exception e) {
+                        this.console.println("You must enter a number.\n");
+                    }
                     break;
                 default:
                     this.console.println("Invalid Input"
@@ -43,8 +50,8 @@ public class LandControlView extends View {
                     break;
 
             }
-        } catch (InputMismatchException err) {
-            this.console.println("\nINVALID INPUT!");
+        } catch (Exception err) {
+            this.console.println("\nINVALID INPUT!\n");
         }
         clearScreen();
         this.console.println("Lord " + player.getName() + "you have: \n"

@@ -18,8 +18,8 @@ public class SellLandView extends View {
 
     public SellLandView() {
         super("You have " + game.getWheat() + " wheat in storage.\n"
-                + "You have " + game.getAcres() + " acres\n."
-                + "Your return per acre is " + game.getPerAcre() + "\n"
+                + "You have " + game.getAcres() + " acres.\n"
+                + "Your return per acre is " + game.getPerAcre() + ".\n"
                 + "Enter the amount of land to sell: ");
 
     }

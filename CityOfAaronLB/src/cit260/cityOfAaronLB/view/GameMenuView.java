@@ -48,7 +48,7 @@ public class GameMenuView extends View {
                     break;
                 case "3":
                     clearScreen();
-                    this.console.println("Lord " + player.getName() + "you have: \n"
+                    this.console.println("Lord " + player.getName() + " you have: \n"
                             + "\nYear:               " + game.getYear()
                             + "\nPeople Starved:     " + game.getStarved()
                             + "\nMoved to City:      " + game.getNewPop()

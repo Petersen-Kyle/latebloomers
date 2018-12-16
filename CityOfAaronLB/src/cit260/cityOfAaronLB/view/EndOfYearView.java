@@ -10,7 +10,6 @@ import static CityOfAaronLB.CityOfAaronLB.player;
 import cit260.cityOfAaronLB.model.Item;
 import cit260.cityOfAaronLB.model.Location;
 import cit260.cityOfAaronLB.model.Map;
-import java.util.InputMismatchException;
 
 /**
  *
@@ -33,16 +32,16 @@ public class EndOfYearView extends View {
         try {
             switch (inputs) {
                 case "1":
-                    FeedPeopleView feed = new FeedPeopleView();
-                    feed.display();
+                        FeedPeopleView feed = new FeedPeopleView();
+                        feed.display();
                     break;
                 case "2":
-                    LandHarvestedView land = new LandHarvestedView();
-                    land.display();
+                        LandHarvestedView land = new LandHarvestedView();
+                        land.display();
                     break;
                 case "3":
-                    TithesView tithes = new TithesView();
-                    tithes.display();
+                        TithesView tithes = new TithesView();
+                        tithes.display();
                     break;
                 case "4":
                     if (!game.isPeopleFed()) {
@@ -64,11 +63,11 @@ public class EndOfYearView extends View {
                             System.out.println("The people have dethroned you. Too many people starved.");
                             System.exit(0);
                         }
-                    
+
                         game.setPeopleFed(false);
                         game.setAcresTheyPlanted(false);
                         game.setTithesPaid(false);
-                        
+
                         Map map = game.getMap();
                         Location location = new Location();
                         Location[][] locations = map.getLocations();
@@ -81,7 +80,7 @@ public class EndOfYearView extends View {
                                 locations[row][column].setVisited(false);
                             }
                         }
-                        
+
                         game.setYear(game.getYear() + 1);
                         game.setNewPop((int) (Math.random() * 4) + 2);
                         game.setPopulation(game.getPopulation() + game.getNewPop());
@@ -100,7 +99,7 @@ public class EndOfYearView extends View {
                                 + "\nAmount of Tithes:   " + game.getTithe()
                                 + "\nEaten by Rats:      " + game.getRatsEat()
                                 + "\n");
-                    
+
                     }
                     break;
                 default:
@@ -108,8 +107,8 @@ public class EndOfYearView extends View {
                             + "\nPlease enter a number 1 - 4 or Q to quit");
                     break;
             }
-        } catch (InputMismatchException err) {
-            this.console.println("\nINVALID INPUT!");
+        } catch (Exception err) {
+            this.console.println("\nINVALID INPUT!\n");
         }
         return false;
     }

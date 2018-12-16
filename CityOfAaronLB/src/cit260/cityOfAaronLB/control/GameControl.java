@@ -31,7 +31,6 @@ public class GameControl {
         Game currentGame = new Game();
         CityOfAaronLB.setPlayer(player);
         CityOfAaronLB.setGame(currentGame);
-        //items = Item.createItems(); //Need to create later!!
         Map map = createMap(currentGame, 5, 5);
         if (map == null) {
             return -2;
