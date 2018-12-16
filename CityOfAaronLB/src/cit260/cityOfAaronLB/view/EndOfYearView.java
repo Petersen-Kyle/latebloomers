@@ -7,6 +7,7 @@ package cit260.cityOfAaronLB.view;
 
 import static CityOfAaronLB.CityOfAaronLB.game;
 import static CityOfAaronLB.CityOfAaronLB.player;
+import cit260.cityOfAaronLB.model.Adjustments;
 import cit260.cityOfAaronLB.model.Item;
 import cit260.cityOfAaronLB.model.Location;
 import cit260.cityOfAaronLB.model.Map;
@@ -59,7 +60,7 @@ public class EndOfYearView extends View {
                             this.console.println("Congratulations! You won!");
                             System.exit(0);
                         }
-                        if (game.getPopulation() < 50) {
+                        if (game.getPopulation() < game.getStarved()) {
                             System.out.println("The people have dethroned you. Too many people starved.");
                             System.exit(0);
                         }
@@ -67,7 +68,7 @@ public class EndOfYearView extends View {
                         game.setPeopleFed(false);
                         game.setAcresTheyPlanted(false);
                         game.setTithesPaid(false);
-
+                        
                         Map map = game.getMap();
                         Location location = new Location();
                         Location[][] locations = map.getLocations();
@@ -78,6 +79,7 @@ public class EndOfYearView extends View {
                                 location.setColumn(column);
                                 map.setCurrentColumn(column);
                                 locations[row][column].setVisited(false);
+                                locations[row][column].getItem().setAdjustments((int) (Math.random() * (200 + 10)) + -100);
                             }
                         }
 

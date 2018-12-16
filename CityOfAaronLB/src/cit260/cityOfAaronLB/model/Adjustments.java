@@ -54,7 +54,7 @@ public enum Adjustments {
     public int getAdjustments() {
         return adjustments;
     }
-
+    
     public String getPositiveDescription() {
         return positiveDescription;
     }
